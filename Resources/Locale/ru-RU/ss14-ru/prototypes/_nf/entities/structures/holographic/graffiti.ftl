@@ -89,3 +89,5 @@ ent-HoloGraffitiHighlighted20 = { ent-HoloGraffiti }
     .desc = { ent-HoloGraffiti.desc }
 ent-HoloGraffitiHighlighted21 = { ent-HoloGraffiti }
     .desc = { ent-HoloGraffiti.desc }
+
+ent-PunkHoloGraffitiOverlay = PunkHoloGraffitiOverlay

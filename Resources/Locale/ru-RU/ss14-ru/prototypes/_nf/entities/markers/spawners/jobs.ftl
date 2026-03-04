@@ -24,3 +24,11 @@ ent-SpawnPointBailiff = бейлиф
     .desc = { ent-SpawnPointWarden.desc }
 ent-SpawnPointDetectiveNF = детектив
     .desc = { ent-SpawnPointDetective.desc }
+
+ent-NFSpawnPointDetective = cadet
+ent-NFSpawnPointSeniorOfficer = bailiff
+ent-SpawnPointDeputy = sergeant
+ent-SpawnPointPublicAffairsLiaison = detective
+ent-NFSpawnPointJanitor = public affairs liaison
+ent-SpawnPointCadet = deputy
+ent-SpawnPointDirectorOfCare = director of care

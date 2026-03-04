@@ -271,3 +271,6 @@ ent-MailSecurityNonlethalsKit = { ent-BaseMail }
 ent-MailSecurityDonuts = { ent-BaseMail }
     .suffix = пончики
     .desc = { ent-BaseMail.desc }
+
+ent-MailNFRGBBGun = MailNFRGBBGun
+ent-MailCommandNFWristwatchGold = MailCommandNFWristwatchGold

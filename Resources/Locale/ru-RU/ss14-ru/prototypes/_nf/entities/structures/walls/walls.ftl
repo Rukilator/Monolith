@@ -133,7 +133,7 @@ ent-NFWallCobblebrickBluespace = { ent-NFAsteroidWall }
     .desc = Плотная рудная жила, богатая блюспейс налётом. Чрезвычайно твёрдая.
     .suffix = Блюспейс
 
-ent-NFWallCobblebrickCoal = supercompacted coal
+ent-NFWallCobblebrickCoal = сверхуплотнённый уголь
     .desc = Плотная рудная жила, богатая углём. Чрезвычайно твёрдая.
     .suffix = Уголь
 
@@ -253,7 +253,7 @@ ent-NFWallSandstoneBluespace = { ent-NFAsteroidWall }
     .desc = Плотная рудная жила, богатая блюспейс налётом. Чрезвычайно твёрдая.
     .suffix = Блюспейс
 
-ent-NFWallSandstoneCoal = supercompacted coal
+ent-NFWallSandstoneCoal = сверхуплотнённый уголь
     .desc = Плотная рудная жила, богатая углём. Чрезвычайно твёрдая.
     .suffix = Уголь
 
@@ -331,7 +331,7 @@ ent-NFWallSandstoneUraniumCrab = { ent-NFWallSandstoneUranium }
 
 ent-NFWallSandstoneBananiumGolem = { ent-NFWallSandstoneBananium }
     .desc = { ent-NFWallSandstoneBananium.desc }
-    .suffix = Урановый Голем
+    .suffix = Бананиумовый Голем
 
 ent-NFWallSandstoneCoalGolem = { ent-NFWallSandstoneCoal }
     .desc = { ent-NFWallSandstoneCoal.desc }
@@ -373,7 +373,7 @@ ent-NFWallNecropolisBluespace = { ent-NFAsteroidWall }
     .desc = Плотная рудная жила, богатая блюспейс налётом. Чрезвычайно твёрдая.
     .suffix = Блюспейс
 
-ent-NFWallNecropolisCoal = supercompacted coal
+ent-NFWallNecropolisCoal = сверхуплотнённый уголь
     .desc = Плотная рудная жила, богатая углём. Чрезвычайно твёрдая.
     .suffix = Уголь
 
@@ -451,7 +451,7 @@ ent-NFWallNecropolisUraniumCrab = { ent-NFWallNecropolisUranium }
 
 ent-NFWallNecropolisBananiumGolem = { ent-NFWallNecropolisBananium }
     .desc = { ent-NFWallNecropolisBananium.desc }
-    .suffix = Урановый Голем
+    .suffix = Бананиумовый Голем
 
 ent-NFWallNecropolisCoalGolem = { ent-NFWallNecropolisCoal }
     .desc = { ent-NFWallNecropolisCoal.desc }
@@ -493,7 +493,7 @@ ent-NFWallBasaltCobblebrickBluespace = { ent-NFAsteroidWall }
     .desc = Плотная рудная жила, богатая блюспейс налётом. Чрезвычайно твёрдая.
     .suffix = Блюспейс
 
-ent-NFWallBasaltCobblebrickCoal = supercompacted coal
+ent-NFWallBasaltCobblebrickCoal = сверхуплотнённый уголь
     .desc = Плотная рудная жила, богатая углём. Чрезвычайно твёрдая.
     .suffix = Уголь
 
@@ -571,7 +571,7 @@ ent-NFWallBasaltCobblebrickUraniumCrab = { ent-NFWallBasaltCobblebrickUranium }
 
 ent-NFWallBasaltCobblebrickBananiumGolem = { ent-NFWallBasaltCobblebrickBananium }
     .desc = { ent-NFWallBasaltCobblebrickBananium.desc }
-    .suffix = Урановый Голем
+    .suffix = Бананиумовый Голем
 
 ent-NFWallBasaltCobblebrickCoalGolem = { ent-NFWallBasaltCobblebrickCoal }
     .desc = { ent-NFWallBasaltCobblebrickCoal.desc }
@@ -613,7 +613,7 @@ ent-NFWallChromiteCobblebrickBluespace = { ent-NFAsteroidWall }
     .desc = Плотная рудная жила, богатая блюспейс налётом. Чрезвычайно твёрдая.
     .suffix = Блюспейс
 
-ent-NFWallChromiteCobblebrickCoal = supercompacted coal
+ent-NFWallChromiteCobblebrickCoal = сверхуплотнённый уголь
     .desc = Плотная рудная жила, богатая углём. Чрезвычайно твёрдая.
     .suffix = Уголь
 
@@ -691,7 +691,7 @@ ent-NFWallChromiteCobblebrickUraniumCrab = { ent-NFWallChromiteCobblebrickUraniu
 
 ent-NFWallChromiteCobblebrickBananiumGolem = { ent-NFWallChromiteCobblebrickBananium }
     .desc = { ent-NFWallChromiteCobblebrickBananium.desc }
-    .suffix = Урановый Голем
+    .suffix = Бананиумовый Голем
 
 ent-NFWallChromiteCobblebrickCoalGolem = { ent-NFWallChromiteCobblebrickCoal }
     .desc = { ent-NFWallChromiteCobblebrickCoal.desc }
@@ -733,7 +733,7 @@ ent-NFWallAndesiteCobblebrickBluespace = { ent-NFAsteroidWall }
     .desc = Плотная рудная жила, богатая блюспейс налётом. Чрезвычайно твёрдая.
     .suffix = Блюспейс
 
-ent-NFWallAndesiteCobblebrickCoal = supercompacted coal
+ent-NFWallAndesiteCobblebrickCoal = сверхуплотнённый уголь
     .desc = Плотная рудная жила, богатая углём. Чрезвычайно твёрдая.
     .suffix = Уголь
 
@@ -811,7 +811,7 @@ ent-NFWallAndesiteCobblebrickUraniumCrab = { ent-NFWallAndesiteCobblebrickUraniu
 
 ent-NFWallAndesiteCobblebrickBananiumGolem = { ent-NFWallAndesiteCobblebrickBananium }
     .desc = { ent-NFWallAndesiteCobblebrickBananium.desc }
-    .suffix = Урановый Голем
+    .suffix = Бананиумовый Голем
 
 ent-NFWallAndesiteCobblebrickCoalGolem = { ent-NFWallAndesiteCobblebrickCoal }
     .desc = { ent-NFWallAndesiteCobblebrickCoal.desc }
@@ -843,5 +843,18 @@ ent-NFWallAndesiteCobblebrickSilverGolem = { ent-NFWallAndesiteCobblebrickSilver
 
 ent-NFWallAndesiteCobblebrickUraniumGolem = { ent-NFWallAndesiteCobblebrickUranium }
     .desc = { ent-NFWallAndesiteCobblebrickUranium.desc }
-    .suffix = Урановый голем
+    .suffix = Урановый Голем
 
+
+ent-NFWallSandstone = сверхуплотнённый лёд # special name
+ent-NFWallSnowCobblebrick = NFWallSnowCobblebrick
+ent-NFWallAndesiteCobblebrick = Кладка из андезита
+    .desc = Плотная рудная жила, богатая бананиумом. Чрезвычайно твёрдая.
+ent-NFWallNecropolis = NFWallNecropolis
+ent-NFWallSandCobblebrick = Кладка из песка
+    .desc = Плотная рудная жила, богатая бананиумом. Чрезвычайно твёрдая.
+ent-NFWallAsteroidCobblebrick = NFWallAsteroidCobblebrick
+ent-NFWallChromiteCobblebrick = Кладка из хромита
+    .desc = Плотная рудная жила, богатая бананиумом. Чрезвычайно твёрдая.
+ent-NFWallCobblebrick = NFWallCobblebrick
+ent-NFWallBasaltCobblebrick = NFWallBasaltCobblebrick

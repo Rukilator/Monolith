@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using Content.Server._Forge.Sponsor; // Forge-Change
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers; // Frontier
 using Content.Server.Cargo.Systems; // Frontier
@@ -71,6 +72,7 @@ namespace Content.Server.Ghost
         [Dependency] private readonly TagSystem _tag = default!;
         [Dependency] private readonly IAdminManager _admin = default!; // Frontier
         [Dependency] private readonly IServerPreferencesManager _preferencesManager = default!;
+        [Dependency] private readonly SponsorManager _sponsors = default!; // Forge-Change
 
         private EntityQuery<GhostComponent> _ghostQuery;
         private EntityQuery<PhysicsComponent> _physicsQuery;
@@ -556,6 +558,34 @@ namespace Content.Server.Ghost
             }
 
             var ghost = SpawnAtPosition(GameTicker.ObserverPrototypeName, spawnPosition.Value);
+
+            // Forge-Change-Start
+            var user = mind.Comp.UserId;
+            try
+            {
+                if (user != null && _sponsors.TryGetSponsor(user.Value, out var level)
+                                 && _sponsors.TryGetSponsorGhost(level, out var sponsorGhost))
+                {
+                    ghost = Spawn(sponsorGhost, spawnPosition.Value);
+                }
+                else
+                {
+                    ghost = Spawn(GameTicker.ObserverPrototypeName, spawnPosition.Value);
+                }
+
+                if (!HasComp<GhostComponent>(ghost))
+                {
+                    AddComp<GhostComponent>(ghost);
+                    Log.Warning($"Added missing GhostComponent to {ToPrettyString(ghost)}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"Failed to spawn ghost: {ex}");
+                return null;
+            }
+            // Forge-Change-End
+
             var ghostComponent = Comp<GhostComponent>(ghost);
 
             // Try setting the ghost entity name to either the character name or the player name.

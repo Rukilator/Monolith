@@ -1,0 +1,38 @@
+# Author Info
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Notes:
+#
+- type: pointOfInterest
+  id: ShipyardTL
+  name: Заброшенная Верфь TechnicLogistic
+  minimumDistance: 4000
+  maximumDistance: 5500
+  gridPath: /Maps/_Forge/POI/shipyard_tl.yml
+  addComponents:
+  - type: IFF
+    color: "#c2c0c0"
+    readOnly: true
+  - type: Shuttle
+
+- type: gameMap
+  id: ShipyardTL
+  mapName: Заброшенная Верфь TechnicLogistic
+  mapPath: /Maps/_Forge/POI/shipyard_tl.yml
+  minPlayers: 0
+  stations:
+    ShipyardTL:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Заброшенная Верфь TechnicLogistic '
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt

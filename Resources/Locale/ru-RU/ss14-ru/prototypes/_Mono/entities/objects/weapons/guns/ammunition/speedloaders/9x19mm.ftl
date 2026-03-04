@@ -1,0 +1,7 @@
+﻿ent-BaseSpeedLoader9x19mm = спидлоадер (9x19мм FMJ)
+ent-SpeedLoader9x19mmFMJ = speed loader (9x19mm FMJ)
+ent-SpeedLoader9x19mmEmpty = speed loader (9x19mm any)
+ent-SpeedLoader9x19mmIncendiary = speed loader (9x19mm incendiary)
+ent-SpeedLoader9x19mmPractice = speed loader (9x19mm practice)
+ent-SpeedLoader9x19mmUranium = speed loader (9x19mm uranium)
+ent-SpeedLoader9x19mmRubber = speed loader (9x19mm rubber)

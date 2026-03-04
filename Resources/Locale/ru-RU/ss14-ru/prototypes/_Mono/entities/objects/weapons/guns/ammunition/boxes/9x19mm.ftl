@@ -1,0 +1,11 @@
+﻿ent-BaseAmmoBox9x19mm = коробка боеприпасов (9x19мм FMJ)
+ent-AmmoBox9x19mmFMJ = ammunition box (9x19mm FMJ)
+ent-AmmoBox9x19mmPractice = ammunition box (9x19mm practice)
+ent-AmmoBox9x19mmIncendiary = ammunition box (9x19mm incendiary)
+ent-AmmoBox9x19mmUranium = ammunition box (9x19mm uranium)
+ent-AmmoBox9x19mmRubber = ammunition box (9x19mm rubber)
+ent-AmmoBox9x19mmEmp = ammunition box (9x19mm emp)
+ent-AmmoBox9x19mmHP = ammunition box (9x19mm hollow-point)
+ent-AmmoBox9x19mmRIP = ammunition box (9x19mm RIP)
+ent-AmmoBox9x19mmPlasteelAP = ammunition box (9x19mm AP)
+ent-AmmoBox9x19mmBigFMJ = Big

@@ -1,4 +1,4 @@
-ent-NFCartridgeRifle25 = патрон (.25 автоПП)
+ent-ForgeCartridgeRifle25 = патрон (.25 автоПП)
     .desc = { ent-BaseCartridgeRifle.desc }
 ent-NFCartridgeRifle25Overpressure = патрон (.25 автоПП высокоскоростной)
     .desc = { ent-BaseCartridgeRifle.desc }

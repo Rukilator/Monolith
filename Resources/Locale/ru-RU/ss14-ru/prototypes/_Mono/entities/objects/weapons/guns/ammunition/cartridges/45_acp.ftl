@@ -1,0 +1,11 @@
+﻿ent-BaseCartridge45_ACP = патрон (.45 ACP FMJ)
+    .desc = Более тяжёлая альтернатива 9x19мм для пистолетов и пистолетов-пулемётов.
+ent-Cartridge45_ACPFMJ = патрон (.45 ACP FMJ)
+ent-Cartridge45_ACPPractice = cartridge (.45 ACP practice)
+ent-Cartridge45_ACPIncendiary = cartridge (.45 ACP incendiary)
+ent-Cartridge45_ACPUranium = cartridge (.45 ACP uranium)
+ent-Cartridge45_ACPRubber = cartridge (.45 ACP rubber)
+ent-Cartridge45_ACPEmp = патрон (.45 ACP emp)
+ent-Cartridge45_ACPHP = cartridge (.45 ACP hollow-point)
+ent-Cartridge45_ACPRIP = патрон (.45 ACP RIP)
+ent-Cartridge45_ACPPlasteelAP = патрон (.45 ACP AP)

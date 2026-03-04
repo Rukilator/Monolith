@@ -13,3 +13,6 @@ ent-BoxFolderNfsdFormsBrown = { ent-BoxFolderPalBrown }
 ent-BoxFolderPalGreen = { ent-BoxFolderPalBrown }
     .desc = { ent-BoxFolderPalBrown.desc }
 
+
+ent-PaperDeadDropHint = подозрительная записка
+    .desc = Смятый лист с каракулями. Похоже, написано в спешке.

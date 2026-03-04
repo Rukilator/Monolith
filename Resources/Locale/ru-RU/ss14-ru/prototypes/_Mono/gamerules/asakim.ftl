@@ -1,0 +1,2 @@
+ent-UnknownShuttleAsakimSmall = UnknownShuttleAsakimSmall
+ent-UnknownShuttleAsakimMedium = UnknownShuttleAsakimMedium

@@ -38,6 +38,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Replays;
 using Robust.Shared.Timing;
 using Content.Client._NF.Emp.Overlays; // Frontier
+using Content.Client._Forge.DiscordAuth; // Forge-Change
+using Content.Client._Forge.Sponsor; // Forge-Change
 
 namespace Content.Client.Entry
 {

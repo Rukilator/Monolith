@@ -49,7 +49,8 @@ public sealed class CavemanAccentSystem : EntitySystem
 
             var modifiedWord = word;
 
-            if (actualLength > CavemanAccentComponent.MaxWordLength)
+            // Forge-Change: use instance MaxWordLength from component instead of static DataField
+            if (actualLength > component.MaxWordLength)
             {
                 modifiedWord = GetGrunt();
                 CapitalizeReplacement(word, ref modifiedWord);

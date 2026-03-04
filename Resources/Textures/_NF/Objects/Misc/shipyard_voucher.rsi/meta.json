@@ -46,6 +46,9 @@
       "name": "voucherstationguard"
     },
     {
+      "name": "vouchersheriff"
+    },
+    {
       "name": "voucherservice"
     }
   ]

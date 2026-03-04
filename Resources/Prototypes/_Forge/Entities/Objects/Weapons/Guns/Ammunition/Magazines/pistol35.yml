@@ -1,0 +1,730 @@
+# WizDen
+#region base mags .35
+- type: entity
+  id: BaseMagazinePistol
+  name: pistol magazine (.35 auto)
+  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistol
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgePistol
+    capacity: 10
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: ForgeBaseMagazinePistol35
+  name: pistol magazine (.35 pistol)
+  parent: [ BaseC1Contraband, BaseMagazinePistol, RecyclableItemSteelTiny ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - ForgeMagazinePistol35
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - ForgeCartridgePistol35
+    capacity: 10
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Pistol35/pistol_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Pistol35/pistol_mag.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag
+
+
+- type: entity
+  categories: [ HideSpawnMenu ] # Frontier
+  id: BaseMagazinePistolSubMachineGun  # Yeah it's weird but it's pistol caliber
+  name: SMG magazine (.35 auto)
+  parent: [BaseItem, BaseC1Contraband, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny, BaseSecurityContraband<BaseC1Contraband
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolSubMachineGun
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgePistol
+    capacity: 30
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: ForgeBaseMagazinePistolSubMachineGun35
+  name: smg magazine (.35 pistol)
+  parent: [ BaseC1Contraband, BaseMagazinePistolSubMachineGun, RecyclableItemSteelTiny ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - ForgeMagazineSubMachineGunPistol35
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - ForgeCartridgeRifle25
+    capacity: 30
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Pistol35/smg_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Pistol35/smg_mag.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag
+
+- type: entity
+  categories: [ HideSpawnMenu ] # Frontier
+  id: MagazinePistolSubMachineGunTopMounted
+  name: WT550 magazine (.35 auto top-mounted)
+  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
+  description: Unconventional 30-round top feeding magazine for the WT550 SMG. Intended to hold general-purpose kinetic ammunition.
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolSubMachineGunTopMounted
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    # proto: CartridgePistol # Frontier
+    whitelist:
+      tags:
+      - CartridgePistol
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag_top_mounted.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-1
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+
+- type: entity
+  id: ForgeBaseMagazineSubMachineGunTopMounted35
+  name: top mounted smg magazine (.35 pistol)
+  parent: [ BaseC1Contraband, MagazinePistolSubMachineGunTopMounted, RecyclableItemSteelTiny ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - ForgeMagazineSubMachineGunTopMountedPistol35
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: ForgeCartridgeRifle25
+    whitelist:
+      tags:
+      - ForgeCartridgeRifle25
+    capacity: 30
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Pistol35/smg_mag_top_mounted.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-1
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Item
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Pistol35/smg_mag_top_mounted.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag
+
+#region standard mags .35
+- type: entity
+  id: ForgeMagazinePistol35Empty
+  name: pistol magazine (.35 pistol, any)
+  parent: ForgeBaseMagazinePistol35
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
+  id: ForgeMagazinePistol35
+  name: pistol magazine (.35 pistol)
+  parent: ForgeBaseMagazinePistol35
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol35
+
+- type: entity
+  id: ForgeMagazinePistol35Overpressure
+  name: pistol magazine (.35 pistol, overpressure)
+  parent: ForgeBaseMagazinePistol35
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol35Overpressure
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#ff8d00"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff8d00"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff8d00"
+
+- type: entity
+  id: ForgeMagazinePistol35Incendiary
+  name: pistol magazine (.35 pistol, incendiary)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseMagazinePistol35] # Corvax-Forge: Contraband T2
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol35Incendiary
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#ff0000"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff0000"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff0000"
+
+- type: entity
+  id: ForgeMagazinePistol35Uranium
+  name: pistol magazine (.35 pistol, uranium)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseMagazinePistol35] # Corvax-Forge: Contraband T2
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol35Uranium
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00ff00"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00ff00"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00ff00"
+
+- type: entity
+  id: ForgeMagazinePistol35Practice
+  name: pistol magazine (.35 pistol, practice)
+  parent: ForgeBaseMagazinePistol35
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol35Practice
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#dddddd"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#dddddd"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#dddddd"
+
+# Frontier
+- type: entity
+  id: ForgeMagazinePistol35Emp
+  name: pistol magazine (.35 pistol, EMP)
+  parent: ForgeBaseMagazinePistol35
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol35Emp
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00ffff"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00ffff"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00ffff"
+
+- type: entity
+  id: ForgeMagazinePistol35Rubber
+  name: pistol magazine (.35 pistol, rubber)
+  parent: ForgeBaseMagazinePistol35
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol35Rubber
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00b0ff"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00b0ff"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00b0ff"
+
+
+# WizDen
+#region smg mags .35
+- type: entity
+  id: ForgeMagazineSubMachineGun35Empty
+  name: smg magazine (.25 auto, any)
+  parent: ForgeBaseMagazinePistolSubMachineGun35
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
+  id: ForgeMagazineSubMachineGun35
+  name: smg magazine (.25 auto)
+  parent: ForgeBaseMagazinePistolSubMachineGun35
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25
+
+- type: entity
+  id: ForgeMagazineSubMachineGun35Overpressure
+  name: smg magazine (.25 auto, overpressure)
+  parent: ForgeBaseMagazinePistolSubMachineGun35
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25Overpressure
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#ff8d00"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff8d00"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff8d00"
+
+- type: entity
+  id: ForgeMagazineSubMachineGun35Incendiary
+  name: smg magazine (.25 auto, incendiary)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseMagazinePistolSubMachineGun35] # Corvax-Forge: Contraband T2
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25Incendiary
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#ff0000"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff0000"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff0000"
+
+- type: entity
+  id: ForgeMagazineSubMachineGun35Uranium
+  name: smg magazine (.25 auto, uranium)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseMagazinePistolSubMachineGun35] # Corvax-Forge: Contraband T2
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25Uranium
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00ff00"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00ff00"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00ff00"
+
+- type: entity
+  id: ForgeMagazineSubMachineGun35Practice
+  name: smg magazine (.25 auto, practice)
+  parent: ForgeBaseMagazinePistolSubMachineGun35
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25Practice
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+
+- type: entity
+  id: ForgeMagazineSubMachineGunTopMounted35Empty
+  name: top mounted smg magazine (.25 auto, any)
+  parent: ForgeBaseMagazineSubMachineGunTopMounted35
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+  - type: Sprite
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-1
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+
+- type: entity
+  id: ForgeMagazineSubMachineGunTopMounted35
+  name: top mounted smg magazine (.25 auto)
+  parent: ForgeBaseMagazineSubMachineGunTopMounted35
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25
+  - type: Sprite
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-1
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+
+- type: entity
+  id: ForgeMagazineSubMachineGunTopMounted35Overpressure
+  name: top mounted smg magazine (.25 auto, overpressure)
+  parent: ForgeBaseMagazineSubMachineGunTopMounted35
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25Overpressure
+  - type: Sprite
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: decal-01
+        color: "#ff8d00"
+      - state: mag-unshaded-1
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff8d00"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff8d00"
+
+- type: entity
+  id: ForgeMagazineSubMachineGunTopMounted35Incendiary
+  name: top mounted smg magazine (.25 auto, incendiary)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseMagazineSubMachineGunTopMounted35] # Corvax-Forge: Contraband T2
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25Incendiary
+  - type: Sprite
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: decal-01
+        color: "#ff0000"
+      - state: mag-unshaded-1
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff0000"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff0000"
+
+- type: entity
+  id: ForgeMagazineSubMachineGunTopMounted35Uranium
+  name: top mounted smg magazine (.25 auto, uranium)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseMagazineSubMachineGunTopMounted35] # Corvax-Forge: Contraband T2
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25Uranium
+  - type: Sprite
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: decal-01
+        color: "#00ff00"
+      - state: mag-unshaded-1
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00ff00"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00ff00"
+
+- type: entity
+  id: ForgeMagazineSubMachineGunTopMounted35Practice
+  name: top mounted smg magazine (.25 auto, practice)
+  parent: ForgeBaseMagazineSubMachineGunTopMounted35
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25Practice
+  - type: Sprite
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: decal-01
+      - state: mag-unshaded-1
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+
+# Frontier
+- type: entity
+  id: ForgeMagazineSubMachineGun35Rubber # MagazinePistolSubMachineGunRubber
+  name: smg magazine (.25 auto, rubber)
+  parent: ForgeBaseMagazinePistolSubMachineGun35
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25Rubber
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00b0ff"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00b0ff"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00b0ff"
+
+- type: entity
+  id: ForgeMagazineSubMachineGun35Emp # MagazinePistolSubMachineGunEmp
+  name: smg magazine (.25 auto, EMP)
+  parent: ForgeBaseMagazinePistolSubMachineGun35
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25Emp
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00ffff"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00ffff"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00ffff"
+
+- type: entity
+  id: ForgeMagazineSubMachineGunTopMounted35Emp
+  name: top mounted smg magazine (.25 auto, EMP)
+  parent: ForgeBaseMagazineSubMachineGunTopMounted35
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25Emp
+  - type: Sprite
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: decal-01
+        color: "#00ffff"
+      - state: mag-unshaded-1
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00ffff"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00ffff"
+
+- type: entity
+  id: ForgeMagazineSubMachineGunTopMounted35Rubber
+  name: top mounted smg magazine (.25 auto, rubber)
+  parent: ForgeBaseMagazineSubMachineGunTopMounted35
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25Rubber
+  - type: Sprite
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: decal-01
+        color: "#00b0ff"
+      - state: mag-unshaded-1
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00b0ff"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00b0ff"

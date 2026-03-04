@@ -1,7 +1,7 @@
 ent-VehicleATVNF = квадроцикл
     .desc = Универсальный транспорт
 ent-VehicleSkeletonMotorcycleNF = мотоцикл
-    .desc = Bad to the Bone.
+    .desc = Жёсткий до мозга костей.
 ent-VehicleHoverbikeNF = ховербайк
     .desc = Ракетный двигатель с велосипедным рулём. Звучит безопасно.
 ent-VehicleHoverbikeNFKeys = { ent-VehicleHoverbikeNF }

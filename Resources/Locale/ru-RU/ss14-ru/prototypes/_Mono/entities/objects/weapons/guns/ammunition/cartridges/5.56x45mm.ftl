@@ -1,0 +1,10 @@
+﻿ent-BaseCartridge556x45mm = патрон (5.56x45мм FMJ)
+    .desc = Крайне распространённый промежуточный патрон для винтовок.
+ent-Cartridge556x45mmFMJ = патрон (5.56x45mm FMJ)
+ent-Cartridge556x45mmPractice = cartridge (5.56x45mm practice)
+ent-Cartridge556x45mmIncendiary = cartridge (5.56x45mm incendiary)
+ent-Cartridge556x45mmUranium = cartridge (5.56x45mm uranium)
+ent-Cartridge556x45mmRubber = cartridge (5.56x45mm rubber)
+ent-Cartridge556x45mmHP = cartridge (5.56x45mm hollow-point)
+ent-Cartridge556x45mmRIP = патрон (5.56x45mm RIP)
+ent-Cartridge556x45mmPlasteelAP = патрон (5.56x45mm AP)

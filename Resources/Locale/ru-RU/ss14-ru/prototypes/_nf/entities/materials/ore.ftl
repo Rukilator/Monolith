@@ -12,3 +12,10 @@ ent-ScrapOre20 = { ent-ScrapOre }
 materials-raw-scrap = несортированный лом
 materials-scrap = лом
 ent-SpawnRandomRefinedScrap = очищенный лом
+
+ent-NFOreScrap = руда из лома
+ent-ScrapOre50 = materials-raw-scrap
+ent-ScrapOre100 = materials-raw-scrap
+    .desc = Перебирайте лом в поисках целых плат, инструментов и местных материалов. Результаты разнятся.
+ent-RawScrap = materials-raw-scrap
+    .desc = Перебирайте лом в поисках целых плат, инструментов и местных материалов. Результаты разнятся. #Mono

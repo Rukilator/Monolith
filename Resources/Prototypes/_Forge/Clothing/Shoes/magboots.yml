@@ -1,0 +1,40 @@
+- type: entity
+  parent: [ClothingShoesBootsMagBase, BaseJetpack, ClothingShoesBootsCombat, BaseC3Contraband, ContrabandClothing ]
+  id: ClothingShoesBootsMagContractor
+  name: DCN™ magboots
+  description: Magnetic boots with a unique design, which appear to be based on an improved model, as they have a lighter magnetic attraction.
+  components:
+  - type: Sprite
+    sprite: Forge/Clothing/Shoes/Boots/magboots-contractor.rsi
+    state: icon
+  - type: Clothing
+    sprite: Forge/Clothing/Shoes/Boots/magboots-contractor.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      volume: 5
+      temperature: 293.15
+      moles:
+      - 1.5
+      - 1.5
+  - type: Item
+    sprite: null
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: Magboots
+    magbootsAlert: MagbootsContractor
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: SilenceIsGolden
+
+- type: alert
+  id: MagbootsContractor
+  icons:
+  - sprite: Forge/Clothing/Shoes/Boots/magboots-contractor.rsi
+    state: icon-on
+  name: alerts-magboots-name
+  description: alerts-magboots-desc

@@ -1,0 +1,455 @@
+- type: entity
+  name: pulse sniper
+  parent: [BaseWeaponBattery, BaseGunWieldable, BaseC2ContrabandUnredeemable]
+  id: WeaponPulseCarbineSniper
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Battery/pulse_sniper.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 4
+    zeroVisible: false
+  - type: Appearance
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Battery/pulse_sniper.rsi
+  - type: Gun
+    selectedMode: FullAuto
+    fireRate: 0.65
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+    projectileSpeed: 60
+  - type: Battery
+    maxCharge: 7000
+    startingCharge: 7000
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: ProjectileBatteryAmmoProvider
+    proto: ForgeBulletPulseSniper
+    fireCost: 1000
+
+- type: entity
+  parent: Pulse
+  id: PulseSniper
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 100
+        Structural: 1000
+
+#- type: entity
+#  name: Owl
+#  parent: [ BaseWeaponPowerCellSmall, BaseC1Contraband ]
+#  id: WeaponLaserOwl
+#  description: A cheap and widely used laser pistol.
+#  components:
+#  - type: Sprite
+#    sprite: Forge/Objects/Weapons/Guns/Battery/owl.rsi
+#    layers:
+#    - state: base
+#      map: ["enum.GunVisualLayers.Base"]
+#    - state: mag-0
+#      map: ["enum.GunVisualLayers.Mag"]
+#  - type: Item
+#    sprite: Objects/Weapons/Guns/Battery/owl.rsi
+#  - type: MagazineVisuals
+#    magState: mag
+#    steps: 5
+#    zeroVisible: true
+
+- type: entity
+  name: Sign
+  parent: [BaseWeaponBattery, BaseGunWieldable, BaseC2ContrabandUnredeemable]
+  id: WeaponSniperSign
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Battery/sign.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Appearance
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Battery/sign.rsi
+  - type: Gun
+    selectedMode: FullAuto
+    fireRate: 0.65
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: SniperSign
+    fireCost: 1000
+  - type: Battery
+    maxCharge: 5000
+    startingCharge: 5000
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3
+    pvsIncrease: 0.3
+
+- type: entity
+  parent: BasicHitscan
+  id: SniperSign
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 51
+        Structural: 80
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
+      state: muzzle_sign
+    travelFlash:
+      sprite: Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
+      state: sign
+    impactFlash:
+      sprite: Forge/Objects/Weapons/Guns/Projectiles/sign_pr.rsi
+      state: impact_sign
+
+- type: entity
+  id: WeaponSyndieEnergyRifleCarbine
+  parent: [ BaseWeaponEnergyRifleFireModesSyndie, BaseWeaponFrameEnergyRifleAssaultSyndie, BaseC3Contraband ]
+  name: syndie laser carbine
+  suffix: Frontier
+  description: |-
+    Modified laser carbine made for Syndicate operatives
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Battery/laser_gun_syndie.rsi
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Battery/laser_gun_syndie.rsi
+
+- type: entity
+  id: BaseWeaponEnergyRifleFireModesSyndie
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-energybolt-high
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletLaserHeavySyndie
+    fireCost: 160
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletLaserHeavySyndie
+      fireCost: 160
+    - proto: ForgeBulletDisabler
+      fireCost: 80
+
+- type: entity
+  id: BaseWeaponEnergyPistolFireModesSyndie
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-energybolt-high
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletLaserSyndie
+    fireCost: 120
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletLaserSyndie
+      fireCost: 120
+    - proto: ForgeBulletDisabler
+      fireCost: 80
+
+- type: entity
+  id: BaseWeaponFrameEnergyRifleAssaultSyndie
+  parent: [ ForgeBaseWeaponEncumbranceRifleAssault, BaseWeaponBattery ]
+  suffix: Frontier
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunRequiresWield
+  - type: GunWieldBonus
+    minAngle: -0 # Set to 0 because GunRequiresWield
+    maxAngle: -0
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 1.5
+    maxAngle: 7.5
+    angleIncrease: 0.4
+    angleDecay: 2
+    fireRate: 3
+    selectedMode: FullAuto
+    availableModes:
+      - SemiAuto
+      - FullAuto
+  - type: SpeedModifiedOnWield
+    walkModifier: 1
+    sprintModifier: 1
+  # - type: CursorOffsetRequiresWield
+  # - type: EyeCursorOffset
+    # maxOffset: 2.5
+    # pvsIncrease: 0.25
+  - type: Battery # Default: 30 shots with 80 fireCost
+    maxCharge: 2400
+    startingCharge: 2400
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 15
+
+- type: entity
+  id: BaseWeaponFrameEnergyPistolSyndie
+  parent: [ ForgeBaseWeaponFrameEnergyPistol, BaseWeaponBattery ]
+  suffix: Frontier
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 1.5
+    maxAngle: 7.5
+    angleIncrease: 0.4
+    angleDecay: 2
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: SpeedModifiedOnWield
+    walkModifier: 1
+    sprintModifier: 1
+  # - type: CursorOffsetRequiresWield
+  # - type: EyeCursorOffset
+    # maxOffset: 2.5
+    # pvsIncrease: 0.25
+  - type: Battery # Default: 30 shots with 80 fireCost
+    maxCharge: 2400
+    startingCharge: 2400
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 12
+
+- type: entity
+  id: BulletLaserHeavySyndie
+  parent: ForgeBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 16
+        Radiation: 4
+    armorPenetration: 0.2 # Forge-Change: moved out of DamageSpecifier
+
+- type: entity
+  id: BulletLaserSyndie
+  parent: ForgeBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 11
+        Radiation: 3
+    armorPenetration: 0.15 # Forge-Change: moved out of DamageSpecifier
+
+- type: entity
+  id: WeaponSyndieEnergyFalconPistolLaser
+  parent: [ BaseWeaponEnergyPistolFireModesSyndie, BaseWeaponFrameEnergyPistolSyndie, BaseC3Contraband ]
+  name: pistol "Falcon"
+  description: |-
+    Powerful laser pistol specially designed by Vitezstvi for the Gorlax Marauders
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Battery/laser_pistol_syndie.rsi
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Battery/laser_pistol_syndie.rsi
+  - type: Battery # 26 shots
+    maxCharge: 1560
+    startingCharge: 1560
+  - type: BatterySelfRecharger # Recharges 1 shot per 2 seconds
+    autoRecharge: true
+    autoRechargeRate: 30
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Item
+
+- type: entity
+  name: energy shotgun #Удалите после появления нормального дробовика гсб :c
+  parent: [BaseWeaponBattery, BaseGunWieldable, BaseC2ContrabandUnredeemable] # Frontier: BaseGrandTheftContraband<BaseC2ContrabandUnredeemable
+  id: ForgeWeaponEnergyShotgun
+  suffix: Forge
+  description: A one-of-a-kind prototype energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon.
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Battery/e_shot.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-4
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Appearance
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Battery/e_shot.rsi
+  - type: Gun
+    fireRate: 2
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: ForgeBulletLaserSpread # use Forge variant
+    fireCost: 150
+  - type: BatteryWeaponFireModes
+    # move to Forge variants
+    fireModes:
+    - proto: ForgeBulletLaserSpread
+      fireCost: 150
+    - proto: ForgeBulletLaserSpreadNarrow
+      fireCost: 200
+    - proto: ForgeBulletDisablerSmgSpread
+      fireCost: 140
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,3,1
+    sprite: Objects/Weapons/Guns/Battery/inhands_64x.rsi
+    heldPrefix: energy
+  - type: GunRequiresWield
+  - type: Battery
+    maxCharge: 2400
+    startingCharge: 2400
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 60
+
+- type: entity
+  name: прототип NT1984
+  parent: [BaseWeaponBattery, BaseCentcommContraband]
+  id: WeaponDSPulseGun
+  description: Экспериментальная мультифазовая пушка способная уничтожать всё живое.
+  components:
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Appearance
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
+  - type: Gun
+    fireRate: 2
+    projectileSpeed: 60
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: ForgeBulletDisablerHeavy
+    fireCost: 100
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: ForgeBulletDisablerHeavy
+      fireCost: 100
+    - proto: ForgeBulletPulseSniper
+      fireCost: 100
+    - proto: ForgeBulletHeavyPulseNarrow
+      fireCost: 100
+  - type: Battery
+    maxCharge: 40000
+    startingCharge: 40000
+
+- type: entity
+  id: WeaponDOCLaserPistol
+  parent: [ BaseWeaponEnergyPistolFireModesDOC, ForgeBaseWeaponFrameEnergyPistolNanotrasen ]
+  name: DOC pistol
+  description: |-
+    Powerful laser pistol specially designed by Vitezstvi for the Director of Care
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Battery/DOC.rsi
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Battery/DOC.rsi
+  - type: Battery
+    maxCharge: 1200
+    startingCharge: 1200
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 35
+  - type: Tag
+
+- type: entity
+  id: BaseWeaponEnergyPistolFireModesDOC
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-energybolt-high
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletLaserDOC
+    fireCost: 120
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletLaserDOC
+      fireCost: 120
+    - proto: ForgeBulletDisabler
+      fireCost: 80
+
+- type: entity
+  id: BulletLaserDOC
+  parent: ForgeBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 10

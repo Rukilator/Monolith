@@ -1,0 +1,10 @@
+ent-WeaponPistolViperPMC = пистолет Viper ЧВК
+ent-WeaponSubMachineGunWt550PMC = ЧВК
+ent-WeaponSubMachineGunDrozdPMC = ПП «Дрозд» ЧВК
+ent-WeaponSubMachineGunC20rPMC = ПП C-20r ЧВК
+ent-WeaponRifleLecterPMC = ЧВК
+ent-WeaponShotgunKammererPMC = ЧВК
+ent-WeaponShotgunEnforcerPMC = ЧВК
+ent-WeaponEnergyGunPMC = энергетическое оружие ЧВК
+ent-WeaponLaserCannonPMC = лазерная пушка ЧВК
+ent-WeaponDisablerSMGPMC = обездвиживатель-ПП ЧВК

@@ -1,0 +1,12 @@
+ent-ForgeBaseWeaponFrameRifleAssaultFrontierGunsmith = штурмовая Frontier Gunsmith
+ent-ForgeBaseWeaponRifleAssaultChamber20Clip = патронник
+ent-ForgeBaseWeaponRifleAssaultChamber20Rubber = патронник
+ent-ForgeBaseWeaponFrameRifleAssaultNanotrasen = штурмовая Nanotrasen
+ent-ForgeBaseWeaponRifleAssaultChamber20 = магазин
+ent-ForgeBaseWeaponRifleAssaultChamber30 = магазин
+ent-ForgeBaseWeaponFrameRifleAssault = штурмовая винтовка
+ent-ForgeBaseWeaponRifleAssaultChamber30LowCapacity = патронник
+ent-ForgeBaseWeaponRifleAssaultChamber30Rubber = патронник
+ent-ForgeBaseWeaponRifleAssaultChamber30LowCapacityRubber = магазин
+ent-ForgeBaseWeaponFrameRifleAssaultCybersun = штурмовая Cybersun
+ent-ForgeBaseWeaponRifleAssaultChamber = патронник штурмовой

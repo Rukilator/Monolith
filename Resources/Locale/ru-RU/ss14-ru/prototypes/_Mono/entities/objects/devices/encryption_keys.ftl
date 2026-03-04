@@ -1,0 +1,9 @@
+﻿ent-EncryptionKeyUssp = ключ шифрования СССП
+    .desc = Ключ шифрования для тактического канала связи СССП.
+ent-EncryptionKeyUsspCommand = USSP command encryption key
+    .desc = An encryption key for the USSP command channel. Due to USSP higher-level networking being defunct, it instead provides access to tactical command.
+ent-EncryptionKeyVanguardCommand = vanguard command encryption key # mono
+    .desc = An encryption key used by officers in the vanguard. # Mono
+ent-EncryptionKeyStationMasterSR = EncryptionKeyStationMasterSR
+ent-EncryptionKeyDiplomacy = diplomatic encryption key
+    .desc = A direct communications channel to the heads of the sector's warring states.

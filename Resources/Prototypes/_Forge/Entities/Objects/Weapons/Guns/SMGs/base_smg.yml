@@ -1,0 +1,170 @@
+#region frame
+- type: entity
+  id: ForgeBaseWeaponFrameSubMachineGun
+  parent: [ ForgeBaseWeaponEncumbranceSubMachineGun, ForgeBaseItemWeaponGunMagazineFed ]
+  name: submachine gun
+  abstract: true
+  components:
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -0.8
+    maxAngle: -4
+  - type: Gun
+    projectileSpeed: 22.5
+    minAngle: 3.7
+    maxAngle: 18.5
+    angleIncrease: 1
+    angleDecay: 5
+    fireRate: 6
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+  - type: StaticPrice
+    price: 350
+
+#region manufacturer
+- type: entity
+  id: ForgeBaseWeaponFrameSubMachineGunNanotrasen
+  parent: ForgeBaseWeaponFrameSubMachineGun
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 4.3
+    maxAngle: 21.5
+    angleIncrease: 1.4
+    angleDecay: 4.8
+    fireRate: 5.1
+
+- type: entity
+  id: ForgeBaseWeaponFrameSubMachineGunCybersun
+  parent: [ BaseC3SyndicateContraband, ForgeBaseWeaponFrameSubMachineGun ]
+  abstract: true
+  components:
+  - type: Gun
+    angleIncrease: 1.1
+    angleDecay: 7.7
+    fireRate: 4.8
+
+- type: entity
+  id: ForgeBaseWeaponFrameSubMachineGunGorlex
+  parent: [ BaseC3SyndicateContraband, ForgeBaseWeaponFrameSubMachineGun ]
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 4.1
+    maxAngle: 20.5
+    angleIncrease: 1.8
+    angleDecay: 6.5
+
+- type: entity
+  id: ForgeBaseWeaponFrameSubMachineGunFrontierGunsmith
+  parent: [ ForgeBaseWeaponFrameSubMachineGun ]
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 4.4
+    maxAngle: 22
+    angleIncrease: 2.1
+    angleDecay: 6.7
+    fireRate: 4.8
+
+#region chamber
+- type: entity
+  id: ForgeBaseWeaponSubMachineGunChamber
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-25
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/smg.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/smg_cock.ogg
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+
+- type: entity
+  id: ForgeBaseWeaponSubMachineGunChamber35
+  parent: ForgeBaseWeaponSubMachineGunChamber
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazineSubMachineGun35
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist: &mag25Whitelist
+          tags:
+            - ForgeMagazineSubMachineGunPistol35
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber: &chamber25Standard
+        name: Chamber
+        startingItem: ForgeCartridgeRifle25
+        priority: 1
+        whitelist:
+          tags:
+            - ForgeCartridgeRifle25
+
+- type: entity
+  id: ForgeBaseWeaponSubMachineGunChamber35Rubber
+  parent: ForgeBaseWeaponSubMachineGunChamber35
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazineSubMachineGun35Rubber
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist: *mag25Whitelist
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber: &chamber25Rubber
+        name: Chamber
+        startingItem: ForgeCartridgeRifle25Rubber
+        priority: 1
+        whitelist:
+          tags:
+            - ForgeCartridgeRifle25
+
+- type: entity
+  id: ForgeBaseWeaponSubMachineGunChamber35TopMounted
+  parent: ForgeBaseWeaponSubMachineGunChamber
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazineSubMachineGunTopMounted35
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist: &mag25TopMountedWhitelist
+          tags:
+            - ForgeMagazineSubMachineGunTopMountedPistol35
+      gun_chamber: *chamber25Standard
+
+- type: entity
+  id: ForgeBaseWeaponSubMachineGunChamber35TopMountedRubber
+  parent: ForgeBaseWeaponSubMachineGunChamber35TopMounted
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazineSubMachineGunTopMounted35Rubber
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist: *mag25TopMountedWhitelist
+      gun_chamber: *chamber25Rubber

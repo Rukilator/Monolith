@@ -1,0 +1,129 @@
+# Pistols / SMGs
+- type: entity
+  parent: BasicHitscan
+  id: ForgeRedLightLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 10
+  - type: HitscanBasicRaycast
+    maxDistance: 21.0
+
+# Assault Rifles / Carbines
+- type: entity
+  parent: RedHeavyLaser
+  id: ForgeRedMediumLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 12
+  - type: HitscanBasicRaycast
+    maxDistance: 21.0
+
+# Rifles
+- type: entity
+  parent: RedHeavyLaser
+  id: ForgeRedHeavyLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 14
+  - type: HitscanBasicRaycast
+    maxDistance: 21.0
+
+# Sniper Rifles
+- type: entity
+  parent: RedShuttleLaser
+  id: ForgeRedSpecialLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 20
+  - type: HitscanBasicRaycast
+    maxDistance: 21.0
+
+
+# Pulse
+- type: entity
+  parent: Pulse
+  id: ForgePulse
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 30
+
+# Mobs
+- type: entity
+  parent: BasicHitscan
+  id: ForgeRedLaserPractice
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 1
+
+# Shuttle guns
+
+# Whatstone - got a rough value based on
+- type: entity
+  parent: RedShuttleLaser
+  id: ForgeRedShuttleLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicRaycast
+    maxDistance: 65.0
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 30 # Mono
+        Structural: 10
+
+
+- type: entity
+  parent: Pulse
+  id: FiredartLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 20
+  - type: HitscanBasicRaycast
+    maxDistance: 21
+
+- type: entity
+  parent: Pulse
+  id: ImmolationLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 40
+  - type: HitscanBasicRaycast
+    maxDistance: 21
+
+
+- type: entity
+  parent: XrayLaser
+  id: ForgeXrayLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 20
+        Radiation: 20
+  - type: HitscanBasicRaycast
+    maxDistance: 21

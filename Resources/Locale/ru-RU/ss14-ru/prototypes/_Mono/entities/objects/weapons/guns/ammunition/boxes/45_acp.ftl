@@ -1,0 +1,11 @@
+﻿ent-BaseAmmoBox45_ACP = коробка боеприпасов (.45 ACP FMJ)
+ent-AmmoBox45_ACPFMJ = ammunition box (.45 ACP FMJ)
+ent-AmmoBox45_ACPPractice = ammunition box (.45 ACP practice)
+ent-AmmoBox45_ACPIncendiary = ammunition box (.45 ACP incendiary)
+ent-AmmoBox45_ACPUranium = ammunition box (.45 ACP uranium)
+ent-AmmoBox45_ACPRubber = ammunition box (.45 ACP rubber)
+ent-AmmoBox45_ACPEmp = ammunition box (.45 ACP emp)
+ent-AmmoBox45_ACPHP = ammunition box (.45 ACP hollow-point)
+ent-AmmoBox45_ACPRIP = ammunition box (.45 ACP RIP)
+ent-AmmoBox45_ACPPlasteelAP = ammunition box (.45 ACP AP)
+ent-AmmoBox45_ACPBigFMJ = Big

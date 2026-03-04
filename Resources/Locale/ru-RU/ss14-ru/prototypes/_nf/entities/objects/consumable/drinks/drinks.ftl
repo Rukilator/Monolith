@@ -16,3 +16,6 @@ ent-DrinkTorpedoJuice = { ent-DrinkGlass }
 ent-DrinkBeesKnees = { ent-DrinkGlass }
     .suffix = пчелиные колени
     .desc = { ent-DrinkGlass.desc }
+
+ent-CondimentCup = стаканчик для приправ
+    .desc = Хлипкий стаканчик для приправ. Гарантия недействительна при наполнении чем-либо иным.

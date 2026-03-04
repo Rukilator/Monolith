@@ -15,3 +15,16 @@ ent-MobXenoSpitterExpeditions = Плевун
 ent-MobXenoQueenDungeon = Королева
     .desc = Королева — воплощение величия и силы улья. Она не только откладывает яйца, но и управляет своими детьми, направляя их усилия. Если она погибнет, улей потеряет всякое направление и распадётся. Королева — сердце и разум колонии, единственная и незаменимая.
     .suffix = ИИ/Призрак, Враждебный
+
+ent-NFMobXenoPraetorian = NFMobXenoPraetorian
+ent-NFMobXenoRouny = NFMobXenoRouny
+ent-NFMobXenoQueen = ghost-role-information-xeno-name
+    .desc = ghost-role-information-xeno-description
+ent-NFMobXenoRunner = NFMobXenoRunner
+ent-NFMobSmallPurpleSnake = NFMobSmallPurpleSnake
+ent-NFMobXeno = NFMobXeno
+ent-NFMobPurpleSnake = NFMobPurpleSnake
+ent-NFMobXenoSpitter = NFMobXenoSpitter
+ent-NFMobXenoRavager = NFMobXenoRavager
+ent-NFMobXenoDrone = ghost-role-information-xeno-name
+    .desc = ghost-role-information-xeno-descript

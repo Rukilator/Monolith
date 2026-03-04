@@ -1,0 +1,318 @@
+#region Pellets
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgun
+  name: pellet (.50)
+  parent: ForgeBasePellet
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 8
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgunOverpressure
+  name: pellet (.50 overpressure)
+  parent: ForgeBasePelletOverpressure
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 9.5
+    armorPenetration: 0.1 # Forge-Change
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgunIncendiary
+  name: pellet (.50 incendiary)
+  parent: ForgeBasePelletIncendiary
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 5
+        Heat: 4
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgunUranium
+  name: pellet (.50 uranium)
+  parent: ForgeBasePelletUranium
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 5
+        Radiation: 5
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgunPractice
+  name: pellet (.50 practice)
+  parent: ForgeBasePelletPractice
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 0.1
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgunImprovised
+  name: pellet (.50 improvised)
+  parent: ForgeBasePelletPractice
+  components:
+  - type: Sprite
+    layers:
+    - state: pellet
+      color: "#00aeffc8"
+      shader: unshaded
+    - state: pellet-trace
+      color: "#aaaaaaBB"
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 2
+        Slash: 2
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgunGlass
+  name: pellet (.50 glass)
+  parent: ForgePelletShotgunImprovised
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Slash: 3.5
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgunGrapeshot
+  name: pellet (.50 grapeshot)
+  parent: ForgeBasePellet
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 4
+        Structural: 5
+
+#region PelletsSpread
+- type: entity
+  id: ForgeBasePelletShotgunSpread
+  abstract: true
+  components:
+  - type: ProjectileSpread
+    count: 7 # eight(?) total, includes the spread as a bullet
+    spread: 10
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgunSpread
+  parent: [ForgeBasePelletShotgunSpread, ForgePelletShotgun]
+  components:
+  - type: ProjectileSpread
+    proto: ForgePelletShotgun
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgunOverpressureSpread
+  parent: [ForgeBasePelletShotgunSpread, ForgePelletShotgunOverpressure]
+  components:
+  - type: ProjectileSpread
+    proto: ForgePelletShotgunOverpressure
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgunIncendiarySpread
+  parent: [ForgeBasePelletShotgunSpread, ForgePelletShotgunIncendiary]
+  components:
+  - type: ProjectileSpread
+    proto: ForgePelletShotgunIncendiary
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgunPracticeSpread
+  parent: [ForgeBasePelletShotgunSpread, ForgePelletShotgunPractice]
+  components:
+  - type: ProjectileSpread
+    proto: ForgePelletShotgunPractice
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgunUraniumSpread
+  parent: [ForgeBasePelletShotgunSpread, ForgePelletShotgunUranium]
+  components:
+  - type: ProjectileSpread
+    proto: ForgePelletShotgunUranium
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgunImprovisedSpread
+  parent: [ForgeBasePelletShotgunSpread, ForgePelletShotgunImprovised]
+  components:
+  - type: ProjectileSpread
+    proto: ForgePelletShotgunImprovised
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgunGlassSpread
+  parent: [ForgeBasePelletShotgunSpread, ForgePelletShotgunGlass]
+  components:
+  - type: ProjectileSpread
+    proto: ForgePelletShotgunGlass
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgePelletShotgunGrapeshotSpread
+  parent: [ForgeBasePelletShotgunSpread, ForgePelletShotgunGrapeshot]
+  components:
+  - type: ProjectileSpread
+    proto: ForgePelletShotgunGrapeshot
+
+#region Slugs
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgeShotgunSlug
+  parent: ForgeBaseBullet
+  name: slug (.50)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 20
+        Blunt: 10
+        Structural: 25
+    armorPenetration: 0.2 # Forge-Change
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgeShotgunSlugBeanbag
+  parent: ForgeBaseBulletRubber
+  name: beanbag (.50)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 10
+  - type: StaminaDamageOnCollide
+    damage: 30 # 4 hits to stun
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ForgeShotgunSlugTranquilizer
+  parent: ForgeBaseBullet
+  name: slug (.50 tranquilizer)
+  components:
+  - type: Sprite
+    layers:
+    - state: pellet
+      color: "#00ffffFF"
+      shader: unshaded
+    - state: pellet-trace
+      color: "#00ffffBB"
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 1
+  - type: SolutionContainerManager
+    solutions:
+      ammo:
+        maxVol: 15
+  - type: RefillableSolution
+    solution: ammo
+  - type: DrainableSolution
+    solution: ammo
+  - type: SolutionInjectOnProjectileHit
+    transferAmount: 15
+    solution: ammo
+  - type: InjectableSolution
+    solution: ammo
+  - type: Tracer
+    color: "#00ffffFF"
+    length: 2
+
+- type: entity
+  id: PelletKS23Flashbang
+  name: flashbang (.90)
+  parent: [ BaseBullet, BaseBulletTrigger ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: slug
+  - type: FlashOnTrigger
+    range: 3
+  - type: SpawnOnTrigger
+    proto: GrenadeFlashEffect
+  - type: ActiveTimerTrigger
+    timeRemaining: 1
+  - type: DeleteOnTrigger
+  - type: Projectile
+    damage:
+      types:
+       Heat: 15
+
+- type: entity
+  id: PelletKS23Smoke
+  name: smoke (.90)
+  parent: [ BaseBullet, BaseBulletTrigger ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: slug
+  - type: SmokeOnTrigger
+    duration: 5
+    smokePrototype: Smoke
+    solution:
+      reagents:
+      - ReagentId: TearGas
+        Quantity: 50
+    spreadAmount: 1
+  - type: ActiveTimerTrigger
+    timeRemaining: 1
+  - type: DeleteOnTrigger
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 10
+
+- type: entity
+  id: PelletKS23Base
+  name: (.90)
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: buckshot
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 9
+
+- type: entity
+  id: PelletKS23BaseSpread
+  parent: PelletKS23Base
+  components:
+  - type: ProjectileSpread
+    proto: PelletKS23Base
+    count: 6
+    spread: 5
+
+- type: entity
+  id: PelletKS23Beanbag
+  name: beanbag (.90)
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: buckshot
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 10
+  - type: StaminaDamageOnCollide
+    damage: 60

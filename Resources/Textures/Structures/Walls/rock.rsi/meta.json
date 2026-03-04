@@ -214,6 +214,23 @@
         },
         {
             "name": "rock_andesite_west"
+        },
+                {
+            "name": "rock_magmite"
+		},
+        {
+            "name": "gibtonite_active",
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "gibtonite_inactive"
         }
     ]
 }

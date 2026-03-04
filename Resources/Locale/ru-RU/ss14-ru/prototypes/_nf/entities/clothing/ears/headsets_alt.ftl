@@ -14,3 +14,14 @@ ent-ClothingHeadsetAltNfsdGreenCentcom = полноразмерная гарни
     .desc = { ent-ClothingHeadsetAlt.desc }
 ent-ClothingHeadsetAltNfsdCreamandBrownCentcom = полноразмерная гарнитура ДСБФ
     .desc = { ent-ClothingHeadsetAlt.desc }
+
+ent-ClothingHeadsetAltCargoCommon = ClothingHeadsetAltCargoCommon
+ent-ClothingHeadsetAltSecurityCommon = ClothingHeadsetAltSecurityCommon
+ent-ClothingHeadsetAltCentComCommonSR = ClothingHeadsetAltCentComCommonSR
+ent-ClothingHeadsetAltMercenaryCommon = ClothingHeadsetAltMercenaryCommon
+ent-ClothingHeadsetAltEngineeringCommon = ClothingHeadsetAltEngineeringCommon
+ent-ClothingHeadsetAltCommandCommon = ClothingHeadsetAltCommandCommon
+ent-ClothingHeadsetAltMedicalCommon = ClothingHeadsetAltMedicalCommon
+ent-ClothingHeadsetAltScienceCommon = ClothingHeadsetAltScienceCommon
+ent-ClothingHeadsetAltPilotCommon = ClothingHeadsetAltPilotCommon
+ent-ClothingHeadsetAltCentComCommon = ClothingHeadsetAltCentComCommon

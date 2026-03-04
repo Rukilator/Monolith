@@ -1,0 +1,4 @@
+ent-UnknownShuttleChimeraSakuratsu = UnknownShuttleChimeraSakuratsu
+ent-UnknownShuttleChimeraOlympus = UnknownShuttleChimeraOlympus
+ent-UnknownShuttleChimeraTethys = UnknownShuttleChimeraTethys
+ent-UnknownShuttleChimeraLegionnaire = UnknownShuttleChimeraLegionnaire

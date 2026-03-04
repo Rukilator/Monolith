@@ -99,6 +99,10 @@
     - Chemicals
   - type: PirateBountyItem # Frontier
     id: HydroponicsTray # Frontier
+  #<Forge>
+  - type: TTS # Corvax-TTS
+    voice: TrainingRobot
+  #<Forge>
 
 - type: entity
   parent: hydroponicsTray

@@ -1,0 +1,16 @@
+ent-MachineDriveCTLA25Circuitboard = плата блюспейс-двигателя CTLA-25
+    .desc = Плата для блюспейс-двигателя.
+ent-MachineGCSLowCircuitboard = low-power gunnery control server board
+    .desc = Плата машины для консоли управления орудиями (GCS).
+ent-MachineGCSMediumCircuitboard = medium-power gunnery control server board
+    .desc = Плата машины для консоли управления орудиями (GCS).
+ent-MachineGCSHighCircuitboard = high-power gunnery control server board
+    .desc = Плата машины для консоли управления орудиями (GCS).
+ent-MachineGCSUltraCircuitboard = ultra-high-power gunnery control server board
+    .desc = Плата машины для консоли управления орудиями (GCS).
+ent-MachineGCSStationCircuitboard = station gunnery control server board
+    .desc = Плата машины для консоли управления орудиями (GCS).
+ent-MachineDriveCTLA25sCircuitboard = CTLA-25s bluespace drive board
+    .desc = Плата машины для продвинутого блюспейс-двигателя.
+ent-MachineDriveCTLA50Circuitboard = CTLA-50 bluespace drive board
+    .desc = Плата машины для продвинутого блюспейс-двигателя.

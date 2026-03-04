@@ -50,3 +50,4 @@ ent-ClothingOuterEVASuitLvhi = скафандр EVA LVHI
     .desc = Костюм для выхода в открытый космос со встроенным шлемом, обычно выдаваемый персоналу компании Langstad-Voigt Heavy Industries (LVHI).
 ent-ClothingOuterEVASuitFsb = скафандр EVA FSB
     .desc = Стандартный костюм EVA для судов корпорации "Far Star Biotech". Он поставляется с двумя подстаканниками.
+ent-NFClothingOuterEVASuitBase = NFClothingOuterEVASuitBase

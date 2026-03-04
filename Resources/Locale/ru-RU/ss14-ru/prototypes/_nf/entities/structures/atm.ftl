@@ -28,3 +28,12 @@ ent-StationAdminBankATMMedical = { ent-StationAdminBankATM }
     .desc = { ent-StationAdminBankATM.desc }
 ent-StationAdminBankATMNfsd = { ent-StationAdminBankATM }
     .desc = { ent-StationAdminBankATM.desc }
+
+ent-BaseStationAdminBankATM = консоль администрирования станции
+    .desc = Используется для перевода средств на счёт станции и обратно.
+ent-ComputerBankATMDepositFree = банкомат
+    .desc = Используется для ввода и вывода средств с личного банковского счёта.
+ent-ComputerBankATMFree = банкомат
+ent-StationAdminBankATMBlackMarket = консоль чёрного рынка
+    .desc = Используется для перевода средств на счёт чёрного рынка и обратно.
+ent-ComputerWallmountBankATMFree = настенный банкомат

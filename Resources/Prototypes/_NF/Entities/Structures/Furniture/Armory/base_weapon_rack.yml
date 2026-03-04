@@ -142,6 +142,8 @@
   parent: StructureGunRack
   suffix: Empty, Wallmount
   components:
+  - type: Transform
+    noRot: false
   - type: WallMount
     arc: 360
   - type: Sprite
@@ -237,6 +239,8 @@
   parent: StructureMeleeWeaponRack
   suffix: Empty, Wallmount
   components:
+  - type: Transform
+    noRot: false
   - type: WallMount
     arc: 360
   - type: Sprite
@@ -329,6 +333,8 @@
   parent: StructurePistolRack
   suffix: Empty, Wallmount
   components:
+  - type: Transform
+    noRot: false
   - type: WallMount
     arc: 360
   - type: Sprite

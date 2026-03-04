@@ -1,0 +1,11 @@
+﻿ent-WeaponTurretLaserTSFMC = лазерная турель
+ent-WeaponTurretLaserSilicon = Frontier, Silicon
+ent-WeaponTurretTSFMC = TSFMC
+ent-WeaponTurretUSSP = USSP
+ent-WeaponTurretPDV = PDV
+ent-BaseMk290Sentry = MK-290 Sentry
+    .desc = The MK-290 deployable sentry system designed in the old United Nations of Earth, and serving continued use with the TSF armed forces.
+ent-WeaponTurretMk290 = WeaponTurretMk290
+ent-WeaponTurretMk290Empty = TSFMC, Empty
+ent-WeaponTurretMk290Packed = TSFMC, Packed
+    .desc = A disassembled and packed MK-290 sentry system.

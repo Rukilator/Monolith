@@ -1,0 +1,11 @@
+﻿ent-BaseCartridge762x39mm = патрон (7.62x39мм FMJ)
+    .desc = Появившийся более 400 лет назад, этот патрон использовался в винтовках множества ополчений и армий.
+ent-Cartridge762x39mmFMJ = патрон (7.62x39mm FMJ)
+ent-Cartridge762x39mmPractice = cartridge (7.62x39mm practice)
+ent-Cartridge762x39mmIncendiary = cartridge (7.62x39mm incendiary)
+ent-Cartridge762x39mmUranium = cartridge (7.62x39mm uranium)
+ent-Cartridge762x39mmRubber = cartridge (7.62x39mm rubber)
+ent-Cartridge762x39mmSubsonic = cartridge (7.62x39mm subsonic)
+ent-Cartridge762x39mmHP = cartridge (7.62x39mm hollow-point)
+ent-Cartridge762x39mmRIP = патрон (7.62x39mm RIP)
+ent-Cartridge762x39mmPlasteelAP = патрон (7.62x39mm AP)

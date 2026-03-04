@@ -1,0 +1,127 @@
+- type: entity
+  parent: BaseAmmoProvider
+  id: AmmoProviderKS23Shell
+  abstract: true
+  components:
+    - type: BallisticAmmoProvider
+      mayTransfer: true
+      whitelist:
+        tags:
+        - ShellKS23
+      capacity: 6
+    - type: Item
+      size: Normal
+      shape:
+      - 0,0,1,0
+
+- type: entity
+  name: KS23 lethal cartridges dispenser
+  parent: AmmoProviderKS23Shell
+  id: BoxLethalshotKS23
+  description: A dispenser box full of lethal pellet shots.
+  components:
+    - type: BallisticAmmoProvider
+      proto: ShellKS23Base
+    - type: Icon
+      sprite: Forge/Objects/Storage/boxes.rsi
+      state: KS23BaseDispenser
+    - type: Sprite
+      sprite: Forge/Objects/Storage/boxes.rsi
+      state: KS23BaseDispenser
+
+- type: entity
+  name: KS23 flashbang cartridges dispenser
+  parent: AmmoProviderKS23Shell
+  id: BoxFlashbangKS23
+  description: A dispenser box full of flashbang pellet shots.
+  components:
+    - type: BallisticAmmoProvider
+      proto: ShellKS23Flashbang
+    - type: Icon
+      sprite: Forge/Objects/Storage/boxes.rsi
+      state: KS23FlashbangDispenser
+    - type: Sprite
+      sprite: Forge/Objects/Storage/boxes.rsi
+      state: KS23FlashbangDispenser
+
+- type: entity
+  name: KS23 smoke cartridges dispenser
+  parent: AmmoProviderKS23Shell
+  id: BoxSmokeKS23
+  description: A dispenser box full of smoke pellet shots.
+  components:
+    - type: BallisticAmmoProvider
+      proto: ShellKS23Smoke
+    - type: Icon
+      sprite: Forge/Objects/Storage/boxes.rsi
+      state: KS23SmokeDispenser
+    - type: Sprite
+      sprite: Forge/Objects/Storage/boxes.rsi
+      state: KS23SmokeDispenser
+
+- type: entity
+  name: KS23 beanbag cartridges dispenser
+  parent: AmmoProviderKS23Shell
+  id: BoxBeanbagKS23
+  description: A dispenser box full of beanbag pellet shots.
+  components:
+    - type: BallisticAmmoProvider
+      proto: ShellKS23Beanbag
+    - type: Icon
+      sprite: Forge/Objects/Storage/boxes.rsi
+      state: KS23BeanbagDispenser
+    - type: Sprite
+      sprite: Forge/Objects/Storage/boxes.rsi
+      state: KS23BeanbagDispenser
+
+# Forge-Change: ported NF shotgun ammo boxes from Frontier1 with Forge prefix
+
+- type: entity
+  id: ForgeBaseAmmunitionBoxShellShotgun
+  parent: ForgeBaseAmmunitionBox
+  name: shell box (.50 shell)
+  abstract: true
+  components:
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - ShellShotgun
+    capacity: 20
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi
+
+- type: entity
+  id: ForgeAmmunitionBoxShellShotgunIncendiary
+  parent: [ForgeBaseAmmunitionBoxShellShotgun, BaseC2ContrabandUnredeemable]
+  name: shell box (.50 incendiary)
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeShellShotgunIncendiary
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#897e6a"
+    - state: decal-01
+      color: "#ff0000"
+    - state: decal-shell-incendiary
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: ForgeAmmunitionBoxShellShotgunUranium
+  parent: [ForgeBaseAmmunitionBoxShellShotgun, BaseC2ContrabandUnredeemable]
+  name: shell box (.50 uranium)
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeShellShotgunUranium
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#897e6a"
+    - state: decal-01
+      color: "#00ff00"
+    - state: decal-shell-uranium
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]

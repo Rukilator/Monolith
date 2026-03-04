@@ -1,0 +1,185 @@
+#region Base
+- type: entity
+  categories: [ HideSpawnMenu ] # Frontier
+  id: BaseShellShotgun
+  name: shell (.50)
+  parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: added BaseC1Contraband
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - ShellShotgun
+  - type: CartridgeAmmo
+    soundEject:
+      collection: ShellEject
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  id: ForgeBaseShellShotgun
+  name: shell (.50)
+  parent: [ BaseC1Contraband, BaseShellShotgun ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - ShellShotgun
+
+- type: entity
+  id: ForgeBaseShellShotgunLight
+  parent: ForgeBaseShellShotgun
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - ShellShotgun
+    - ShellShotgunLight
+
+#region Pellets
+- type: entity
+  id: ForgeShellShotgunBuckshot
+  name: shell (.50 buckshot)
+  parent: ForgeBaseShellShotgun
+  components:
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: ForgePelletShotgunSpread
+
+- type: entity
+  id: ForgeShellShotgunBuckshotOverpressure
+  name: shell (.50 overpressure)
+  parent: ForgeBaseShellShotgun
+  components:
+  - type: Sprite
+    layers:
+      - sprite: _NF/Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
+        state: overpressure
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: ForgePelletShotgunOverpressureSpread
+  - type: SpentAmmoVisuals
+    state: "overpressure"
+
+- type: entity
+  id: ForgeShellShotgunIncendiary
+  name: shell (.50 incendiary)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseShellShotgun] # Corvax-Forge: Contraband T2
+  components:
+  - type: Sprite
+    layers:
+      - state: incendiary
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: ForgePelletShotgunIncendiarySpread
+  - type: SpentAmmoVisuals
+    state: "incendiary"
+
+- type: entity
+  id: ForgeShellShotgunPractice
+  name: shell (.50 practice)
+  parent: ForgeBaseShellShotgun
+  components:
+  - type: Sprite
+    layers:
+      - state: practice
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: ForgePelletShotgunPracticeSpread
+  - type: SpentAmmoVisuals
+    state: "practice"
+
+- type: entity
+  id: ForgeShellShotgunUranium
+  name: shell (.50 uranium)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseShellShotgun] # Corvax-Forge: Contraband T2
+  components:
+  - type: Sprite
+    layers:
+      - state: depleted-uranium
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: ForgePelletShotgunUraniumSpread
+  - type: SpentAmmoVisuals
+    state: "depleted-uranium"
+
+- type: entity
+  id: ForgeShellShotgunImprovised
+  name: shell (.50 improvised)
+  parent: ForgeBaseShellShotgun
+  components:
+  - type: Sprite
+    layers:
+      - state: improvised
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: ForgePelletShotgunImprovisedSpread
+  - type: SpentAmmoVisuals
+    state: "improvised"
+  - type: Construction
+    graph: ImprovisedShotgunShellGraph
+    node: shell
+
+#region Slugs
+- type: entity
+  id: ForgeShellShotgunSlug
+  name: shell (.50 slug)
+  parent: ForgeBaseShellShotgun
+  components:
+  - type: Sprite
+    layers:
+      - state: slug
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: ForgeShotgunSlug
+  - type: SpentAmmoVisuals
+    state: "slug"
+
+- type: entity
+  id: ForgeShellShotgunBeanbag
+  name: shell (.50 beanbag)
+  parent: ForgeBaseShellShotgunLight
+  components:
+  - type: Sprite
+    layers:
+      - state: beanbag
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: ForgeShotgunSlugBeanbag
+  - type: SpentAmmoVisuals
+    state: "beanbag"
+
+- type: entity
+  id: ForgeShellShotgunTranquilizer
+  name: shell (.50 tranquilizer)
+  parent: ForgeBaseShellShotgunLight
+  components:
+  - type: Sprite
+    layers:
+      - state: tranquilizer
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: ForgeShotgunSlugTranquilizer
+  - type: SpentAmmoVisuals
+    state: "tranquilizer"
+  - type: ChemicalAmmo
+  - type: SolutionContainerManager
+    solutions:
+      ammo:
+        reagents:
+        - ReagentId: ChloralHydrate
+          Quantity: 4
+  - type: SolutionTransfer
+    maxTransferAmount: 4

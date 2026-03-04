@@ -44,3 +44,8 @@ ent-MobSpawnSilverGolem = Спавнер Серебрянный Голем
     .desc = { ent-MobSpawnCrabNFQuartz.desc }
 ent-MobSpawnUraniumGolem = Спавнер Урановый Голем
     .desc = { ent-MobSpawnCrabNFQuartz.desc }
+
+ent-MobSpawnScrapbot = спавнер мусорщика
+ent-MobSpawnScrapbotThreads = спавнер мусорщика
+ent-MobSpawnScrapbotLaser = спавнер мусорщика
+ent-MobSpawnScrapbotThrusters = спавнер мусорщика

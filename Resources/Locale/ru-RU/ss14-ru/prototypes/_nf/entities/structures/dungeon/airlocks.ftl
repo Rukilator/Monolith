@@ -43,3 +43,4 @@ ent-AirlockScienceGlassLockedDungeon = { ent-AirlockScienceGlassLocked }
 ent-AirlockHydroGlassLockedDungeon = { ent-AirlockHydroGlassLocked }
     .suffix = НЕ МАППИТЬ, ТОЛЬКО ЭКСПЫ
     .desc = { ent-AirlockHydroGlassLocked.desc }
+ent-AirlockEngineeringGlassLockedDungeon = AirlockEngineeringGlassLockedDungeon

@@ -7,7 +7,7 @@ ent-LockerJanitor = шкафчик уборщика
 ent-LockerPilot = шкафчик пилота
     .desc = { ent-LockerBaseSecure.desc }
 ent-LockerWoodenGeneric = деревянный шкаф
-    .desc = Dusty old wooden cabinet. Smells like grandparents.
+    .desc = Пыльный старый деревянный шкаф. Пахнет как у бабушки.
 ent-LockerNfsdEvidence = шкафчик с уликами ДСБФ
     .desc = { ent-LockerBaseSecure.desc }
 ent-LockerNfsdCopper = шкафчик кадета ДСБФ
@@ -24,3 +24,6 @@ ent-LockerNfsdSheriff = шкафчик шерифа ДСБФ
     .desc = { ent-LockerBaseSecure.desc }
 ent-LockerStationRepresentative = шкафчик представителя фронтира
     .desc = { ent-LockerBaseSecure.desc }
+
+ent-LockerMaterials = шкаф с материалами
+ent-NFLockerBaseSecure = шкафчик почтальона

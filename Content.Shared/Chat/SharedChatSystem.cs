@@ -25,7 +25,10 @@ public abstract class SharedChatSystem : EntitySystem
     public const char AdminPrefix = ']';
     public const char WhisperPrefix = ',';
     public const char CollectiveMindPrefix = '+';
-    public const char DefaultChannelKey = 'h';
+    public const char DefaultChannelKey = 'а'; // Corvax-Frontier-Edit
+    public const int VoiceRange = 10; // how far voice goes in world units /// Forge-Change
+    public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units /// Forge-Change
+    public const int WhisperMuffledRange = 5; // how far whisper goes at all, in world units /// Forge-Change
 
     [ValidatePrototypeId<RadioChannelPrototype>]
     public const string CommonChannel = "Common";

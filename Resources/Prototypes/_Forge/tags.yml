@@ -1,0 +1,215 @@
+- type: Tag
+  id: CartridgeVector22
+
+- type: Tag
+  id: CartridgeVector45
+
+- type: Tag
+  id: ChemicalMedipen
+
+- type: Tag
+  id: SyndicateSabre
+
+- type: Tag
+  id: MagazineAntiMateriel
+
+- type: Tag
+  id: MagazineVector22
+
+- type: Tag
+  id: MagazineVector45
+
+- type: Tag
+  id: MagazineP90LRK
+
+- type: Tag
+  id: ShuttleShotgunShellsBox
+
+- type: Tag
+  id: ShuttleRifleAmmoBox
+
+- type: Tag
+  id: ShuttleSmgRifleAmmoBox
+
+- type: Tag
+  id: ShuttleMagnumRifleAmmoBox
+
+- type: Tag
+  id: Postman
+
+- type: Tag
+  id: ShellKS23
+
+- type: Tag
+  id: ColiseumGrenade
+
+- type: Tag
+  id: ColiseumMagazineGrenade
+
+- type: Tag
+  id: ColiseumCoin
+
+- type: Tag
+  id: SolarAssemblyFlatpack
+
+- type: Tag
+  id: Jetpack
+
+- type: Tag
+  id: SpaceCash
+
+- type: Tag
+  id: CyberPen
+
+- type: Tag
+  id: BookSmygler
+
+- type: Tag
+  id: TMagazineGrenade
+
+- type: Tag
+  id: MercenaryToken
+
+- type: Tag
+  id: BookPirateCodex
+
+- type: Tag
+  id: BookSCadet
+
+- type: Tag
+  id: BookSComa
+
+- type: Tag
+  id: BookSParamed
+
+- type: Tag
+  id: BookSShturm
+
+- type: Tag
+  id: BookPirateCode
+
+- type: Tag
+  id: LuxuryPen
+
+- type: Tag
+  id: SSpaceCash
+
+- type: Tag
+  id: Ipc
+
+- type: Tag
+  id: NightVisionGoggles
+
+- type: Tag
+  id: BaseEnergySwordTL
+
+- type: Tag
+  id: MagazineRifle45
+
+- type: Tag
+  id: ForgeBlueprintMercenaryTechfab
+
+- type: Tag
+  id: ForgeBlueprintNfsdTechfab
+
+  # .25
+- type: Tag
+  id: ForgeMagazineRifle25
+
+- type: Tag
+  id: ForgeCartridgeRifle25
+
+  # .35
+- type: Tag
+  id: ForgeMagazinePistol35
+
+- type: Tag
+  id: ForgeMagazineSubMachineGunPistol35
+
+- type: Tag
+  id: ForgeMagazineHighCapacityPistol35
+
+- type: Tag
+  id: ForgeCartridgePistol35
+
+  # .45
+- type: Tag
+  id: ForgeMagazinePistol45
+
+- type: Tag
+  id: ForgeCartridgePistol45
+
+- type: Tag
+  id: ForgeSpeedLoaderPistol45
+
+  # .60
+- type: Tag
+  id: ForgeCartridgeRifle60
+
+  # .30
+- type: Tag
+  id: ForgeMagazineRifle30
+
+- type: Tag
+  id: ForgeCartridgeRifle30
+
+- type: Tag
+  id: ForgeMagazineLowCapacityRifle30
+
+  # .20
+- type: Tag
+  id: ForgeMagazineClipRifle20
+
+- type: Tag
+  id: ForgeMagazineBoxRifle20
+
+- type: Tag
+  id: ForgeMagazineRifle20
+
+- type: Tag
+  id: ForgeCartridgeRifle20
+
+- type: Tag
+  id: ForgeMagazineDrumRifle20
+
+- type: Tag
+  id: CartridgeRifle
+
+- type: Tag
+  id: CartridgeAntiMateriel
+
+- type: Tag
+  id: MagazineShotgun
+
+- type: Tag
+  id: ShellShotgun
+
+- type: Tag
+  id: 203mmCartridge
+
+- type: Tag
+  id: ForgeMagazineSubMachineGunTopMountedPistol35
+
+- type: Tag
+  id: ForgeMagazineSubMachineGunPistol45
+
+- type: Tag
+  id: MagazinePistolCaselessRifle
+
+- type: Tag
+  id: MagazinePistolSubMachineGunTopMounted
+
+- type: Tag
+  id: CartridgePistol
+
+- type: Tag
+  id: CartridgeCaselessRifle
+
+- type: Tag
+  id: MagazineCaselessRifle
+
+- type: Tag
+  id: CartridgeMagnum
+
+- type: Tag
+  id: ShellShotgunLight

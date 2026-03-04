@@ -1,0 +1,10 @@
+ent-BallisticTurretHeavyBase = тяжёлая баллистическая турель
+    .desc = Мощно бронированная турель, ведущая шквальный огонь патронами 8x65мм СКР, разрывающими цели. Горе глупцу, что окажется перед ней.
+ent-WeaponTurretHeavyNanoTrasen = NanoTrasen
+ent-WeaponTurretHeavyHostile = враждебный
+ent-WeaponTurretHeavyAllHostile = все враждебные
+ent-WeaponTurretHeavySyndicate = Синдикат
+ent-WeaponTurretHeavyTSFMC = TSF
+ent-WeaponTurretHeavyVDN = PDV
+ent-WeaponTurretHeavyMD = медицинский
+ent-WeaponTurretHeavySilicon = враждебный ИИ

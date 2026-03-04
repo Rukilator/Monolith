@@ -23,13 +23,13 @@
     children:
     - id: BluespaceCacheError
 #    - id: BluespaceCave # Mono edit
-    - id: BluespaceVaultError
-    - id: BluespaceVaultSmallError
-    - id: BluespaceSyndicateFTLInterception
+#    - id: BluespaceVaultError
+#    - id: BluespaceVaultSmallError
+#    - id: BluespaceSyndicateFTLInterception
 # Mono edit start
 #    - id: BluespaceWizardFederationScout
 #    - id: BluespaceBloodMoon
-    - id: BluespacePreFractureFTLInterception
+#    - id: BluespacePreFractureFTLInterception
 # Mono edit end
 
 - type: entity

@@ -1,0 +1,3 @@
+ent-ForgeBaseWeaponLightMachineGunChamber20 = магазин
+ent-ForgeBaseWeaponFrameLightMachineGunGorlex = ручной пулемёт Gorlex
+ent-ForgeBaseWeaponFrameLightMachineGun = ручной пулемёт

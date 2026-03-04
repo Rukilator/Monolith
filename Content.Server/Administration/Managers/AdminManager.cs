@@ -1,6 +1,8 @@
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Content.Server.Chat.Managers;
 using Content.Server.Database;
@@ -392,7 +394,8 @@ namespace Content.Server.Administration.Managers
 
             _admins.Add(session, reg);
 
-            if (session.ContentData()!.Stealthed)
+            // Forge-Change: guard nullable ContentData() when checking Stealthed
+            if (session.ContentData() is { Stealthed: true })
                 reg.Data.Stealth = true;
 
             if (reg.Data.Active)

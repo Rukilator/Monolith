@@ -90,3 +90,9 @@ ent-NFPlushieEngineer = плюшевый унатх инженер
 ent-PlushieSlips = Плюшевый уборщик
 ent-DBToySword = Игрушечный двухклинковый меч
 ent-PlushieTrystan = Плюшевая офисная вульпа
+
+ent-PlushieYarrMoth = плюшевая пиратская моль
+    .desc = Коварный и в шикарном плаще. Стрекочет, когда сжимаешь!
+ent-RevolverCapGunFakeGrown = RevolverCapGunFakeGrown
+ent-PlushieMailVulp = плюшевый почтовый вульп
+    .desc = Пахнет мятой и напоминает о непрочитанной почте. Проверьте почту!

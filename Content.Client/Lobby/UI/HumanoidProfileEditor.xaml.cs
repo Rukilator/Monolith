@@ -9,6 +9,7 @@ using Content.Client.Players.PlayTimeTracking;
 using Content.Client.Sprite;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Client.UserInterface.Controls;
+using Content.Shared._Forge;
 using Content.Shared._Mono.Company;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing;
@@ -390,6 +391,16 @@ namespace Content.Client.Lobby.UI
 
             #endregion Width
 
+            #region Barks
+            // Corvax-Frontier-Barks-Start
+            if (_cfgManager.GetCVar(ForgeVars.BarksEnabled))
+            {
+                BarksContainer.Visible = true;
+                InitializeBarkVoice();
+            }
+            // Corvax-Frontier-Barks-End
+            #endregion Barks
+
             #region Eyes
 
             EyeColorPicker.OnEyeColorPicked += newColor =>
@@ -521,6 +532,7 @@ namespace Content.Client.Lobby.UI
             #endregion Markings
 
             RefreshFlavorText();
+            RefreshTTS(); // Corvax-TTS
 
             #region Dummy
 
@@ -1191,6 +1203,7 @@ namespace Content.Client.Lobby.UI
             UpdateSpawnPriorityControls();
             UpdateHeightControls();
             UpdateWidthControls();
+            UpdateBarkVoicesControls(); // Corvax-Frontier-Barks
             UpdateAgeEdit();
             UpdateEyePickers();
             UpdateSaveButton();
@@ -1206,6 +1219,8 @@ namespace Content.Client.Lobby.UI
             RefreshSpecies();
             RefreshTraits();
             RefreshFlavorText();
+            RefreshTTS(); // Corvax-TTS
+            UpdateTTSControls(); // Corvax-TTS
             ReloadPreview();
 
             if (Profile != null)
@@ -1708,11 +1723,27 @@ namespace Content.Client.Lobby.UI
             _entManager.System<MetaDataSystem>().SetEntityName(PreviewDummy, newName);
         }
 
-        private void SetSpawnPriority(SpawnPriorityPreference newSpawnPriority)
+        private void SetSpawnPriority(SpawnPriorityPreference newSpawnPriority) 
         {
             Profile = Profile?.WithSpawnPriorityPreference(newSpawnPriority);
             SetDirty();
         }
+
+        // Corvax-Frontier-Barks-start
+        private void SetBarkVoice(string newVoice)
+        {
+            Profile = Profile?.WithBarkVoice(newVoice);
+            IsDirty = true;
+        }
+        // Corvax-Frontier-Barks-end
+
+        // Corvax-TTS-Start
+        private void SetVoice(string newVoice)
+        {
+            Profile = Profile?.WithVoice(newVoice);
+            IsDirty = true;
+        }
+        // Corvax-TTS-End
 
         private void SetHeight(float newHeight)
         {

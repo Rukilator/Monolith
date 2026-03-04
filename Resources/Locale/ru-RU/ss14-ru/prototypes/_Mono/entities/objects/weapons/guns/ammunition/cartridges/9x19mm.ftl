@@ -1,0 +1,11 @@
+﻿ent-BaseCartridge9x19mm = патрон (9x19мм FMJ)
+    .desc = Обычный пистолетный патрон. Лёгок в обращении, неплохо действует по незащищённой плоти.
+ent-Cartridge9x19mmFMJ = патрон (9x19mm FMJ)
+ent-Cartridge9x19mmPractice = cartridge (9x19mm practice)
+ent-Cartridge9x19mmIncendiary = cartridge (9x19mm incendiary)
+ent-Cartridge9x19mmUranium = cartridge (9x19mm uranium)
+ent-Cartridge9x19mmRubber = cartridge (9x19mm rubber)
+ent-Cartridge9x19mmEmp = патрон (9x19mm emp)
+ent-Cartridge9x19mmHP = cartridge (9x19mm hollow-point)
+ent-Cartridge9x19mmRIP = патрон (9x19mm RIP)
+ent-Cartridge9x19mmPlasteelAP = патрон (9x19mm AP)

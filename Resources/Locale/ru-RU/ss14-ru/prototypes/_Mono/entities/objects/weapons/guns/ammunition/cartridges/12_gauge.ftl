@@ -1,0 +1,16 @@
+ent-BaseShellShotgun12_gauge = дробовой патрон (12 калибр)
+    .desc = Стандартный дробовой патрон, распространённый практически повсеместно.
+ent-ShellShotgun12_gaugeBeanbag = shotgun shell (12 gauge beanbag)
+ent-ShellShotgun12_gaugeSlug = shotgun shell (12 gauge slug)
+ent-ShellShotgun12_gaugeFlare = flare shell (12 gauge flare)
+ent-ShellShotgun12_gaugeBuckshot = shotgun shell (12 gauge buckshot)
+ent-ShellShotgun12_gaugeIncendiary = shotgun shell (12 gauge incendiary)
+ent-ShellShotgun12_gaugePractice = shotgun shell (12 gauge practice)
+ent-ShellShotgun12_gaugeTranquilizer = shotgun shell (12 gauge tranquilizer)
+ent-ShellShotgun12_gaugeImprovised = improvised shotgun shell (12 gauge)
+    .desc = Самодельный дробовой патрон со стеклянной шрапнелью. Разлёт такой, что в сарай с десяти шагов не попадёшь.
+ent-ShellShotgun12_gaugeUranium = shotgun shell (12 gauge uranium)
+ent-ShellShotgun12_gaugeOOBuckshot = shotgun shell (12 gauge OO magnum buckshot)
+ent-ShellShotgun12_gaugeSlugRIP = shotgun shell (12 gauge RIP)
+ent-ShellShotgun12_gaugeSlugAP = shotgun shell (12 gauge armor-piercing slug)
+ent-ShellShotgun12_gaugeFlechette = shotgun shell (12 gauge flechette)

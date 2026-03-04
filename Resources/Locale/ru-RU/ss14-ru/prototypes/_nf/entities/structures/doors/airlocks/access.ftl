@@ -82,3 +82,10 @@ ent-AirlockMercenaryGlassLocked = { ent-AirlockMercenaryGlass }
 ent-AirlockExternalGlassMailCarrierLocked = { ent-AirlockExternalGlass }
     .suffix = Почтовый, Glass, Закрыт
     .desc = { ent-AirlockExternalGlass.desc }
+
+ent-AirlockExternalGlassRogueLocked = AirlockExternalGlassRogueLocked
+ent-AirlockMiningGlassRogueLocked = AirlockMiningGlassRogueLocked
+ent-AirlockRogueGlassLocked = AirlockRogueGlassLocked
+ent-AirlockHatchRogueLocked = AirlockHatchRogueLocked
+ent-AirlockGlassShuttleSyndicateRogueLocked = AirlockGlassShuttleSyndicateRogueLocked
+ent-AirlockShuttleSyndicateRogueLocked = AirlockShuttleSyndicateRogueLocked

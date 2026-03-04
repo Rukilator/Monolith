@@ -1,0 +1,178 @@
+#region frame
+- type: entity
+  id: ForgeBaseWeaponFramePistol
+  parent: [ ForgeBaseWeaponEncumbrancePistol, ForgeBaseItemWeaponGunMagazineFed ]
+  name: pistol
+  abstract: true
+  components:
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 3.1
+    maxAngle: 15.5
+    angleIncrease: 0.8
+    angleDecay: 4
+    fireRate: 4
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+  - type: StaticPrice
+    price: 250
+
+#region manufacturer
+- type: entity
+  id: ForgeBaseWeaponFramePistolNanotrasen
+  parent: ForgeBaseWeaponFramePistol
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 3.6
+    maxAngle: 18
+    angleIncrease: 1.1
+    angleDecay: 3.7
+    fireRate: 3.4
+
+- type: entity
+  id: ForgeBaseWeaponFramePistolCybersun
+  parent: [ BaseC3SyndicateContraband, ForgeBaseWeaponFramePistol ]
+  abstract: true
+  components:
+  - type: Gun
+    angleIncrease: 0.9
+    angleDecay: 6.3
+    fireRate: 3.2
+
+#region chamber
+- type: entity
+  id: ForgeBaseWeaponPistolChamber
+  abstract: true
+  components:
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/pistol_cock.ogg
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+
+- type: entity
+  id: ForgeBaseWeaponPistolChamber35
+  parent: ForgeBaseWeaponPistolChamber
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-35
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazinePistol35
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist: &whitelist35
+          tags:
+            - ForgeMagazinePistol35
+            - ForgeMagazineHighCapacityPistol35
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber: &chamber35Standard
+        name: Chamber
+        startingItem: ForgeCartridgePistol35
+        priority: 1
+        whitelist:
+          tags:
+            - ForgeCartridgePistol35
+
+- type: entity
+  id: ForgeBaseWeaponPistolChamber35HighCapacity
+  parent: ForgeBaseWeaponPistolChamber35
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazineHighCapacityPistol35
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist: *whitelist35
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber: *chamber35Standard
+
+- type: entity
+  id: ForgeBaseWeaponPistolChamber35HighCapacityOverpressure
+  parent: ForgeBaseWeaponPistolChamber35
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazineHighCapacityPistol35Overpressure
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist: *whitelist35
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: ForgeCartridgePistol35Overpressure
+        priority: 1
+        whitelist:
+          tags:
+            - ForgeCartridgePistol35
+
+- type: entity
+  id: ForgeBaseWeaponPistolChamber35HighCapacityRubber
+  parent: ForgeBaseWeaponPistolChamber35
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazineHighCapacityPistol35Rubber
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist: *whitelist35
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: ForgeCartridgePistol35Rubber
+        priority: 1
+        whitelist:
+          tags:
+            - ForgeCartridgePistol35
+
+- type: entity
+  id: ForgeBaseWeaponPistolChamber45
+  parent: ForgeBaseWeaponPistolChamber
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-45
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazinePistol45
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - ForgeMagazinePistol45
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: ForgeCartridgePistol45
+        priority: 1
+        whitelist:
+          tags:
+            - ForgeCartridgePistol45

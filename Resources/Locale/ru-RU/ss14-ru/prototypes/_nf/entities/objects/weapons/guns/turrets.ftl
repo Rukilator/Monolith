@@ -27,3 +27,8 @@ ent-WeaponTurretAsmgtHostileUniversallyDeployed = { ent-WeaponTurretAsmgtNtDeplo
 ent-WeaponTurretAsmgtHostileUniversallyPacked = { ent-WeaponTurretAsmgtNtPacked }
   .desc = Разобранная и упакованная Автономная Сторожевая Пулеметная Турель (АСПТ). ВНИМАНИЕ! Разобранная турель будет враждебной к любому, кто не находился рядом (в пределах 3 м) после распаковки!
   .suffix = Враждебная, Упакованная
+
+ent-WeaponTurretLaserNanoTrasenPackingGraph = WeaponTurretLaserNanoTrasenPackingGraph
+ent-WeaponTurretAsmgtHostileUniversallyPackingGraph = WeaponTurretAsmgtHostileUniversallyPackingGraph
+ent-WeaponTurretAsmgtNtPackingGraph = WeaponTurretAsmgtNtPackingGraph
+ent-WeaponTurretContrabandDenyingPackingGraph = WeaponTurretContrabandDenyingPackingGraph

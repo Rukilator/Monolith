@@ -1,0 +1,158 @@
+#region base
+- type: entity
+  id: ForgeBaseMagazineShotgunDrum
+  name: ammo drum (.50 shells)
+  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - MagazineShotgun
+  - type: BallisticAmmoProvider
+    proto: ForgeShellShotgunBuckshot
+    mayTransfer: true
+    whitelist:
+      tags:
+        - ShellShotgun
+    capacity: 8
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/smg_cock.ogg
+  - type: Item
+    size: Small
+    sprite: _Forge/Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/drum.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/drum.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 9
+    zeroVisible: false
+  - type: Appearance
+
+#region fills
+- type: entity
+  id: ForgeMagazineShotgunDrumEmpty
+  name: ammo drum (.50 shells, any)
+  parent: ForgeBaseMagazineShotgunDrum
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
+  id: ForgeMagazineShotgunDrum
+  name: ammo drum (.50 shells, buckshot)
+  parent: ForgeBaseMagazineShotgunDrum
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeShellShotgunBuckshot
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#333333"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#333333"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#333333"
+
+- type: entity
+  id: ForgeMagazineShotgunDrumBeanbag
+  name: ammo drum (.50 shells, beanbags)
+  parent: ForgeBaseMagazineShotgunDrum
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeShellShotgunBeanbag
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00b0ff"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00b0ff"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00b0ff"
+
+- type: entity
+  id: ForgeMagazineShotgunDrumSlug
+  name: ammo drum (.50 shells, slugs)
+  parent: ForgeBaseMagazineShotgunDrum
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeShellShotgunSlug
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#333333"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#333333"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#333333"
+
+- type: entity
+  id: ForgeMagazineShotgunDrumIncendiary
+  name: ammo drum (.50 shells, incendiary)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseMagazineShotgunDrum] # Corvax-Forge: Contraband T2
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeShellShotgunIncendiary
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#ff0000"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff0000"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff0000"

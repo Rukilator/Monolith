@@ -22,3 +22,7 @@ ent-PortableGeneratorDK = Г.И.П.Е.Р.П.А.К.М.А.Н.
         Генератор нового поколения для питания станций.
         Работает на бананиуме и рассчитан на мощность до 120 кВт.
         Крайне радиоактивен.
+
+ent-PortableGeneratorDKShuttle = портативный генератор типа D-K Jr.
+    .desc = |-
+ent-BaseGeneratorShuttle = BaseGeneratorShuttle

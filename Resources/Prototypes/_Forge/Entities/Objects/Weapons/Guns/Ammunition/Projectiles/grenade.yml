@@ -1,0 +1,14 @@
+- type: entity
+  parent: PelletClusterRubber
+  id: ForgePelletClusterRubber
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: PelletClusterLethal
+  id: ForgePelletClusterLethal
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: PelletClusterIncendiary
+  id: ForgePelletClusterIncendiary
+  categories: [ HideSpawnMenu ]

@@ -58,6 +58,7 @@
   parent: BaseC2ContrabandUnredeemable
   id: BaseC2Contraband
   abstract: true
+
 # endregion
 
 # region Class 3 Objects

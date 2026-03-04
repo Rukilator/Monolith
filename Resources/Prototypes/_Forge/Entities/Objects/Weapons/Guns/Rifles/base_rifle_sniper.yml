@@ -1,0 +1,94 @@
+#region frame
+- type: entity
+  id: ForgeBaseWeaponFrameRifleSniper
+  parent: [ BaseC1Contraband, ForgeBaseWeaponEncumbranceSniper, ForgeBaseItemWeaponGun ]
+  suffix: Frontier
+  abstract: true
+  components:
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunRequiresWield
+  - type: GunWieldBonus
+    minAngle: -0 # Set to 0 because GunRequiresWield
+    maxAngle: -0
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 1.6
+    maxAngle: 8
+    angleIncrease: 0.4
+    angleDecay: 2
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+  # - type: CursorOffsetRequiresWield
+  # - type: EyeCursorOffset
+  #   maxOffset: 3
+  #   pvsIncrease: 1
+
+#region manufacturer
+- type: entity
+  id: ForgeBaseWeaponFrameRifleSniperCybersun
+  parent: [ BaseC3SyndicateContraband, ForgeBaseWeaponFrameRifleSniper ]
+  abstract: true
+  components:
+  - type: Gun
+    angleIncrease: 0.5
+    angleDecay: 3.5
+    fireRate: 0.8
+    projectileSpeed: 50
+
+#region chamber
+- type: entity
+  id: ForgeBaseWeaponRifleChamber60
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-60
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: BallisticAmmoProvider
+    capacity: 5
+    proto: ForgeCartridgeRifle60
+    whitelist:
+      tags:
+      - ForgeCartridgeRifle60
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+
+- type: entity
+  id: ForgeBaseWeaponRifleChamber60Magazine
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-60
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  # Corvax-Forge: Add hristov magazine
+  - type: ChamberMagazineAmmoProvider
+    autoCycle: false
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: MagazineAntiMateriel
+        insertSound: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MagazineAntiMateriel
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        startingItem: ForgeCartridgeRifle60
+        priority: 1
+        whitelist:
+          tags:
+          - ForgeCartridgeRifle60
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot

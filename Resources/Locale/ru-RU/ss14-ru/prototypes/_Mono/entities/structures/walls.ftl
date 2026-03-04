@@ -1,0 +1,12 @@
+ent-BaseWallTierOne = default wall
+    .desc = Keeps the air in and the chimera out.
+ent-BaseWallTierTwo = reinforced wall
+    .desc = Keeps the air in and the chimera out.
+ent-BaseWallTierThree = super reinforced wall
+    .desc = Keeps the air in and the chimera out.
+ent-BaseWallTierFour = super ultra giga reinforced wall
+    .desc = Keeps the air in and the chimera out.
+ent-BaseWallOutpost = OUTPOST ONLY
+    .desc = Keeps the air in and the chimera out.
+ent-WallSolidChitinMonolithic = DEPRECATED
+ent-WallReinforcedChitinMonolithic = monolith tenebris

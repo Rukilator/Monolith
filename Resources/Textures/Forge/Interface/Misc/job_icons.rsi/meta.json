@@ -1,0 +1,51 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Create by autsaider_m, StRep Eifall, overlord by goster",
+
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+    "states": [
+        {
+            "name": "overlord",
+            "delays": [
+                [
+                    1.0,
+                    1.0
+                ]
+            ]
+        },
+        {
+            "name": "commander"
+        },
+        {
+            "name": "stormtrooper"
+        },
+        {
+            "name": "medsyn"
+        },
+        {
+            "name": "engysyn"
+        },
+        {
+            "name": "smuggler"
+        },
+        {
+            "name": "bodyguard"
+        },
+        {
+            "name": "syndicatecadet"
+        },
+        {
+            "name": "doc"
+        },
+        {
+            "name": "engynfsd"
+        },
+        {
+            "name": "strep"
+        }
+    ]
+}

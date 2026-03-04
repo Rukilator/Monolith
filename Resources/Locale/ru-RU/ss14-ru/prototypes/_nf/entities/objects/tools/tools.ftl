@@ -3,3 +3,6 @@ ent-ShipyardRCD = корабельный РСУ
 ent-ShipyardRCDEmpty = { ent-ShipyardRCD }
     .suffix = Пустой
     .desc = { ent-ShipyardRCD.desc }
+
+ent-NFShovel = народная лопата
+    .desc = Старая реликвия от Великого Вождя. Способна выполнять 18 функций: копать, рубить, резать, долбить, отковыривать, перекусывать провода, копать.

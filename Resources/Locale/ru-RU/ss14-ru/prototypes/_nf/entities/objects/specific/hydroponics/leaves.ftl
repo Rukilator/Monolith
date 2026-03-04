@@ -14,3 +14,4 @@ ent-ShroomsDried = сушеные грибы
     .desc = Сушёные грибы, готовые к измельчению
 ent-ShroomsDried5 = { ent-ShroomsDried }
     .desc = { ent-ShroomsDried.desc }
+ent-NFGroundTobacco5 = NFGroundTobacco5

@@ -46,3 +46,9 @@ ent-MobRogueSiliconGuardian = Цитадель
     .desc = Передовой охранный механизм, после взлома выполняющий волю Бешеного ИИ с небывалой жестокостью.
 ent-MobRogueSiliconBoss = Мех One Star
     .desc = Автономный боевой мех, используемый для наступательных операций. Теперь он является элитной охраной Бешеного ИИ и оснащен ракетными установками. Проявите крайнюю осторожность.
+
+ent-MobRogueSiliconScrapThrustersRangedAsteroid = MobRogueSiliconScrapThrustersRangedAsteroid
+ent-MobRogueSiliconScrapThrustersAsteroid = malfunctionnig scrap unit
+ent-MobRogueSiliconScrapAsteroid = malfunctionnig scrap unit
+ent-MobRogueSiliconScrapThreadsAsteroid = malfunctionnig scrap unit
+ent-TeslaGunBulletRogueSilicon = tesla gun lightning

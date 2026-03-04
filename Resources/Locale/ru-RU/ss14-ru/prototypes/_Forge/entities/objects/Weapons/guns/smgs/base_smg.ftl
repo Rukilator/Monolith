@@ -1,0 +1,10 @@
+ent-ForgeBaseWeaponFrameSubMachineGunGorlex = ПП Gorlex
+ent-ForgeBaseWeaponFrameSubMachineGunNanotrasen = ПП Nanotrasen
+ent-ForgeBaseWeaponSubMachineGunChamber35 = магазин
+ent-ForgeBaseWeaponSubMachineGunChamber35TopMountedRubber = магазин
+ent-ForgeBaseWeaponSubMachineGunChamber35Rubber = патронник
+ent-ForgeBaseWeaponSubMachineGunChamber = патронник ПП
+ent-ForgeBaseWeaponFrameSubMachineGunCybersun = ПП Cybersun
+ent-ForgeBaseWeaponSubMachineGunChamber35TopMounted = патронник
+ent-ForgeBaseWeaponFrameSubMachineGunFrontierGunsmith = ПП Frontier Gunsmith
+ent-ForgeBaseWeaponFrameSubMachineGun = пистолет-пулемёт

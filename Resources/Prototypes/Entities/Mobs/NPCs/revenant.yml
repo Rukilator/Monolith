@@ -82,3 +82,7 @@
   - type: Reactive
     groups:
       Acidic: [Touch]
+  #<Forge>
+  - type: TTS # Corvax-TTS
+    voice: Chen
+  #</Forge>

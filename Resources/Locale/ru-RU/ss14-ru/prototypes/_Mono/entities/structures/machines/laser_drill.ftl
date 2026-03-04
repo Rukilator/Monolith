@@ -1,0 +1,11 @@
+ent-LaserDrill = automated laser drill
+    .desc = A large automated drill that digs up random materials when powered with 50 kW of HV. Only works on expedition planets.
+ent-StationLaserDrill = advanced automated laser drill
+    .desc = A large bluespace automated drill that digs up random materials when powered with 50 kW of HV. Now works in space! You can just make out a scratched off logo starting with an embossed 'N' on the side.
+ent-SpawnLootOres15 = Laser Drill, 15
+ent-GoldOre15 = Fifteen
+ent-SteelOre15 = Fifteen
+ent-PlasmaOre15 = Fifteen
+ent-SilverOre15 = Fifteen
+ent-SpaceQuartz15 = Fifteen
+ent-UraniumOre15 = Fifteen

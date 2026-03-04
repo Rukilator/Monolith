@@ -1,0 +1,343 @@
+- type: entity
+  id: BaseMagazineMagnum
+  name: pistol magazine (.45 magnum)
+  parent: [ BaseMagazinePistol, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazineMagnum
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeMagnum
+    capacity: 7
+
+# WizDen
+#region base mags .45
+- type: entity
+  id: ForgeBaseMagazinePistol45
+  name: pistol magazine (.45 pistol)
+  parent: [ BaseC1Contraband, BaseMagazineMagnum, RecyclableItemSteelTiny ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - ForgeMagazinePistol45
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - ForgeCartridgePistol45
+    capacity: 8
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Pistol35/pistol_mag.rsi
+    layers:
+    - state: base
+      color: "#666666"
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Pistol35/pistol_mag.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+        color: "#666666"
+      right:
+      - state: inhand-right-mag
+        color: "#666666"
+
+- type: entity
+  id: ForgeBaseMagazinePistolSubMachineGun45
+  name: smg magazine (.45 pistol)
+  parent: [ BaseC1Contraband, BaseMagazineMagnum, RecyclableItemSteelTiny ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - ForgeMagazineSubMachineGunPistol45
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - ForgeCartridgePistol45
+    capacity: 25
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Pistol45/smg_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Item
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Pistol45/smg_mag.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag
+
+#region standard mags .45
+- type: entity
+  id: ForgeMagazinePistol45Empty
+  name: pistol magazine (.45 pistol, any)
+  parent: ForgeBaseMagazinePistol45
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
+  id: ForgeMagazinePistol45
+  name: pistol magazine (.45 pistol)
+  parent: ForgeBaseMagazinePistol45
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol45
+
+- type: entity
+  id: ForgeMagazinePistol45Overpressure
+  name: pistol magazine (.45 pistol, overpressure)
+  parent: ForgeBaseMagazinePistol45
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol45Overpressure
+  - type: Sprite
+    layers:
+    - state: base
+      color: "#666666"
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#ff8d00"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+        color: "#666666"
+      - state: inhand-left-stripe
+        color: "#ff8d00"
+      right:
+      - state: inhand-right-mag
+        color: "#666666"
+      - state: inhand-right-stripe
+        color: "#ff8d00"
+
+- type: entity
+  id: ForgeMagazinePistol45Incendiary
+  name: pistol magazine (.45 pistol, incendiary)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseMagazinePistol45] # Corvax-Forge: Contraband T2
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol45Incendiary
+  - type: Sprite
+    layers:
+    - state: base
+      color: "#666666"
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#ff0000"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+        color: "#666666"
+      - state: inhand-left-stripe
+        color: "#ff0000"
+      right:
+      - state: inhand-right-mag
+        color: "#666666"
+      - state: inhand-right-stripe
+        color: "#ff0000"
+
+- type: entity
+  id: ForgeMagazinePistol45Uranium
+  name: pistol magazine (.45 pistol, uranium)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseMagazinePistol45] # Corvax-Forge: Contraband T2
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol45Uranium
+  - type: Sprite
+    layers:
+    - state: base
+      color: "#666666"
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00ff00"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+        color: "#666666"
+      - state: inhand-left-stripe
+        color: "#00ff00"
+      right:
+      - state: inhand-right-mag
+        color: "#666666"
+      - state: inhand-right-stripe
+        color: "#00ff00"
+
+- type: entity
+  id: ForgeMagazinePistol45Practice
+  name: pistol magazine (.45 pistol, practice)
+  parent: ForgeBaseMagazinePistol45
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol45Practice
+  - type: Sprite
+    layers:
+    - state: base
+      color: "#666666"
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+        color: "#666666"
+      - state: inhand-left-stripe
+      right:
+      - state: inhand-right-mag
+        color: "#666666"
+      - state: inhand-right-stripe
+
+- type: entity
+  id: ForgeMagazinePistol45Rubber
+  name: pistol magazine (.45 pistol, rubber)
+  parent: ForgeBaseMagazinePistol45
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol45Rubber
+  - type: Sprite
+    layers:
+    - state: base
+      color: "#666666"
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00b0ff"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+        color: "#666666"
+      - state: inhand-left-stripe
+        color: "#00b0ff"
+      right:
+      - state: inhand-right-mag
+        color: "#666666"
+      - state: inhand-right-stripe
+        color: "#00b0ff"
+
+# Frontier
+#region smg mags .45
+- type: entity
+  id: ForgeMagazineSubMachineGun45Empty
+  name: SMG magazine (.45 pistol, any)
+  parent: ForgeBaseMagazinePistolSubMachineGun45
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
+  id: ForgeMagazineSubMachineGun45
+  name: SMG magazine (.45 pistol)
+  parent: ForgeBaseMagazinePistolSubMachineGun45
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol45
+
+- type: entity
+  id: ForgeMagazineSubMachineGun45Overpressure
+  name: SMG magazine (.45 pistol, overpressure)
+  parent: ForgeBaseMagazinePistolSubMachineGun45
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol45Overpressure
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#ff8d00"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff8d00"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff8d00"
+
+- type: entity
+  id: ForgeMagazineSubMachineGun45Rubber
+  name: SMG magazine (.45 pistol, rubber)
+  parent: ForgeBaseMagazinePistolSubMachineGun45
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol45Rubber
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00b0ff"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00b0ff"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00b0ff"
+
+# Corvax-Frontier
+- type: entity
+  id: ForgeMagazinePistol45AP
+  name: pistol magazine (.45 pistol, AP)
+  parent: ForgeBaseMagazinePistol45
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgePistol45AP
+  - type: Sprite
+    layers:
+    - state: base
+      color: "#666666"
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#820000"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+        color: "#666666"
+      - state: inhand-left-stripe
+        color: "#820000"
+      right:
+      - state: inhand-right-mag
+        color: "#666666"
+      - state: inhand-right-stripe
+        color: "#820000"

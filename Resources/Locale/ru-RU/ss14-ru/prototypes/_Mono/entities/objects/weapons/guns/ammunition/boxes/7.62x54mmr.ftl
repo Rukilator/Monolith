@@ -1,0 +1,10 @@
+﻿ent-BaseAmmoBox762x54mmR = коробка боеприпасов (7.62x54ммR FMJ)
+ent-AmmoBox762x54mmRFMJ = ammunition box (7.62x54mmR FMJ)
+ent-AmmoBox762x54mmRPractice = ammunition box (7.62x54mmR practice)
+ent-AmmoBox762x54mmRIncendiary = ammunition box (7.62x54mmR incendiary)
+ent-AmmoBox762x54mmRUranium = ammunition box (7.62x54mmR uranium)
+ent-AmmoBox762x54mmRRubber = ammunition box (7.62x54mmR rubber)
+ent-AmmoBox762x54mmRHP = ammunition box (7.62x54mmR hollow-point)
+ent-AmmoBox762x54mmRRIP = ammunition box (7.62x54mmR RIP)
+ent-AmmoBox762x54mmRPlasteelAP = ammunition box (7.62x54mmR AP)
+ent-AmmoBox762x54mmRBigFMJ = Big

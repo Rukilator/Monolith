@@ -1,2 +1,2 @@
-ent-NFBulletDisabler = Оглушающий
-ent-NFBulletLaserLow = Лазерный
+ent-ForgeBulletDisabler = Оглушающий
+ent-ForgeBulletLaserLow = Лазерный

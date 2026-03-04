@@ -745,8 +745,11 @@ public sealed partial class DeepFryerSystem : SharedDeepfryerSystem
 
     private void OnInitDeepFried(EntityUid uid, DeepFriedComponent component, ComponentInit args)
     {
-        var meta = MetaData(uid);
-        component.OriginalName = meta.EntityName;
+        if (component.OriginalName == null)
+        {
+            var meta = MetaData(uid);
+            component.OriginalName = meta.EntityName;
+        }
         UpdateDeepFriedName(uid, component);
     }
 

@@ -49,3 +49,5 @@ ent-WarpPointNFNfsd = { ent-WarpPoint }
 ent-WarpPointNFMcHobo = { ent-WarpPoint }
     .suffix = POI, МакХобо
     .desc = { ent-WarpPoint.desc }
+ent-WarpPointAdmin = WarpPointAdmin
+ent-WarpPointDungeon = WarpPointDungeon

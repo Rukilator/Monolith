@@ -141,6 +141,10 @@
     toggleAction: null
     activateSound: null
     deactivateSound: null
+  #<Forge>
+  - type: TTS # Corvax-TTS
+    voice: Rat
+  #</Forge>
 
 - type: entity
   id: MobRatKingBuff

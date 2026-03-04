@@ -1,0 +1,6 @@
+ent-MagazineAntiMaterielAP = магазин (.60 пробивные)
+ent-MagazineAntiMateriel = магазин (.60 пустые)
+ent-MagazineAntiMaterielRubber = магазин (.60)
+ent-MagazineAntiMaterielIncendiary = магазин (.60 зажигательные)
+ent-MagazineAntiMaterielEmpty = магазин (.60 пустые)
+ent-BaseMagazineAntiMateriel = магазин (.60 калибр)

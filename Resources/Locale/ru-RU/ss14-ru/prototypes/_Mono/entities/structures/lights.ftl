@@ -1,0 +1,1 @@
+ent-PoweredlightBlueAirAlarm = Blue, Off

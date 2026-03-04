@@ -1,0 +1,11 @@
+﻿ent-BaseCartridge45_magnum = патрон (.45 магнум)
+    .desc = Тяжёлый магнум-патрон, обычно встречающийся только в револьверах или винтовках с ручной перезарядкой.
+ent-Cartridge45_magnumFMJ = cartridge (.45 magnum)
+ent-Cartridge45_magnumPractice = cartridge (.45 magnum practice)
+ent-Cartridge45_magnumIncendiary = cartridge (.45 magnum incendiary)
+ent-Cartridge45_magnumAP = cartridge (.45 magnum armor-piercing)
+ent-Cartridge45_magnumUranium = cartridge (.45 magnum uranium)
+ent-Cartridge45_magnumRubber = cartridge (.45 magnum rubber)
+ent-Cartridge45_magnumHP = cartridge (.45 magnum hollow-point)
+ent-Cartridge45_magnumRIP = cartridge (.45 magnum RIP)
+ent-Cartridge45_magnumPlasteelAP = cartridge (.45 magnum AP)

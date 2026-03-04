@@ -1,0 +1,13 @@
+ent-BaseWeaponEnergyPistolFireModesSyndie = режимы огня энергопистолета синдиката
+ent-BulletLaserSyndie = пистолет «Сокол»
+    .desc = |-
+ent-BaseWeaponEnergyRifleFireModesSyndie = режимы огня энерговинтовки синдиката
+ent-BaseWeaponEnergyPistolFireModesDOC = режимы огня энергопистолета ДОК
+ent-BulletLaserHeavySyndie = тяжёлый лазер синдиката
+ent-BaseWeaponFrameEnergyPistolSyndie = энергетический пистолет синдиката
+ent-WeaponDSPulseGun = прототип NT1984
+    .desc = Экспериментальная мультифазовая пушка способная уничтожать всё живое.
+ent-BaseWeaponFrameEnergyRifleAssaultSyndie = энергетическая винтовка синдиката
+ent-PulseSniper = импульсная снайперская
+ent-SniperSign = снайперская «Знак»
+ent-BulletLaserDOC = лазер ДОК

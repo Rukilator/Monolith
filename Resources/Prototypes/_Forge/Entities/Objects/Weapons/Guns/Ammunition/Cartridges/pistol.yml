@@ -1,0 +1,325 @@
+- type: entity
+  id: BaseCartridgePistol
+  name: cartridge (.35 auto)
+  parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgePistol
+  - type: CartridgeAmmo
+    # proto: BulletPistol # Frontier
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  id: BaseCartridgeMagnum
+  name: cartridge (.45 magnum)
+  parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeMagnum
+  - type: CartridgeAmmo
+    # proto: BulletMagnum # Frontier
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  categories: [ HideSpawnMenu ] # Frontier
+  id: CartridgeMagnum
+  name: cartridge (.45 magnum)
+  parent: BaseCartridgeMagnum
+  description: Heavy magnum cartridge mostly used by revolvers. Standard kinetic ammunition is common and useful in most situations.
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol45 # Forge-change
+
+# WizDen
+#region base
+- type: entity
+  id: ForgeBaseCartridgePistol35
+  name: cartridge (.35 pistol)
+  parent: BaseCartridgePistol
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - ForgeCartridgePistol35
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol35
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#666666"
+
+- type: entity
+  id: ForgeBaseCartridgePistol45
+  name: cartridge (.45 pistol)
+  parent: BaseCartridgeMagnum
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - ForgeCartridgePistol45
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol45
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#666666"
+
+#region .35 pistol
+- type: entity
+  id: ForgeCartridgePistol35
+  name: cartridge (.35 pistol)
+  parent: ForgeBaseCartridgePistol35
+
+- type: entity
+  id: ForgeCartridgePistol35Overpressure
+  name: cartridge (.35 pistol, overpressure)
+  parent: ForgeBaseCartridgePistol35
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol35Overpressure
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#ff8d00"
+
+- type: entity
+  id: ForgeCartridgePistol35Incendiary
+  name: cartridge (.35 pistol, incendiary)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseCartridgePistol35] # Corvax-Forge: Contraband T2
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol35Incendiary
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#ff0000"
+
+- type: entity
+  id: ForgeCartridgePistol35Uranium
+  name: cartridge (.35 pistol, uranium)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseCartridgePistol35] # Corvax-Forge: Contraband T2
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol35Uranium
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#00ff00"
+
+- type: entity
+  id: ForgeCartridgePistol35Practice
+  name: cartridge (.35 pistol, practice)
+  parent: ForgeBaseCartridgePistol35
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol35Practice
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#dddddd"
+
+# Frontier
+# .35 pistol
+- type: entity
+  id: ForgeCartridgePistol35Emp
+  name: cartridge (.35 pistol, EMP)
+  parent: ForgeBaseCartridgePistol35
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol35Emp
+  - type: EmpDescription
+    range: 0.3
+    energyConsumption: 2700000
+    disableDuration: 10
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#00ffff"
+
+- type: entity
+  id: ForgeCartridgePistol35Rubber
+  name: cartridge (.35 pistol, rubber)
+  parent: ForgeBaseCartridgePistol35
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol35Rubber
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#00b0ff"
+
+# WizDen
+#region .45 pistol
+- type: entity
+  id: ForgeCartridgePistol45
+  name: cartridge (.45 pistol)
+  parent: ForgeBaseCartridgePistol45
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol45
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#666666"
+
+- type: entity
+  id: ForgeCartridgePistol45Overpressure
+  name: cartridge (.45 pistol, overpressure)
+  parent: ForgeBaseCartridgePistol45
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol45Overpressure
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#ff8d00"
+
+- type: entity
+  id: ForgeCartridgePistol45Incendiary
+  name: cartridge (.45 pistol, incendiary)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseCartridgePistol45] # Corvax-Forge: Contraband T2
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol45Incendiary
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#ff0000"
+
+- type: entity
+  id: ForgeCartridgePistol45Uranium
+  name: cartridge (.45 pistol, uranium)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseCartridgePistol45] # Corvax-Forge: Contraband T2
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol45Uranium
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#00ff00"
+
+- type: entity
+  id: ForgeCartridgePistol45Practice
+  name: cartridge (.45 pistol, practice)
+  parent: ForgeBaseCartridgePistol45
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol45Practice
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#dddddd"
+
+# Frontier
+# .45 pistol
+- type: entity
+  id: ForgeCartridgePistol45Emp
+  name: cartridge (.45 pistol, EMP)
+  parent: ForgeBaseCartridgePistol45
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol45Emp
+  - type: EmpOnTrigger
+    range: 5
+    energyConsumption: 2700000
+    disableDuration: 10
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#00ffff"
+
+- type: entity
+  id: ForgeCartridgePistol45Rubber
+  name: cartridge (.45 pistol, rubber)
+  parent: ForgeBaseCartridgePistol45
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol45Rubber
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#00b0ff"
+
+- type: entity
+  id: ForgeCartridgePistol45AP
+  name: cartridge (.45 pistol, AP)
+  parent: ForgeBaseCartridgePistol45
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletPistol45AP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#820000"

@@ -75,6 +75,9 @@ namespace Content.Server.Shuttles.Components
         [DataField]
         public float DampingModifier;
 
+        [DataField] //  Forge-Change
+        public string? TargetPOI = null;
+
         // <Mono>
         /// <summary>
         /// Limit to max velocity set by a shuttle console.

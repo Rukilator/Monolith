@@ -57,3 +57,8 @@ ent-SyndicateElectricRangeMachineCircuitboard = электроплита "donk c
 ent-PirateTechFabCircuitboardNF = плата пиратского техфаба
     .desc = Плата, созданная фрилансерским братством для лучшего техфаба во всём космосе.
     .suffix = DoNotMap
+
+ent-ThrusterUSSPMachineCircuitboard = плата двигателя TSFMC
+ent-ThrusterRogueMachineCircuitboard = плата двигателя USSP
+ent-CondimentDispenserCircuitboard = плата дозатора приправ
+    .desc = Печатная плата для дозатора приправ.

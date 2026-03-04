@@ -1,0 +1,11 @@
+- type: entity
+  id: ForgeWeaponRevolverRitland45
+  parent: [ ForgeBaseWeaponRevolverChamber45, ForgeBaseWeaponFrameRevolverGorlex ]
+  name: ritland-45
+  description: |-
+    An illegal revolver favoured by Syndicate agents.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Revolvers/python.rsi
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Revolvers/python.rsi

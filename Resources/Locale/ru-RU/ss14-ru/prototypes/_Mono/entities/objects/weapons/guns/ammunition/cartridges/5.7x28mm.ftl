@@ -1,0 +1,11 @@
+﻿ent-BaseCartridge57x28mm = патрон (5.7x28мм FMJ)
+    .desc = Малый патрон для ПП. Больше внутренних повреждений, чем у 4.6, но меньшая бронебойность. Ранее печально известен своей высокой стоимостью.
+ent-Cartridge57x28mmFMJ = патрон (5.7x28mm FMJ)
+ent-Cartridge57x28mmPractice = cartridge (5.7x28mm practice)
+ent-Cartridge57x28mmIncendiary = cartridge (5.7x28mm incendiary)
+ent-Cartridge57x28mmUranium = cartridge (5.7x28mm uranium)
+ent-Cartridge57x28mmRubber = cartridge (5.7x28mm rubber)
+ent-Cartridge57x28mmEmp = патрон (5.7x28mm emp)
+ent-Cartridge57x28mmHP = cartridge (5.7x28mm hollow-point)
+ent-Cartridge57x28mmRIP = патрон (5.7x28mm RIP)
+ent-Cartridge57x28mmPlasteelAP = патрон (5.7x28mm AP)

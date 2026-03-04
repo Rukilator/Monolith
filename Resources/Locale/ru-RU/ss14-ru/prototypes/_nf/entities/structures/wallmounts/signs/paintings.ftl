@@ -3,3 +3,6 @@ ent-PaintingNightOfThePostGoblin = Ночь почтового гоблина
 ent-PaintingSpookyIan = Бесконечный долг
     .desc = Их бдение вечно.
 
+
+ent-PaintingSpookyLady = Дама и знамёна
+    .desc = Их дозор вечен.

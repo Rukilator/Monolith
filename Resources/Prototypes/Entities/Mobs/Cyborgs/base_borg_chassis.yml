@@ -267,6 +267,12 @@
       flatReductions:
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
   - type: PreventDropOnDowned # Frontier: borgs don't drop items when falling (e.g. critical/dead)
+  # <Forge>
+  - type: SpeechSynthesis # Corvax-Frontier-Barks
+    voice: BarksCitadelSynthetic2 # Corvax-Frontier-Barks
+  - type: TTS # Corvax-TTS
+    voice: TrainingRobot
+  # <Forge>
   # <Mono>
   - type: ToggleableSignature
     blip:

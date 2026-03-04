@@ -127,3 +127,10 @@ ent-LockerWallColorMedicalFilled = медицинский настенный ш�
 ent-LockerWallColorMedicalDoctorFilled = настенный шкафчик врача
     .desc = { ent-LockerWallEVAColorNfsd .desc }
     .suffix = Заполненный, Фронтир
+
+ent-LockerWallColorHydroponicsEmpty = LockerWallColorHydroponicsEmpty
+ent-LockerWallColorHydroponicsFilled = LockerWallColorHydroponicsFilled
+ent-ClosetWallO2N2Filled = ClosetWallO2N2Filled
+ent-ClosetWallN2Filled = ClosetWallN2Filled
+ent-LockerWallEVAColorFsbEmpty = LockerWallEVAColorFsbEmpty
+ent-ClosetWallO2Filled = ClosetWallO2Filled

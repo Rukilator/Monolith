@@ -1,0 +1,10 @@
+﻿ent-BaseCartridge762x51mm = патрон (7.62x51мм FMJ)
+    .desc = Полноразмерный патрон приличного калибра.
+ent-Cartridge762x51mmFMJ = патрон (7.62x51mm FMJ)
+ent-Cartridge762x51mmPractice = cartridge (7.62x51mm practice)
+ent-Cartridge762x51mmIncendiary = cartridge (7.62x51mm incendiary)
+ent-Cartridge762x51mmUranium = cartridge (7.62x51mm uranium)
+ent-Cartridge762x51mmRubber = cartridge (7.62x51mm rubber)
+ent-Cartridge762x51mmHP = cartridge (7.62x51mm hollow-point)
+ent-Cartridge762x51mmRIP = патрон (7.62x51mm RIP)
+ent-Cartridge762x51mmPlasteelAP = патрон (7.62x51mm AP)

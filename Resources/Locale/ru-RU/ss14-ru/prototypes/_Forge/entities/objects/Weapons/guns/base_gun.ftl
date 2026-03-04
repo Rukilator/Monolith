@@ -1,0 +1,11 @@
+ent-ForgeBaseItemWeaponGunMagazineFed = огнестрельное оружие с магазином
+ent-ForgeBaseWeaponEncumbranceMachinePistol = малогабаритный пистолет
+ent-ForgeBaseWeaponEncumbranceSubMachineGun = пистолет-пулемёт
+ent-ForgeBaseWeaponEncumbrancePistol = пистолет
+ent-ForgeBaseWeaponEncumbranceLauncher = гранатомёт
+ent-ForgeBaseWeaponEncumbranceSniper = снайперская винтовка
+ent-ForgeBaseWeaponEncumbranceCrossbow = арбалет
+ent-ForgeBaseWeaponEncumbranceRifle = винтовка
+ent-ForgeBaseWeaponEncumbranceCrossbowHand = ручной арбалет
+ent-ForgeBaseItemWeaponGun = огнестрельное оружие
+ent-ForgeBaseWeaponEncumbranceRifleAssault = штурмовая винтовка

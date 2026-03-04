@@ -1,0 +1,19 @@
+- type: entity
+  parent: PowerCellMicroreactor
+  id: PowerCellDCN
+  name: microreactor power cell
+  description: A rechargeable standardized microreactor cell. Has lower capacity but slowly recharges by itself.
+  suffix: DCN
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Power/power_cells.rsi
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: powerDCN
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: o2
+      shader: unshaded
+  # - type: EmpProtection #Forge-change
+  - type: BatterySelfRecharger
+    autoRecharge: false
+    autoRechargeRate: 0.12 # 12 -> 0.12

@@ -1,0 +1,396 @@
+# WizDen
+#region base .30
+- type: entity
+  id: BaseMagazineLightRifle
+  name: "magazine (.30 rifle)"
+  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband added RecyclableItemSteelTiny
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazineLightRifle
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeLightRifle
+    # proto: CartridgeLightRifle # Frontier
+    capacity: 30
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+
+- type: entity
+  id: ForgeBaseMagazineRifle30
+  name: magazine (.30 rifle)
+  parent: [ BaseC1Contraband, RecyclableItemSteelTiny, BaseMagazineLightRifle ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - ForgeMagazineRifle30 # TODO: make it make sense, change the tags
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - ForgeCartridgeRifle30
+    proto: ForgeCartridgeRifle30
+    capacity: 30
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Rifle/rifle30_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-7
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 8
+    zeroVisible: false
+  - type: Item
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Rifle/rifle30_mag.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag
+
+- type: entity
+  id: ForgeBaseMagazineLowCapacityRifle30
+  name: low cap magazine (.30 rifle)
+  parent: ForgeBaseMagazineRifle30
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - ForgeMagazineLowCapacityRifle30
+  - type: Item
+    size: Tiny
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Rifle/rifle30_low_cap_mag.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag
+  - type: BallisticAmmoProvider
+    capacity: 15
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Rifle/rifle30_low_cap_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-6
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    steps: 7
+
+#region .30 magazines
+- type: entity
+  id: ForgeMagazineRifle30Empty
+  name: magazine (.30 rifle, any)
+  parent: ForgeBaseMagazineRifle30
+  suffix: empty
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
+  id: ForgeMagazineRifle30
+  name: magazine (.30 rifle)
+  parent: ForgeBaseMagazineRifle30
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle30
+
+- type: entity
+  id: ForgeMagazineRifle30Overpressure
+  name: magazine (.30 rifle, overpressure)
+  parent: ForgeBaseMagazineRifle30
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle30Overpressure
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#ff8d00"
+    - state: mag-7
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff8d00"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff8d00"
+
+- type: entity
+  id: ForgeMagazineRifle30Incendiary
+  name: magazine (.30 rifle, incendiary)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseMagazineRifle30] # Corvax-Forge: Contraband T2
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle30Incendiary
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#ff0000"
+    - state: mag-7
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff0000"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff0000"
+
+- type: entity
+  id: ForgeMagazineRifle30Uranium
+  name: magazine (.30 rifle, uranium)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseMagazineRifle30] # Corvax-Forge: Contraband T2
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle30Uranium
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00ff00"
+    - state: mag-7
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00ff00"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00ff00"
+
+- type: entity
+  id: ForgeMagazineRifle30Practice
+  name: magazine (.30 rifle, practice)
+  parent: ForgeBaseMagazineRifle30
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle30Practice
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#dddddd"
+    - state: mag-7
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#dddddd"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#dddddd"
+
+- type: entity
+  id: ForgeMagazineRifle30Rubber # MagazineLightRifleRubber
+  name: magazine (.30 rifle, rubber)
+  parent: ForgeBaseMagazineRifle30
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle30Rubber
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00b0ff"
+    - state: mag-7
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00b0ff"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00b0ff"
+
+#region .30 low cap
+- type: entity
+  id: ForgeMagazineLowCapacityRifle30Empty
+  name: low cap magazine (.30 rifle, any)
+  parent: ForgeBaseMagazineLowCapacityRifle30
+  suffix: empty
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
+  id: ForgeMagazineLowCapacityRifle30
+  name: low cap magazine (.30 rifle)
+  parent: ForgeBaseMagazineLowCapacityRifle30
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle30
+
+- type: entity
+  id: ForgeMagazineLowCapacityRifle30Overpressure
+  name: low cap magazine (.30 rifle, overpressure)
+  parent: ForgeBaseMagazineLowCapacityRifle30
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle30Overpressure
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#ff8d00"
+    - state: mag-6
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff8d00"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff8d00"
+
+- type: entity
+  id: ForgeMagazineLowCapacityRifle30Incendiary
+  name: low cap magazine (.30 rifle, incendiary)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseMagazineLowCapacityRifle30] # Corvax-Forge: Contraband T2
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle30Incendiary
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#ff0000"
+    - state: mag-6
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff0000"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff0000"
+
+- type: entity
+  id: ForgeMagazineLowCapacityRifle30Uranium
+  name: low cap magazine (.30 rifle, uranium)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseMagazineLowCapacityRifle30] # Corvax-Forge: Contraband T2
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle30Uranium
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00ff00"
+    - state: mag-6
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00ff00"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00ff00"
+
+- type: entity
+  id: ForgeMagazineLowCapacityRifle30Practice
+  name: low cap magazine (.30 rifle, practice)
+  parent: ForgeBaseMagazineLowCapacityRifle30
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle30Practice
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#dddddd"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#dddddd"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#dddddd"
+
+- type: entity
+  id: ForgeMagazineLowCapacityRifle30Rubber
+  name: low cap magazine (.30 rifle, rubber)
+  parent: ForgeBaseMagazineLowCapacityRifle30
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle30Rubber
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00b0ff"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00b0ff"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00b0ff"

@@ -1,3 +1,4 @@
+using Content.Client._Forge.Sponsor; // Forge-Change
 using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
 using Content.Client.Chat.Managers;
@@ -20,6 +21,7 @@ using Content.Client.Voting;
 using Content.Shared.Administration.Logs;
 using Content.Client.Lobby;
 using Content.Client.Players.RateLimiting;
+using Content.Shared._Forge.Sponsor; // Forge-Change
 using Content.Shared.Administration.Managers;
 using Content.Shared.Chat;
 using Content.Shared.Players.PlayTimeTracking;
@@ -60,6 +62,10 @@ namespace Content.Client.IoC
             collection.Register<PlayerRateLimitManager>();
             collection.Register<SharedPlayerRateLimitManager, PlayerRateLimitManager>();
             collection.Register<TitleWindowManager>();
+
+            // Forge-Change: register sponsor manager on client like in Frontier1
+            collection.Register<SponsorManager>();
+            collection.Register<ISharedSponsorManager, SponsorManager>();
         }
     }
 }

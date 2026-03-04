@@ -1,0 +1,16 @@
+﻿ent-WeaponLoadoutRegisteredBase = зарегистрированная базовая экипировка
+ent-WeaponRifleMla34Registered = ЧВК
+ent-WeaponSubMachineGunMla73Registered = ЧВК
+ent-WeaponSmartLmgRegistered = ЧВК
+ent-WeaponPistolAnacondaRegistered = ЧВК
+ent-WeaponEnergyRevolverRegistered = ЧВК
+ent-WeaponSubMachineSmartRegistered = ЧВК
+ent-WeaponRifleWSPRRegistered = ЧВК
+ent-WeaponRifleAnnieRegistered = ЧВК
+ent-WeaponRifleAK502Registered = ЧВК
+ent-WeaponShotgunBigLeadyRegistered = ЧВК
+ent-WeaponSubMachineGunVector9x19mmRegistered = ЧВК
+ent-WeaponSubMachineGunVector45_ACPRegistered = ЧВК
+ent-WeaponRifleVulcanRegistered = ЧВК
+ent-WeaponShotgunEnforcerRegistered = ЧВК
+ent-WeaponRifleMR3CRegistered = ЧВК

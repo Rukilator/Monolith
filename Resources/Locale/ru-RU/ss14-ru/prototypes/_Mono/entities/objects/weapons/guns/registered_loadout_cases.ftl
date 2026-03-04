@@ -1,0 +1,15 @@
+﻿ent-WeaponCaseShortAnacondaRegistered = зарегистрированный кейс Anaconda
+ent-WeaponCaseShortEg4Registered = Loadout, EG-4
+ent-WeaponCaseMla73Registered = Loadout, MlA-73
+ent-WeaponCaseAbielleRegistered = Loadout, Abielle Smartgun
+ent-WeaponCaseWsprRegistered = Loadout, WSPR
+ent-WeaponCaseAnnieRegistered = Loadout, Annie
+ent-WeaponCaseMla34Registered = Loadout, MlA-34
+ent-WeaponCaseAk502Registered = Loadout, AK-502
+ent-WeaponCaseBigLeadyRegistered = Loadout, Big Leady
+ent-WeaponCaseVector9mmRegistered = Loadout, Vector, 9mm
+ent-WeaponCaseVector45AcpRegistered = Loadout, Vector, .45 ACP
+ent-WeaponCaseMla79Registered = Loadout, MlA-79
+ent-WeaponCaseLongEnforcerRegistered = Loadout, Enforcer
+ent-WeaponCaseLongVulcanRegistered = Loadout, Vulcan
+ent-WeaponCaseLongMR3CRegistered = Loadout, MR-3C

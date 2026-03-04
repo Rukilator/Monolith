@@ -1,0 +1,5 @@
+ent-UnknownShuttleZenithApoc = UnknownShuttleZenithApoc
+ent-UnknownShuttleZenithEApoc = UnknownShuttleZenithEApoc
+ent-UnknownShuttleNebulaApoc = UnknownShuttleNebulaApoc
+ent-UnknownShuttleRazorApoc = UnknownShuttleRazorApoc
+ent-UnknownShuttleWyvernApoc = UnknownShuttleWyvernApoc

@@ -1,0 +1,34 @@
+- type: entity
+  name: Swift
+  parent: [ForgeBaseWeaponPistolChamber35, BaseC1Contraband, ForgeBaseWeaponFramePistolNanotrasen]
+  id: WeaponPistolSwift
+  components:
+  - type: Sprite
+    sprite: Forge/Objects/Weapons/Guns/Pistols/swift.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Forge/Objects/Weapons/Guns/Pistols/swift.rsi
+  - type: Gun
+    fireRate: 5.5
+    projectileSpeed: 35
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Forge/Weapons/Guns/Gunshots/moonwhisper.ogg
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: false
+    radius: 4.5
+    softness: 5
+    autoRot: true
+  - type: PirateBountyItem
+    id: FTechLogisticGuns

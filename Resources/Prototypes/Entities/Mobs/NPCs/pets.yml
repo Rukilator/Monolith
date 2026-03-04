@@ -904,6 +904,10 @@
     attributes:
       proper: true
       gender: female
+  #<Forge>
+  - type: TTS # Corvax-TTS
+    voice: Dryad
+  #<Forge>
   - type: LanguageSpeaker # Einstein Engines - Language (might not have it on base mob, so reassuring here)
   - type: LanguageKnowledge # Einstein Engines - Language
     speaks:

@@ -1,0 +1,14 @@
+ent-ReinforcedWindowOutpost = OUTPOST ONLY
+ent-ReinforcedWindowDiagonalOutpost = diagonal, OUTPOST ONLY
+ent-PlastitaniumWindowOutpost = OUTPOST ONLY
+ent-PlastitaniumWindowDiagonalOutpost = diagonal, OUTPOST ONLY
+ent-WindowTimedSeal = 30 Minutes, Indestructible
+    .desc = A powerful energy field, sealing off a location for a short period of time.
+ent-PlasturaniumWindowDiagonalRadProof = Rad-Proof
+    .desc = Don't smudge up the rads down there.
+ent-PlasturaniumWindowRadProof = Rad-Proof
+    .desc = Don't smudge up the rads down there.
+ent-PlasturaniumWindowDiagonalRadProofIndestructible = Rad-Proof, Indestructible
+    .desc = Don't smudge up the rads down there.
+ent-PlasturaniumWindowRadProofIndestructible = Rad-Proof, Indestructible
+    .desc = Don't smudge up the rads down there.

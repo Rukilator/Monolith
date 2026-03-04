@@ -22,3 +22,5 @@ ent-SpawnMobBloodCultistAscended = вознесённый культист
 ent-SpawnMobBloodCultistJanitor = уборщик культа крови
     .suffix = ИИ, Враждебный, Ближний бой
     .desc = { ent-MarkerBase.desc }
+
+ent-SpawnMobCatBloodCult = спавнер кота культа крови

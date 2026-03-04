@@ -24,7 +24,13 @@ public enum ShipyardConsoleUiKey : byte
     SHM,
     DrakeIndustries,
     // Add ships to this key if they are only available from mothership consoles. Shipyards using it are inherently empty and are populated using the ShipyardListingComponent.
-    Custom
+    Custom,
+    Mercenary, // Forge-Change
+    Salvage, // Forge-Change
+    Debug, // Forge-Change
+    Engineering, // Forge-Change
+    Modules, // Forge-Change
+    Renegates // Forge-Change
 }
 
 public abstract class SharedShipyardSystem : EntitySystem

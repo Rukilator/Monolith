@@ -1,0 +1,11 @@
+﻿ent-BaseAmmoBox556x45mm = коробка боеприпасов (5.56x45мм FMJ)
+ent-AmmoBox556x45mmFMJ = ammunition box (5.56x45mm FMJ)
+ent-AmmoBox556x45mmPractice = ammunition box (5.56x45mm practice)
+ent-AmmoBox556x45mmIncendiary = ammunition box (5.56x45mm incendiary)
+ent-AmmoBox556x45mmUranium = ammunition box (5.56x45mm uranium)
+ent-AmmoBox556x45mmRubber = ammunition box (5.56x45mm rubber)
+ent-AmmoBox556x45mmHP = ammunition box (5.56x45mm hollow-point)
+ent-AmmoBox556x45mmRIP = ammunition box (5.56x45mm RIP)
+ent-AmmoBox556x45mmPlasteelAP = ammunition box (5.56x45mm AP)
+ent-AmmoBox556x45mmBigFMJ = Big
+ent-AmmoBox556x45mmBigRubber = ammunition box (5.56x45mm rubber)

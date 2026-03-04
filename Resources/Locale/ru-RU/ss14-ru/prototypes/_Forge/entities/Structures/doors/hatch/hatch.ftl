@@ -1,0 +1,1 @@
+ent-AirlockHatchRenegades = герметичный люк

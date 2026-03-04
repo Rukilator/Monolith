@@ -22,3 +22,18 @@ ent-MobHorrorExpeditions = ужас аномальной плоти
     .desc = Ужас — это вершина эволюции аномальной плоти, монстр с острыми, как бритва, костяными лезвиями, способный пробивать броню и разрывать плоть с пугающей лёгкостью. Это живое орудие, созданное для разрушения и хаоса.
 ent-MobMawExpeditions = пасть аномальной плоти
     .desc = Неподвижные чудовища, готовые выпрыгнуть на жертву. Они вгрызаются в плоть, не отпуская, пока их не уничтожат. Эти пасти выглядят так, будто созданы из кошмаров безумного генетика. Не суйте пальцы, если только не хотите добавить немного острых ощущений в свою жизнь...
+
+ent-MobFleshJaredOldExpeditionsNewborn = MobFleshJaredOldExpeditionsNewborn
+ent-MobFleshJaredExpeditionsNewborn = MobFleshJaredExpeditionsNewborn
+ent-MobFleshClampOldExpeditionsNewborn = MobFleshClampOldExpeditionsNewborn
+ent-MobFleshLoverExpeditionsNewborn = MobFleshLoverExpeditionsNewborn
+ent-MobFleshClampExpeditionsNewborn = MobFleshClampExpeditionsNewborn
+ent-BaseMobFleshExpeditionsNewborn = новорождённая аномальная плоть
+    .desc = Этот новорождённый монстр облит околоплодной жидкостью; движения вялые, но целенаправленные; конечности слабые, но смертоносные.
+ent-BoneSpikeGun = костяной шип
+    .desc = Выстреливает короткую очередь костяных шипов.
+ent-MobFleshGolemAltExpeditionsNewborn = MobFleshGolemAltExpeditionsNewborn
+ent-MobFleshGolemExpeditionsNewborn = MobFleshGolemExpeditionsNewborn
+ent-MobFleshGolemOldExpeditionsNewborn = MobFleshGolemOldExpeditionsNewborn
+ent-ActionBoneSpike = [color=yellow]Костяной шип[/color]
+    .desc = Выстреливает короткую очередь отравленных костяных шипов. [color=yellow]Перезарядка 5 сек.[/color]

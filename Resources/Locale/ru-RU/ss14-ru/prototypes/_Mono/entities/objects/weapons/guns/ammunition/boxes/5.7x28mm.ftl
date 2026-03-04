@@ -1,0 +1,11 @@
+﻿ent-BaseAmmoBox57x28mm = коробка боеприпасов (5.7x28мм FMJ)
+ent-AmmoBox57x28mmFMJ = ammunition box (5.7x28mm FMJ)
+ent-AmmoBox57x28mmPractice = ammunition box (5.7x28mm practice)
+ent-AmmoBox57x28mmIncendiary = ammunition box (5.7x28mm incendiary)
+ent-AmmoBox57x28mmUranium = ammunition box (5.7x28mm uranium)
+ent-AmmoBox57x28mmRubber = ammunition box (5.7x28mm rubber)
+ent-AmmoBox57x28mmEmp = ammunition box (5.7x28mm emp)
+ent-AmmoBox57x28mmHP = ammunition box (5.7x28mm hollow-point)
+ent-AmmoBox57x28mmRIP = ammunition box (5.7x28mm RIP)
+ent-AmmoBox57x28mmPlasteelAP = ammunition box (5.7x28mm AP)
+ent-AmmoBox57x28mmBigFMJ = Big

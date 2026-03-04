@@ -24,3 +24,7 @@ ent-MassHallucinations = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
 ent-IonStorm = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
+
+ent-BasicAntagEventsTable = BasicAntagEventsTable
+ent-BorerSpawn = BorerSpawn
+ent-BasicCalmEventsTable = BasicCalmEventsTable

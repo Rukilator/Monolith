@@ -1,5 +1,6 @@
 using Content.Shared._Goobstation.Flashbang;
 using Content.Shared._White.Overlays;
+using Content.Shared._Forge.TTS; // Forge-Change
 using Content.Shared.Armor;
 using Content.Shared.Chat;
 using Content.Shared.Chemistry;
@@ -56,6 +57,9 @@ public partial class InventorySystem
         SubscribeLocalEvent<InventoryComponent, GetSpeedModifierContactCapEvent>(RefRelayInventoryEvent);
         SubscribeLocalEvent<InventoryComponent, GetSlowedOverSlipperyModifierEvent>(RefRelayInventoryEvent);
         SubscribeLocalEvent<InventoryComponent, ModifySlowOnDamageSpeedEvent>(RefRelayInventoryEvent);
+
+        // Corvax-TTS
+        SubscribeLocalEvent<InventoryComponent, TransformSpeakerVoiceEvent>(RelayInventoryEvent);
 
         // Eye/vision events
         SubscribeLocalEvent<InventoryComponent, CanSeeAttemptEvent>(RelayInventoryEvent);

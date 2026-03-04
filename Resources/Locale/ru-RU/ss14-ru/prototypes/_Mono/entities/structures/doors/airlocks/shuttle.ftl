@@ -1,0 +1,14 @@
+ent-AirlockExternalShuttleUSSPLocked = External, Docking, USSP, Locked
+ent-AirlockExternalGlassShuttleUSSPLocked = USSP, Locked, Glass
+ent-AirlockShuttleUSSPOutpostLocked = OUTPOST ONLY, USSP, Docking, Locked
+ent-AirlockGlassShuttleUSSPOutpostLocked = OUTPOST ONLY, USSP, Docking, Locked
+ent-AirlockGlassShuttleNfsdOutpost = OUTPOST ONLY, TSFMC, Glass, Docking
+ent-AirlockShuttleNfsdOutpost = OUTPOST ONLY, TSFMC, Docking
+ent-AirlockShuttleOutpost = OUTPOST ONLY
+ent-AirlockGlassShuttleOutpost = OUTPOST ONLY
+ent-AirlockGlassShuttleNfsdCapital = CAPITAL ONLY, TSFMC, Glass, Docking
+ent-AirlockShuttleNfsdCapital = CAPITAL ONLY, TSFMC, Docking
+ent-AirlockShuttleSyndicateRogueLockedCapital = CAPITAL ONLY, Rogue, Locked
+ent-AirlockGlassShuttleSyndicateRogueLockedCapital = CAPITAL ONLY, Rogue, Locked
+ent-AirlockGlassShuttleSyndicateCapital = CAPITAL ONLY, Syndicate, Glass, Docking
+ent-AirlockShuttleSyndicateCapital = CAPITAL ONLY, Syndicate, Docking

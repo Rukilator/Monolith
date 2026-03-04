@@ -1,0 +1,10 @@
+ent-ClothingBeltMilitaryWebbingSyndicate = РПС синдиката
+    .desc = Ременно-плечевая система тактических ремней.
+ent-ClothingBeltMilitaryWebbingSyndicateShturm = РПС штурмовика синдиката
+    .desc = Ременно-плечевая система тактических ремней.
+ent-ClothingBeltMilitaryWebbingSyndicateCommand = РПС командира синдиката
+    .desc = Ременно-плечевая система тактических ремней.
+ent-ClothingBeltMilitaryWebbingSyndicateEng = РПС техника синдиката
+    .desc = Ременно-плечевая система тактических ремней.
+ent-ClothingBeltMilitaryWebbingSyndicateMed = РПС санитара синдиката
+    .desc = Ременно-плечевая система тактических ремней.

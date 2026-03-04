@@ -1,0 +1,299 @@
+
+- type: entity
+  id: ForgeBulletRifle60
+  name: bullet (.60 rifle)
+  parent: ForgeBaseBulletAntiMateriel
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage: # Corvax-Forge-change
+      types:
+        Piercing: 70
+        Structural: 100
+    armorPenetration: 0.5 # Forge-Change
+    penetrationThreshold: 360
+    penetrationDamageTypeRequirement:
+    - Structural
+
+- type: entity
+  id: ForgeBulletRifle60Rubber
+  name: bullet (.60 rifle, rubber)
+  parent: ForgeBaseBulletAntiMaterielRubber
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 15  # Corvax-Forge-change
+  - type: StaminaDamageOnCollide
+    damage: 80  # Corvax-Forge-change
+
+- type: entity
+  id: ForgeBulletRifle60AP
+  name: bullet (.60 rifle)
+  parent: ForgeBaseBulletAntiMateriel
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 70
+        Structural: 300
+    armorPenetration: 0.85 # Forge-Change: moved out of DamageSpecifier
+    penetrationThreshold: 700
+    penetrationDamageTypeRequirement:
+    - Structural
+
+- type: entity
+  id: ForgeBulletRifle60Incendiary
+  name: bullet (.60 Incendiary)
+  parent: ForgeBaseBulletAntiMateriel
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 25
+        Heat: 20
+        Structural: 100
+    armorPenetration: 0.6 # Forge-Change: moved out of DamageSpecifier
+    penetrationThreshold: 360
+    penetrationDamageTypeRequirement:
+    - Structural
+  - type: PointLight
+    enabled: true
+    color: "#ff4300"
+    radius: 1.1
+    energy: 3.0
+  - type: IgniteOnCollide
+    fireStacks: 1
+  - type: IgnitionSource
+    ignited: true
+
+#region .20 rifle
+- type: entity
+  id: ForgeBulletRifle20
+  name: bullet (.20 rifle)
+  parent: ForgeBaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 15
+
+- type: entity
+  id: ForgeBulletRifle20Overpressure
+  name: bullet (.20 rifle, overpressure)
+  parent: ForgeBaseBulletOverpressure
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 16.5
+    armorPenetration: 0.1 # Forge-Change
+
+- type: entity
+  id: ForgeBulletRifle20Incendiary
+  name: bullet (.20 rifle, incendiary)
+  parent: ForgeBaseBulletIncendiary
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 9
+        Heat: 7
+
+- type: entity
+  id: ForgeBulletRifle20Uranium
+  name: bullet (.20 rifle, uranium)
+  parent: ForgeBaseBulletUranium
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 10
+        Radiation: 7
+
+- type: entity
+  id: ForgeBulletRifle20Practice
+  name: bullet (.20 rifle, practice)
+  parent: ForgeBaseBulletPractice
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1
+
+- type: entity
+  id: ForgeBulletRifle20Rubber
+  name: bullet (.20 rifle, rubber)
+  parent: ForgeBaseBulletRubber
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 2
+  - type: StaminaDamageOnCollide
+    damage: 12 # ~9 hits to stun sounds reasonable, less effective than pistol because rifle round is smaller in size
+
+#region .25 rifle
+- type: entity
+  id: ForgeBulletRifle25
+  name: bullet (.25 rifle)
+  parent: ForgeBaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 13
+
+- type: entity
+  id: ForgeBulletRifle25Overpressure
+  name: bullet (.25 rifle, overpressure)
+  parent: ForgeBaseBulletOverpressure
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 14.5
+    armorPenetration: 0.1 # Forge-Change
+
+- type: entity
+  id: ForgeBulletRifle25Incendiary
+  name: bullet (.25 rifle, incendiary)
+  parent: ForgeBaseBulletIncendiary
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 8
+        Heat: 6
+
+- type: entity
+  id: ForgeBulletRifle25Uranium
+  name: bullet (.25 rifle, uranium)
+  parent: ForgeBaseBulletUranium
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 8
+        Radiation: 7
+
+- type: entity
+  id: ForgeBulletRifle25Practice
+  name: bullet (.25 rifle, practice)
+  parent: ForgeBaseBulletPractice
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1
+
+- type: entity
+  id: ForgeBulletRifle25Rubber
+  name: bullet (.25 rifle, rubber)
+  parent: ForgeBaseBulletRubber
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 2
+  - type: StaminaDamageOnCollide
+    damage: 12 # ~9 hits to stun sounds reasonable, less effective than pistol because rifle round is smaller in size
+
+- type: entity
+  id: ForgeBulletRifle25Emp
+  name: bullet (.25 rifle, EMP)
+  parent: ForgeBaseBulletEmp
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Shock: 8
+        Blunt: 6
+
+#region .30 rifle
+- type: entity
+  id: ForgeBulletRifle30
+  name: bullet (.30 rifle)
+  parent: ForgeBaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 17
+
+- type: entity
+  id: ForgeBulletRifle30Overpressure
+  name: bullet (.30 rifle, overpressure)
+  parent: ForgeBaseBulletOverpressure
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 18.5
+    armorPenetration: 0.1 # Forge-Change
+
+- type: entity
+  id: ForgeBulletRifle30Incendiary
+  name: bullet (.30 rifle, incendiary)
+  parent: ForgeBaseBulletIncendiary
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 10
+        Heat: 8
+
+- type: entity
+  id: ForgeBulletRifle30Uranium
+  name: bullet (.30 rifle, uranium)
+  parent: ForgeBaseBulletUranium
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 11
+        Radiation: 8
+
+- type: entity
+  id: ForgeBulletRifle30Practice
+  name: bullet (.30 rifle, practice)
+  parent: ForgeBaseBulletPractice
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1
+
+- type: entity
+  id: ForgeBulletRifle30Rubber
+  name: bullet (.30 rifle, rubber)
+  parent: ForgeBaseBulletRubber
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 2
+  - type: StaminaDamageOnCollide
+    damage: 13 # ~8 hits to stun sounds reasonable

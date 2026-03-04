@@ -1,0 +1,12 @@
+﻿ent-ShipRepairDeviceBase = УРК
+    .desc = Устройство ремонта корабля, способное восстанавливать разрушенные секции кораблей.
+ent-ShipRepairDevice = SRD
+    .desc = A Ship Repair Device that can reconstruct destroyed sections of ships. Holds 300 charges.
+ent-ShipRepairDeviceEmpty = Empty
+ent-ShipRepairDeviceRecharging = Recharging
+    .desc = A Ship Repair Device that can reconstruct destroyed sections of ships. Holds 300 charges and slowly recharges.
+ent-ShipRepairDeviceAdmin = Admin
+ent-ShipRepairDeviceRedacted = Recharging
+    .desc = An arcane repair device that can repair ADS ships.
+ent-ShipRepairDeviceAmmo = ship repair matter
+    .desc = Ammo cartridge for a ship repair device.

@@ -1,0 +1,11 @@
+ent-ClothingHeadsetAltTsfmc = TSFMC over-ear headset
+ent-ClothingHeadsetAltTsfmcCommander = TSFMC command over-ear headset
+ent-ClothingHeadsetTsfmc = TSFMC headset
+ent-ClothingHeadsetAltTsfmcMarsoc = TSFMC MARSOC over-ear headset
+ent-ClothingHeadsetAltTsfmcMarsocFtl = TSFMC MARSOC command over-ear headset
+ent-ClothingHeadsetUSSPCommand = USSP command headset
+    .desc = Модульная гарнитура для высшего состава USSP. Принимает стандартные ключи шифрования, по умолчанию — канал тактической связи USSP. На стратегическом канале только помехи.
+ent-ClothingHeadsetUSSP = USSP headset
+    .desc = Штатная гарнитура оборонительного флота USSP десятилетиями. Принимает стандартные ключи шифрования, по умолчанию — канал тактической связи USSP.
+ent-ClothingHeadsetAltVanguardCommand = vanguard command over-ear headset
+ent-ClothingHeadsetAltCentComSR = ClothingHeadsetAltCentComSR

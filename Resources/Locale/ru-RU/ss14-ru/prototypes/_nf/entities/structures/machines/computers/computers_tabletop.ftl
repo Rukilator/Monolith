@@ -98,3 +98,10 @@ ent-ComputerTabletopStationAdminBankATMNfsd = { ent-StationAdminBankATM }
   .desc = { ent-StationAdminBankATM.desc }
 ent-ComputerTabletopStationAdminBankATMMedical = { ent-StationAdminBankATM }
   .desc = { ent-StationAdminBankATM.desc }
+
+ent-ComputerTabletopMarketConsoleNFNormal = ComputerTabletopMarketConsoleNFNormal
+ent-ComputerTabletopShuttleTradeOutpostLocal = ComputerTabletopShuttleTradeOutpostLocal
+ent-ComputerTabletopShuttleFrontierOutpostRemote = ComputerTabletopShuttleFrontierOutpostRemote
+ent-ComputerTabletopShuttleFrontierOutpostLocal = ComputerTabletopShuttleFrontierOutpostLocal
+ent-ComputerTabletopShuttleTradeOutpostRemote = ComputerTabletopShuttleTradeOutpostRemote
+ent-BaseComputerTabletopStationAdminBankATM = station administration console

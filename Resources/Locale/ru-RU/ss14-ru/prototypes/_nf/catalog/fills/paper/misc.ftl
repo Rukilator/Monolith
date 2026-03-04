@@ -19,3 +19,5 @@ ent-PaperWrittenGriftyScript = сценарий Грифти
 ent-PaperWrittenGriftyWindow = записка для босса
     .suffix = Бумага
     .desc = { ent-PaperOffice.desc }
+
+ent-PaperWrittenPartyProcedure = official party preparation procedure

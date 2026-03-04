@@ -1,0 +1,236 @@
+#region frame
+- type: entity
+  id: ForgeBaseWeaponFrameRifleAssault
+  parent: [ ForgeBaseWeaponEncumbranceRifleAssault, ForgeBaseItemWeaponGunMagazineFed ]
+  name: assault rifle
+  abstract: true
+  components:
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunRequiresWield
+  - type: GunWieldBonus
+    minAngle: -0 # Set to 0 because GunRequiresWield
+    maxAngle: -0
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 2.2
+    maxAngle: 11
+    angleIncrease: 0.6
+    angleDecay: 3
+    fireRate: 4
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+  # - type: CursorOffsetRequiresWield
+  # - type: EyeCursorOffset
+    # maxOffset: 2.5
+    # pvsIncrease: 0.25
+
+#region manufacturer
+- type: entity
+  id: ForgeBaseWeaponFrameRifleAssaultNanotrasen
+  parent: [ ForgeBaseWeaponFrameRifleAssault ]
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 2.5
+    maxAngle: 12.5
+    angleIncrease: 0.8
+    angleDecay: 2.7
+    fireRate: 3.4
+
+- type: entity
+  id: ForgeBaseWeaponFrameRifleAssaultCybersun
+  parent: [ BaseC3SyndicateContraband, ForgeBaseWeaponFrameRifleAssault ]
+  abstract: true
+  components:
+  - type: Gun
+    angleIncrease: 0.6
+    angleDecay: 4.2
+    fireRate: 3.2
+
+- type: entity
+  id: ForgeBaseWeaponFrameRifleAssaultFrontierGunsmith
+  parent: [ ForgeBaseWeaponFrameRifleAssault ]
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 2.6
+    maxAngle: 13
+    angleIncrease: 1.2
+    angleDecay: 3.8
+    fireRate: 3.2
+
+#region chamber
+- type: entity
+  id: ForgeBaseWeaponRifleAssaultChamber
+  abstract: true
+  components:
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/batrifle.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+
+- type: entity
+  id: ForgeBaseWeaponRifleAssaultChamber20
+  parent: ForgeBaseWeaponRifleAssaultChamber
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-20
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazineRifle20
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist: &mag20Whitelist
+          tags:
+            - ForgeMagazineRifle20
+            - ForgeMagazineDrumRifle20
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber: &chamber20Standard
+        name: Chamber
+        startingItem: ForgeCartridgeRifle20
+        priority: 1
+        whitelist:
+          tags:
+            - ForgeCartridgeRifle20
+
+- type: entity
+  id: ForgeBaseWeaponRifleAssaultChamber20Rubber
+  parent: ForgeBaseWeaponRifleAssaultChamber20
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazineRifle20Rubber
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist: *mag20Whitelist
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: ForgeCartridgeRifle20Rubber
+        priority: 1
+        whitelist:
+          tags:
+            - ForgeCartridgeRifle20
+
+- type: entity
+  id: ForgeBaseWeaponRifleAssaultChamber20Clip
+  parent: ForgeBaseWeaponRifleAssaultChamber
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-20
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazineClipRifle20
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - ForgeMagazineClipRifle20
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber: *chamber20Standard
+
+- type: entity
+  id: ForgeBaseWeaponRifleAssaultChamber30
+  parent: ForgeBaseWeaponRifleAssaultChamber
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-30
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazineRifle30
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist: &mag30Whitelist
+          tags:
+            - ForgeMagazineRifle30
+            - ForgeMagazineLowCapacityRifle30
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber: &chamber30Standard
+        name: Chamber
+        startingItem: ForgeCartridgeRifle30
+        priority: 1
+        whitelist: &chamber30Whitelist
+          tags:
+            - ForgeCartridgeRifle30
+
+- type: entity
+  id: ForgeBaseWeaponRifleAssaultChamber30Rubber
+  parent: ForgeBaseWeaponRifleAssaultChamber30
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazineRifle30Rubber
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist: *mag30Whitelist
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber: &chamber30Rubber
+        name: Chamber
+        startingItem: ForgeCartridgeRifle30Rubber
+        priority: 1
+        whitelist: *chamber30Whitelist
+
+- type: entity
+  id: ForgeBaseWeaponRifleAssaultChamber30LowCapacity
+  parent: ForgeBaseWeaponRifleAssaultChamber30
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazineLowCapacityRifle30
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist: *mag30Whitelist
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber: *chamber30Standard
+
+- type: entity
+  id: ForgeBaseWeaponRifleAssaultChamber30LowCapacityRubber
+  parent: ForgeBaseWeaponRifleAssaultChamber30LowCapacity
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ForgeMagazineLowCapacityRifle30Rubber
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist: *mag30Whitelist
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber: *chamber30Rubber

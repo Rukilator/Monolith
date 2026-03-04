@@ -140,6 +140,10 @@
   - type: ShipRepairable
     repairTime: 5
     repairCost: 10
+  #<Forge>
+  - type: TTS # Corvax-TTS
+    voice: TrainingRobot
+  #<Forge>
 
 - type: entity
   parent: VendingMachine

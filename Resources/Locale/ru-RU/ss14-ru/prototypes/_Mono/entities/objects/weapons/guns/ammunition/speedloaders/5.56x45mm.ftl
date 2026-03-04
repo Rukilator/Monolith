@@ -1,0 +1,7 @@
+﻿ent-BaseSpeedLoader556x45mm = спидлоадер (5.56x45мм FMJ)
+ent-SpeedLoader556x45mmFMJ = speed loader (5.56x45mm FMJ)
+ent-SpeedLoader556x45mmEmpty = speed loader (5.56x45mm any)
+ent-SpeedLoader556x45mmIncendiary = speed loader (5.56x45mm incendiary)
+ent-SpeedLoader556x45mmPractice = speed loader (5.56x45mm practice)
+ent-SpeedLoader556x45mmUranium = speed loader (5.56x45mm uranium)
+ent-SpeedLoader556x45mmRubber = speed loader (5.56x45mm rubber)

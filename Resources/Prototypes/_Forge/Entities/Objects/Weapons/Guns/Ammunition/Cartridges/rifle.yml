@@ -1,0 +1,468 @@
+
+
+- type: entity
+  id: ForgeCartridgeRifle60AP
+  name: cartridge (.60 пробивные)
+  parent: ForgeBaseCartridgeRifle60
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle60AP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+
+- type: entity
+  id: ForgeCartridgeRifle60Incendiary
+  name: cartridge (.60 зажигательные)
+  parent: ForgeBaseCartridgeRifle60
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle60Incendiary
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+
+
+#mirgation NF===>Forge
+
+- type: entity
+  id: BaseCartridgeRifle
+  name: cartridge (.20 rifle)
+  parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeRifle
+  - type: CartridgeAmmo
+    # proto: BulletRifle # Frontier
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  id: BaseCartridgeHeavyRifle
+  name: cartridge (.20 rifle)
+  parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeHeavyRifle
+  - type: CartridgeAmmo
+    # proto: BulletHeavyRifle # Frontier
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  id: ForgeBaseCartridgeRifle10
+  name: cartridge (.10 rifle)
+  parent: BaseCartridgeHeavyRifle
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - ForgeCartridgeRifle10
+
+- type: entity
+  id: ForgeBaseCartridgeRifle20
+  name: cartridge (.20 rifle)
+  parent: BaseCartridgeRifle
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - ForgeCartridgeRifle20
+
+
+- type: entity
+  id: ForgeBaseCartridgeRifle25
+  name: cartridge (.25 rifle)
+  parent: BaseCartridgeRifle
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - ForgeCartridgeRifle25
+
+- type: entity
+  id: BaseCartridgeLightRifle
+  name: cartridge (.30 rifle)
+  parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgeLightRifle
+  - type: CartridgeAmmo
+    # proto: BulletLightRifle # Frontier
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  id: ForgeBaseCartridgeRifle30
+  name: cartridge (.30 rifle)
+  parent: BaseCartridgeLightRifle
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - ForgeCartridgeRifle30
+
+- type: entity
+  id: ForgeBaseCartridgeRifle60
+  name: cartridge (.60 rifle)
+  parent: CartridgeAntiMateriel
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - ForgeCartridgeRifle60
+
+#region .20 rifle
+- type: entity
+  id: ForgeCartridgeRifle20
+  name: cartridge (.20 rifle)
+  parent: ForgeBaseCartridgeRifle20
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle20
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#666666"
+
+- type: entity
+  id: ForgeCartridgeRifle20Overpressure
+  name: cartridge (.20 rifle, overpressure)
+  parent: ForgeBaseCartridgeRifle20
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle20Overpressure
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#ff8d00"
+
+- type: entity
+  id: ForgeCartridgeRifle20Incendiary
+  name: cartridge (.20 rifle, incendiary)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseCartridgeRifle20] # Corvax-Forge: Contraband T2
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle20Incendiary
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#ff0000"
+
+- type: entity
+  id: ForgeCartridgeRifle20Uranium
+  name: cartridge (.20 rifle, uranium)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseCartridgeRifle20] # Corvax-Forge: Contraband T2
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle20Uranium
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#00ff00"
+
+- type: entity
+  id: ForgeCartridgeRifle20Practice
+  name: cartridge (.20 rifle, practice)
+  parent: ForgeBaseCartridgeRifle20
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle20Practice
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#dddddd"
+
+- type: entity
+  id: ForgeCartridgeRifle20Rubber # CartridgeRifleRubber
+  name: cartridge (.20 rifle, rubber)
+  parent: ForgeBaseCartridgeRifle20
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle20Rubber
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#00b0ff"
+
+#region .25 rifle
+- type: entity
+  id: ForgeCartridgeRifle25
+  name: cartridge (.25 rifle)
+  parent: ForgeBaseCartridgeRifle25
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle25
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#666666"
+
+- type: entity
+  id: ForgeCartridgeRifle25Overpressure
+  name: cartridge (.25 rifle, overpressure)
+  parent: ForgeBaseCartridgeRifle25
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle25Overpressure
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#ff8d00"
+
+- type: entity
+  id: ForgeCartridgeRifle25Incendiary
+  name: cartridge (.25 rifle, incendiary)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseCartridgeRifle25] # Corvax-Forge: Contraband T2
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle25Incendiary
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#ff0000"
+
+- type: entity
+  id: ForgeCartridgeRifle25Uranium
+  name: cartridge (.25 rifle, uranium)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseCartridgeRifle25] # Corvax-Forge: Contraband T2
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle25Uranium
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#00ff00"
+
+- type: entity
+  id: ForgeCartridgeRifle25Practice
+  name: cartridge (.25 rifle, practice)
+  parent: ForgeBaseCartridgeRifle25
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle25Practice
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#dddddd"
+
+- type: entity
+  id: ForgeCartridgeRifle25Rubber # CartridgeCaselessRifleRubber
+  name: cartridge (.25 rifle, rubber)
+  parent: ForgeBaseCartridgeRifle25
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle25Rubber
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#00b0ff"
+
+#Corvax-Frontier
+- type: entity
+  id: ForgeCartridgeRifle25Emp
+  name: cartridge (.25 rifle, EMP)
+  parent: ForgeBaseCartridgePistol35
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle25Emp
+  - type: EmpDescription
+    range: 0.3
+    energyConsumption: 2700000
+    disableDuration: 10
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#00ffff"
+
+#region .30 rifle
+- type: entity
+  id: ForgeCartridgeRifle30
+  name: cartridge (.30 rifle)
+  parent: ForgeBaseCartridgeRifle30
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle30
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#666666"
+
+- type: entity
+  id: ForgeCartridgeRifle30Overpressure
+  name: cartridge (.30 rifle, overpressure)
+  parent: ForgeBaseCartridgeRifle30
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle30Overpressure
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#ff8d00"
+
+- type: entity
+  id: ForgeCartridgeRifle30Incendiary
+  name: cartridge (.30 rifle, incendiary)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseCartridgeRifle30] # Corvax-Forge: Contraband T2
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle30Incendiary
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#ff0000"
+
+- type: entity
+  id: ForgeCartridgeRifle30Uranium
+  name: cartridge (.30 rifle, uranium)
+  parent: [BaseC2ContrabandUnredeemable, ForgeBaseCartridgeRifle30] # Corvax-Forge: Contraband T2
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle20Uranium
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#00ff00"
+
+- type: entity
+  id: ForgeCartridgeRifle30Practice
+  name: cartridge (.30 rifle, practice)
+  parent: ForgeBaseCartridgeRifle30
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle30Practice
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#dddddd"
+
+- type: entity
+  id: ForgeCartridgeRifle30Rubber # CartridgeLightRifleRubber
+  name: cartridge (.30 rifle, rubber)
+  parent: ForgeBaseCartridgeRifle30
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle30Rubber
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#00b0ff"
+
+#region .60 rifle
+- type: entity
+  id: ForgeCartridgeRifle60
+  name: cartridge (.60 rifle)
+  parent: ForgeBaseCartridgeRifle60
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle60
+  - type: Sprite
+    layers: # TODO: add tip
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+
+- type: entity
+  id: ForgeCartridgeRifle60Rubber
+  name: cartridge (.60 rifle, rubber)
+  parent: ForgeBaseCartridgeRifle60
+  components:
+  - type: CartridgeAmmo
+    proto: ForgeBulletRifle60Rubber
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]

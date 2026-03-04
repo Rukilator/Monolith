@@ -79,3 +79,13 @@ ent-DefaultStationBeaconFrontierDockSixB = { ent-DefaultStationBeacon }
 ent-DefaultStationBeaconFrontierDockSixC = { ent-DefaultStationBeacon }
     .suffix = Док 6c
     .desc = { ent-DefaultStationBeacon.desc }
+
+ent-DefaultStationBeaconFrontierEvaAccess = DefaultStationBeaconFrontierEvaAccess
+ent-DefaultStationBeaconFrontierMess = DefaultStationBeaconFrontierMess
+ent-DefaultStationBeaconFrontierArmoryMercenary = DefaultStationBeaconFrontierArmoryMercenary
+ent-DefaultStationBeaconFrontierHead = DefaultStationBeaconFrontierHead
+ent-DefaultStationBeaconFrontierDoCOffice = DefaultStationBeaconFrontierDoCOffice
+ent-DefaultStationBeaconFrontierAtmosBurn = DefaultStationBeaconFrontierAtmosBurn
+ent-DefaultStationBeaconFrontierLobby = DefaultStationBeaconFrontierLobby
+ent-DefaultStationBeaconFrontierAtmosCollector = DefaultStationBeaconFrontierAtmosCollector
+ent-DefaultStationBeaconFrontierAtmos = DefaultStationBeaconFrontierAtmos

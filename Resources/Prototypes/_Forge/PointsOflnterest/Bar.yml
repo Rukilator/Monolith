@@ -1,0 +1,41 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Notes:
+#
+- type: pointOfInterest
+  id: Bar
+  name: "Бар Мерсена"
+  minimumDistance: 3900 # Forge-change: 441 - long distances
+  maximumDistance: 5400 # Forge-change: 441 - long distances
+  gridPath: /Maps/_Forge/POI/Bar.yml
+  addComponents:
+  - type: IFF
+    color: "#5a137d"
+    readOnly: true
+  - type: Shuttle
+  - type: ProtectedGrid
+    preventArtifactTriggers: True
+    noGridCollision: True
+
+- type: gameMap
+  id: Bar
+  mapName: 'Бар Мерсена'
+  mapPath: /Maps/_Forge/POI/Bar.yml
+  minPlayers: 0
+  stations:
+    Bar:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Бар Мерсена'
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt

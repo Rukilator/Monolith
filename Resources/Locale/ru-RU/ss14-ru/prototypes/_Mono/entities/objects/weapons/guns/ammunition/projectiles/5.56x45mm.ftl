@@ -1,0 +1,8 @@
+﻿ent-Bullet556x45mmFMJ = пуля (5.56x45мм FMJ)
+ent-Bullet556x45mmPractice = bullet (5.56x45mm practice)
+ent-Bullet556x45mmRubber = bullet (5.56x45mm rubber)
+ent-Bullet556x45mmIncendiary = bullet (5.56x45mm incendiary)
+ent-Bullet556x45mmUranium = bullet (5.56x45mm uranium)
+ent-Bullet556x45mmHP = bullet (5.56x45mm hollow-point)
+ent-Bullet556x45mmRIP = bullet (5.56x45mm RIP)
+ent-Bullet556x45mmPlasteelAP = bullet (5.56x45mm AP)

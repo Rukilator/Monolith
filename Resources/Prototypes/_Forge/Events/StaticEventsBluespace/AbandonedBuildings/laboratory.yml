@@ -1,0 +1,38 @@
+# Author Info
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
+
+# Notes:
+#
+- type: pointOfInterest
+  id: LaboratoryTL
+  name: Заброшенная Лаборатория TL
+  minimumDistance: 6500
+  maximumDistance: 9000
+  gridPath: /Maps/_Forge/POI/abandoned_nio_tl.yml
+  addComponents:
+  - type: IFF
+    color: "#c2c0c0"
+    readOnly: true
+  - type: Shuttle
+
+- type: gameMap
+  id: LaboratoryTL
+  mapName: Заброшенная Лаборатория TL
+  mapPath: /Maps/_Forge/POI/abandoned_nio_tl.yml
+  minPlayers: 0
+  stations:
+    LaboratoryTL:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Заброшенная Лаборатория TL '
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt

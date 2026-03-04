@@ -1,0 +1,73 @@
+#region frame
+- type: entity
+  id: ForgeBaseWeaponFrameRevolver # нужно
+  parent: [ ForgeBaseWeaponEncumbrancePistol, ForgeBaseItemWeaponGun ]
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Gun
+    projectileSpeed: 22.5
+    minAngle: 2.7
+    maxAngle: 13.5
+    angleIncrease: 0.7
+    angleDecay: 3.5
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+  - type: UseDelayOnShoot
+  - type: UseDelay
+    delay: 0.66
+  - type: StaticPrice
+    price: 200
+
+#region manufacturer
+- type: entity
+  id: ForgeBaseWeaponFrameRevolverGorlex # нужно
+  parent: [ BaseC3SyndicateContraband, ForgeBaseWeaponFrameRevolver ]
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 3
+    maxAngle: 15
+    angleIncrease: 1.3
+    angleDecay: 4.7
+    fireRate: 3
+
+#region chamber
+- type: entity
+  id: ForgeBaseWeaponRevolverChamber # нужно
+  abstract: true
+  components:
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+  - type: RevolverAmmoProvider
+    mayTransfer: true
+    capacity: 6
+    chambers: [ True, True, True, True, True, True ]
+    ammoSlots: [ null, null, null, null, null, null ]
+    soundEject:
+      path: /Audio/Weapons/Guns/MagOut/revolver_magout.ogg
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
+  - type: ContainerContainer
+    containers:
+      revolver-ammo: !type:Container
+
+- type: entity
+  id: ForgeBaseWeaponRevolverChamber45 #Нужно
+  parent: ForgeBaseWeaponRevolverChamber
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-45
+  - type: RevolverAmmoProvider
+    whitelist:
+      tags:
+        - ForgeCartridgePistol45
+        - ForgeSpeedLoaderPistol45
+    proto: ForgeCartridgePistol45

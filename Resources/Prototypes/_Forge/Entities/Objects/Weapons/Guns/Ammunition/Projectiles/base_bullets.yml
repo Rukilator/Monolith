@@ -1,0 +1,470 @@
+#region ForgeBase
+- type: entity # Forge-change remove bullet-trace state, color, and tracer
+  id: ForgeBaseBullet
+  parent: BaseBullet
+  abstract: true
+  components:
+  - type: Sprite
+    noRot: false
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Projectiles/bullets.rsi
+    layers:
+    - state: bullet
+      shader: unshaded
+
+- type: entity
+  id: ForgeBaseBulletTrigger
+  parent: BaseBulletTrigger
+  abstract: true
+  components:
+  - type: Sprite
+    noRot: false
+    sprite: Forge/Objects/Weapons/Guns/Ammunition/Projectiles/bullets.rsi
+    layers:
+    - state: bullet
+      shader: unshaded
+
+- type: entity
+  id: ForgeBasePellet
+  parent: ForgeBaseBullet
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: pellet
+      shader: unshaded
+    - state: pellet-trace
+      shader: unshaded
+
+#region Bullets
+- type: entity
+  id: ForgeBaseBulletOverpressure
+  parent: ForgeBaseBullet
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: bullet
+      shader: unshaded
+
+- type: entity
+  id: ForgeBaseBulletIncendiary
+  parent: ForgeBaseBullet
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: bullet
+      shader: unshaded
+  - type: PointLight
+    enabled: true
+    color: "#ff4300"
+    radius: 1.1
+    energy: 3.0
+  - type: IgniteOnCollide
+    fireStacks: 0.25
+  - type: IgnitionSource
+    ignited: true
+
+- type: entity
+  id: ForgeBaseBulletUranium
+  parent: ForgeBaseBullet
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: bullet
+      shader: unshaded
+  - type: PointLight
+    enabled: true
+    color: "#9BE792"
+    radius: 1.1
+    energy: 3.0
+- type: entity
+  id: ForgeBaseBulletPractice
+  parent: ForgeBaseBullet
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: bullet
+      shader: unshaded
+
+- type: entity
+  id: ForgeBaseBulletEmp
+  parent: ForgeBaseBulletTrigger
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: bullet
+      shader: unshaded
+  - type: PointLight
+    enabled: true
+    color: "#00ffff"
+    radius: 1.1
+    energy: 3.0
+
+- type: entity
+  id: ForgeBaseBulletRubber
+  parent: ForgeBaseBullet
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: bullet
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 3
+    soundHit:
+      path: /Audio/Weapons/Guns/Hits/snap.ogg
+  - type: StaminaDamageOnCollide
+    damage: 15
+
+- type: entity
+  id: ForgeBaseBulletExplosive
+  parent: ForgeBaseBulletTrigger
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: bullet
+      shader: unshaded
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 2
+    intensitySlope: 1
+    totalIntensity: 6
+    maxTileBreak: 0
+  - type: PointLight
+    enabled: true
+    color: "#ffff00FF"
+    radius: 1.1
+    energy: 3.0
+
+- type: entity
+  id: ForgeBaseBulletAP
+  parent: ForgeBaseBullet
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: bullet
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 8
+    ignoreResistances: true
+
+#region AntiMateriel
+- type: entity
+  id: ForgeBaseBulletAntiMateriel
+  parent: ForgeBaseBullet
+  abstract: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 30
+        Structural: 200
+    penetrationThreshold: 360
+    penetrationDamageTypeRequirement:
+    - Structural
+
+- type: entity
+  id: ForgeBaseBulletAntiMaterielRubber
+  parent: ForgeBaseBulletRubber
+  abstract: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 10
+  - type: StaminaDamageOnCollide
+    damage: 60
+
+#region Pellets
+- type: entity
+  id: ForgeBasePelletOverpressure
+  parent: ForgeBaseBulletOverpressure
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: pellet
+      color: "#ff8d00FF"
+      shader: unshaded
+    - state: pellet-trace
+      color: "#ff8d00BB"
+      shader: unshaded
+
+- type: entity
+  id: ForgeBasePelletIncendiary
+  parent: ForgeBaseBulletIncendiary
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: pellet
+      color: "#ff0000FF"
+      shader: unshaded
+    - state: pellet-trace
+      color: "#ff0000BB"
+      shader: unshaded
+  - type: PointLight
+    enabled: true
+    color: "#ff4300"
+    radius: 1.1
+    energy: 3.0
+  - type: IgniteOnCollide
+    fireStacks: 0.25
+  - type: IgnitionSource
+    ignited: true
+
+- type: entity
+  id: ForgeBasePelletUranium
+  parent: ForgeBaseBullet
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: pellet
+      color: "#00ff00FF"
+      shader: unshaded
+    - state: pellet-trace
+      color: "#9BE792BB"
+      shader: unshaded
+  - type: PointLight
+    enabled: true
+    color: "#9BE792"
+    radius: 1.1
+    energy: 1.0
+- type: entity
+  id: ForgeBasePelletPractice
+  parent: ForgeBaseBullet
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: pellet
+      color: "#ddddddFF"
+      shader: unshaded
+    - state: pellet-trace
+      color: "#ddddddBB"
+      shader: unshaded
+
+#region .35 pistol
+- type: entity
+  id: ForgeBulletPistol35
+  name: bullet (.35 pistol)
+  parent: ForgeBaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 11
+  - type: StaminaDamageOnCollide
+    damage: 4 # 15 hits to slowdown
+
+- type: entity
+  id: ForgeBulletPistol35Overpressure
+  name: bullet (.35 pistol, overpressure)
+  parent: ForgeBaseBulletOverpressure
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 12.5
+    armorPenetration: 0.1 # Forge-Change
+  - type: StaminaDamageOnCollide
+    damage: 5 # 12 hits to slowdown
+
+- type: entity
+  id: ForgeBulletPistol35Incendiary
+  name: bullet (.35 pistol, incendiary)
+  parent: ForgeBaseBulletIncendiary
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 6
+        Heat: 6
+  - type: StaminaDamageOnCollide
+    damage: 4 # 15 hits to slowdown
+
+- type: entity
+  id: ForgeBulletPistol35Uranium
+  parent: ForgeBaseBulletUranium
+  name: bullet (.35 pistol, uranium)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 7
+        Radiation: 6
+  - type: StaminaDamageOnCollide
+    damage: 4 # 15 hits to slowdown
+
+- type: entity
+  id: ForgeBulletPistol35Practice
+  name: bullet (.35 pistol, practice)
+  parent: ForgeBaseBulletPractice
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 1
+
+# .35 pistol
+- type: entity
+  id: ForgeBulletPistol35Emp
+  name: bullet (.35 pistol, EMP)
+  parent: ForgeBaseBulletEmp
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Shock: 5
+        Blunt: 8
+  - type: EmpOnTrigger
+    range: 0.3
+    energyConsumption: 2700000
+    disableDuration: 5
+  - type: StaminaDamageOnCollide
+    damage: 4 # 15 hits to slowdown
+
+- type: entity
+  id: ForgeBulletPistol35Rubber
+  name: bullet (.35 pistol, rubber)
+  parent: ForgeBaseBulletRubber
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 1
+  - type: StaminaDamageOnCollide
+    damage: 13 # ~8 hits to stun sounds reasonable
+
+#region .45 pistol
+- type: entity
+  id: ForgeBulletPistol45
+  name: bullet (.45 pistol)
+  parent: ForgeBaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 25
+  - type: StaminaDamageOnCollide
+    damage: 6 # 10 hits to slowdown
+
+- type: entity
+  id: ForgeBulletPistol45Overpressure
+  name: bullet (.45 pistol, overpressure)
+  parent: ForgeBaseBulletOverpressure
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 27
+    armorPenetration: 0.1 # Forge-Change
+  - type: StaminaDamageOnCollide
+    damage: 7 # ~9 hits to slowdown
+
+- type: entity
+  id: ForgeBulletPistol45Incendiary
+  name: bullet (.45 pistol, incendiary)
+  parent: ForgeBaseBulletIncendiary
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 18
+        Heat: 9
+  - type: StaminaDamageOnCollide
+    damage: 6 # 10 hits to slowdown
+
+- type: entity
+  id: ForgeBulletPistol45Uranium
+  parent: ForgeBaseBulletUranium
+  name: bullet (.45 pistol, uranium)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 18
+        Radiation: 10
+  - type: StaminaDamageOnCollide
+    damage: 6 # 10 hits to slowdown
+
+- type: entity
+  id: ForgeBulletPistol45Practice
+  name: bullet (.45 pistol, practice)
+  parent: ForgeBaseBulletPractice
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 1
+
+# .45 pistol
+- type: entity
+  id: ForgeBulletPistol45Emp
+  name: bullet (.45 pistol, EMP)
+  parent: ForgeBaseBulletEmp
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Shock: 10
+        Blunt: 17
+  - type: EmpOnTrigger
+    range: 0.3
+    energyConsumption: 2700000
+    disableDuration: 10
+  - type: StaminaDamageOnCollide
+    damage: 6 # 10 hits to slowdown
+
+- type: entity
+  id: ForgeBulletPistol45Rubber
+  name: bullet (.45 pistol, rubber)
+  parent: ForgeBaseBulletRubber
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 2
+  - type: StaminaDamageOnCollide
+    damage: 18 # ~6 hits to stun sounds reasonable
+
+# Corvax-Frontier
+- type: entity
+  id: ForgeBulletPistol45AP
+  name: bullet (.45 pistol, AP)
+  parent: ForgeBaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 25
+    armorPenetration: 0.8 # Forge-Change
+  - type: StaminaDamageOnCollide
+    damage: 6 # 10 hits to slowdown

@@ -1,0 +1,153 @@
+#region base .20
+- type: entity
+  id: ForgeBaseAmmunitionBoxRifle20
+  parent: ForgeBaseAmmunitionBox
+  name: ammunition box (.20 rifle)
+  abstract: true
+  components:
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - ForgeCartridgeRifle20
+    capacity: 60
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi
+
+#region base .25
+- type: entity
+  id: ForgeBaseAmmunitionBoxRifle25
+  parent: ForgeBaseAmmunitionBox
+  name: ammunition box (.25 rifle)
+  abstract: true
+  components:
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - ForgeCartridgeRifle25
+    capacity: 60
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi
+
+#region base .30
+- type: entity
+  id: ForgeBaseAmmunitionBoxRifle30
+  parent: ForgeBaseAmmunitionBox
+  name: ammunition box (.30 rifle)
+  abstract: true
+  components:
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - ForgeCartridgeRifle30
+    capacity: 60
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi
+
+#region .25 rifle
+- type: entity
+  id: ForgeAmmunitionBoxRifle25
+  parent: ForgeBaseAmmunitionBoxRifle25
+  name: ammunition box (.25 rifle)
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#b8a291"
+    - state: decal-calibre-25
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: ForgeAmmunitionBoxRifle25Overpressure
+  parent: ForgeBaseAmmunitionBoxRifle25
+  name: ammunition box (.25 rifle, overpressure)
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle25Overpressure
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#b8a291"
+    - state: decal-01
+      color: "#ff8d00"
+    - state: decal-calibre-25
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+#region .30 rifle
+- type: entity
+  id: ForgeAmmunitionBoxRifle30
+  parent: ForgeBaseAmmunitionBoxRifle30
+  name: ammunition box (.30 rifle)
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle30
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#b55f59"
+    - state: decal-calibre-30
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: StaticPrice
+    price: 61
+
+- type: entity
+  id: ForgeAmmunitionBoxRifle30Overpressure
+  parent: ForgeBaseAmmunitionBoxRifle30
+  name: ammunition box (.30 rifle, overpressure)
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle30Overpressure
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#b55f59"
+    - state: decal-01
+      color: "#ff8d00"
+    - state: decal-calibre-30
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+#region .20 rifle
+- type: entity
+  id: ForgeAmmunitionBoxRifle20
+  parent: ForgeBaseAmmunitionBoxRifle20
+  name: ammunition box (.20 rifle)
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle20
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#cbca8f"
+    - state: decal-calibre-20
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: StaticPrice
+    price: 61
+
+- type: entity
+  id: ForgeAmmunitionBoxRifle20Overpressure
+  parent: ForgeBaseAmmunitionBoxRifle20
+  name: ammunition box (.20 rifle, overpressure)
+  components:
+  - type: BallisticAmmoProvider
+    proto: ForgeCartridgeRifle20Overpressure
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#cbca8f"
+    - state: decal-01
+      color: "#ff8d00"
+    - state: decal-calibre-20
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]

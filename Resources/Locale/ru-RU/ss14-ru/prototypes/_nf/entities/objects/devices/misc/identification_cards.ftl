@@ -41,3 +41,5 @@ ent-ClarpyIDCard = ID карта Клярпи
 ent-ClippyIDCard = ID карта Скрепки
     .desc = { ent-IDCardStandard.desc }
 ent-MailCarrierNFIDCard = ID карта почтальона
+
+ent-YipYipIDCard = ID-карта «Йип-йип»

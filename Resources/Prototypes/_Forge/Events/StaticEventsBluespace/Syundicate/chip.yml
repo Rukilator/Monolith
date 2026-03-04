@@ -1,0 +1,40 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Notes:
+#
+- type: pointOfInterest
+  id: chip
+  name: Обломок
+  minimumDistance: 4500
+  maximumDistance: 8500
+  gridPath: /Maps/_Forge/Events/Elementary/Syndicate/chip.yml
+  addComponents:
+  - type: IFF
+    color: "#850d09"
+    flags: [HideLabel]
+    readOnly: true
+  - type: Shuttle
+  - type: BlockEvacuation
+
+- type: gameMap
+  id: chip
+  mapName: Обломок
+  mapPath: /Maps/_Forge/Events/Elementary/Syndicate/chip.yml
+  minPlayers: 0
+  stations:
+    chip:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Обломок'
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt

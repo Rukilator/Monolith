@@ -16,3 +16,7 @@ ent-NFMobShark = карпоакула
   .desc = Опасная карпоакула из черноты бесконечного космоса, обожающая пить вашу кровь.
 ent-NFMobTick = космический клещ
   .desc = Это космический клещ, остерегайтесь его мерзкого укуса. УСФ сообщает, что 90 процентов ампутаций ног - вызваны последствиями укусов космических клещей.
+ent-NFMobCarpMagic = NFMobCarpMagic
+ent-NFMobCarp = NFMobCarp
+ent-NFMobCarpRainbow = NFMobCarpRainbow
+ent-NFMobCarpHolo = NFMobCarpHolo

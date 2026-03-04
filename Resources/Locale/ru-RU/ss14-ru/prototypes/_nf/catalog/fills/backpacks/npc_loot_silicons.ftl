@@ -9,3 +9,5 @@ ent-ClothingBackpackRogueSiliconT3 = { ent-RogueSiliconGiftBox }
     .desc = { ent-RogueSiliconGiftBox.desc }
 ent-ClothingBackpackRogueSiliconT4 = { ent-RogueSiliconGiftBox }
     .desc = { ent-RogueSiliconGiftBox.desc }
+
+ent-ClothingBackpackRogueSiliconT0 = ClothingBackpackRogueSiliconT0

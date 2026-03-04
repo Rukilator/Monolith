@@ -169,6 +169,14 @@ namespace Content.Shared.Roles
         /// </summary>
         [DataField]
         public List<ProtoId<GuideEntryPrototype>>? Guides;
+
+        // Forge-Change-Start
+        [DataField]
+        public int Salary = 0;
+
+        [DataField]
+        public TimeSpan SalaryInterval = TimeSpan.FromMinutes(20);
+        // Forge-Change-End
     }
 
     /// <summary>

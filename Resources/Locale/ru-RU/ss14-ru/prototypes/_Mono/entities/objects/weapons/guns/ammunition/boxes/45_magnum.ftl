@@ -1,0 +1,11 @@
+﻿ent-BaseAmmoBox45_magnum = коробка боеприпасов (.45 магнум FMJ)
+ent-AmmoBox45_magnumFMJ = ammunition box (.45 magnum FMJ)
+ent-AmmoBox45_magnumPractice = ammunition box (.45 magnum practice)
+ent-AmmoBox45_magnumIncendiary = ammunition box (.45 magnum incendiary)
+ent-AmmoBox45_magnumUranium = ammunition box (.45 magnum uranium)
+ent-AmmoBox45_magnumRubber = ammunition box (.45 magnum rubber)
+ent-AmmoBox45_magnumAP = ammunition box (.45 magnum extreme armor-piercing)
+ent-AmmoBox45_magnumHP = ammunition box (.45 magnum hollow-point)
+ent-AmmoBox45_magnumRIP = ammunition box (.45 magnum RIP)
+ent-AmmoBox45_magnumPlasteelAP = ammunition box (.45 magnum AP)
+ent-AmmoBox45_magnumBigFMJ = Big

@@ -25,3 +25,15 @@ ent-ScrapDebrisNFLarge = Крупный обломок
 ent-ScrapDebrisNFExtraLarge = Большой обломок
 ent-ScrapDebrisNFExtraLargeScattered = Огромный обломок
 ent-ScrapDebrisNFHuge = Гигантский обломок
+
+ent-NFWreckDebrisBrassMedium = обломок латунный средний
+ent-NFWreckDebrisMedium = крупный металлолом
+ent-NFWreckDebrisBrassSmall = обломок латунный малый
+ent-NFWreckDebrisBrassLarge = обломок латунный крупный
+ent-NFWreckDebrisBrassExtraLarge = обломок латунный большой
+ent-NFWreckDebrisSmall = малый металлолом
+ent-NFWreckDebrisExtraHuge = гигантский металлолом
+ent-NFWreckDebrisExtraLarge = крупный металлолом
+ent-NFWreckDebrisLarge = крупный металлолом
+ent-NFWreckDebrisEnormous = огромный металлолом
+ent-NFWreckDebrisHuge = гигантский металлолом

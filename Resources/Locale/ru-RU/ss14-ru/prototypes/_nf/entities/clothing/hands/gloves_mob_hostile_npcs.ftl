@@ -73,3 +73,11 @@ ent-ClothingHandsGlovesWeaponSawnOffPkaDagger = двуручное оружие
 ent-ClothingHandsGlovesWeaponSawnOffPkas = двуручное оружие
     .suffix = двойной укороченный протокинетический ускоритель
     .desc = { ent-ClothingHandsGlovesColorBlackSMG.desc }
+
+ent-PunkHandsGlovesBaseballBat = панк-перчатки
+    .desc = Яркие перчатки, которые не спасают от жарки.
+ent-PunkHandsGlovesSmg = PunkHandsGlovesSmg
+ent-PunkHandsGlovesLaserGun = PunkHandsGlovesLaserGun
+ent-PunkHandsGlovesFireaxe = PunkHandsGlovesFireaxe
+ent-PunkHandsGlovesShotgun = PunkHandsGlovesShotgun
+ent-PunkHandsGlovesSledgehammer = PunkHandsGlovesSledgehammer

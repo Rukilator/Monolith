@@ -46,3 +46,9 @@ ent-SpawnDungeonLootGunT5 = случайное оружие
 ent-SpawnDungeonLootExplosivesT5 = случайное оружие
     .suffix = Экспедиция, Взрывчатка, T5
     .desc = { ent-MarkerBasePlaceFree.desc }
+
+ent-SpawnDungeonLootAmmoUranium = random ammo
+ent-SpawnDungeonLootAmmoRubber = random ammo
+ent-SpawnDungeonLootAmmoIncendiary = random ammo
+ent-SpawnDungeonLootAmmoLethal = random ammo
+ent-SpawnDungeonLootAmmoPractice = random ammo

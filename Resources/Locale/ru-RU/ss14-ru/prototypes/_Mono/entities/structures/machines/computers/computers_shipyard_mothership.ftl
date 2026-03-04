@@ -1,0 +1,12 @@
+ent-BaseCarrierComputer = Carrier
+    .desc = Used on carriers to purchase and sell ships without returning to a station.
+ent-SellOnlyCarrierComputer = sell only shipyard console
+ent-MiningCarrierComputer = mining carrier console
+ent-HiveCarrierComputer = zephyr carrier console
+ent-TSFCarrierComputer = TSF carrier console
+ent-LedokolAttatchmentComputer = ledokol attatchment console
+ent-WindreignCarrierComputer = windreign shipyard console
+ent-JupiterCarrierComputer = jupiter shipyard console
+    .desc = Lighter shipyard using the Jupiter's internal hangars, doesn't have access to the full roster of Phaethon Dynasty ships.
+ent-PDVMotleyAnneCarrierComputer = motley anne shipyard console
+ent-RavagerCarrierComputer = ravager shipyard console

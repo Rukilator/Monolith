@@ -14,3 +14,6 @@ ent-WeaponRifleJackdaw = CAWS-25 "Галка"
     .desc = Начало конца возвещается песней галки. Использует безгильзовые патроны .25.
 ent-WeaponRifleVulcanRubber = { ent-WeaponRifleVulcan }
   .desc = { ent-WeaponRifleVulcan.desc }
+
+ent-WeaponRifleGestioPMC = PA Gestio (7.62x39 мм)
+    .desc = Старая винтовка с режимом очереди, так и не вышедшая из испытаний. Принимает магазины 7.62x39 мм малой ёмкости. Легально приобретена у лицензированного поставщика.

@@ -10,3 +10,5 @@ ent-SpawnMobRogueSiliconsT2 = спавнер дрона убийцы
 ent-SpawnMobRogueSiliconsT3 = спавнер дрона убийцы
     .suffix = AI, Враждебный, T3
     .desc = { ent-MarkerBase.desc }
+
+ent-SpawnMobRogueSiliconBossRandom = спавнер босса-силикона

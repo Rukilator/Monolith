@@ -22,3 +22,8 @@ ent-BiogeneratorFill = { ent-Biogenerator }
 ent-PirateTechFab = пиратский техфаб
     .desc = Вы можете услышать, как оно гудит в предвкушении того, что его накормят новыми чертежами.
     .suffix = DoNotMap
+
+ent-BlueprintReceiverBase = сервисный техфаб
+    .desc = Печатает снаряжение для обслуживающего персонала.
+ent-Techfab = инженерный техфаб
+    .desc = Печатает снаряжение для инженеров.

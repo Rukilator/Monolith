@@ -1,0 +1,16 @@
+ent-ForgeBulletLaserPractice = тренировочный лазер
+ent-ForgeBulletLaserMedium = средний лазер
+ent-ForgeBulletImmolationLaser = лазерный снаряд
+ent-ForgeBulletDisablerLow = болт станнера
+ent-ForgeBulletKineticLowPower = кинетический болт
+ent-ForgeBulletFiredartLaser = лазерный снаряд
+ent-ForgeBulletLaserHeavy = болт станнера
+ent-ForgeBulletKineticMediumPower = кинетический болт
+ent-ForgeBulletKineticHighPower = кинетический болт
+ent-ForgeBulletHeavyPulse = тяжёлый импульсный снаряд
+ent-ForgeBulletHeavyPulseNarrow = уничтожить
+ent-ForgeBulletDisablerHeavy = обезвредить
+ent-ForgeBulletPulseSniper = тяжёлый импульсный снаряд
+ent-ForgeBulletDisablerStaminaOnly = болт станнера
+ent-ForgeBulletPulse = импульсный снаряд
+ent-ForgeBulletXrayLaser = радиоактивный снаряд

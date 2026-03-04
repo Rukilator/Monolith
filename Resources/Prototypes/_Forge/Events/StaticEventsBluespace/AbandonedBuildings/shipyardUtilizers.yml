@@ -1,0 +1,39 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/mersen-tyn
+# Discord: mersen
+
+# Notes:
+#
+- type: pointOfInterest
+  id: shipyardUtilizers
+  name: Заброшенная Верфь
+  minimumDistance: 2000
+  maximumDistance: 6000
+  gridPath: /Maps/_Forge/Events/Elementary/AbandonedBuildings/shipyardUtilizers.yml
+  addComponents:
+  - type: IFF
+    color: "#a88732"
+    flags: [HideLabel]
+    readOnly: true
+  - type: Shuttle
+
+- type: gameMap
+  id: shipyardUtilizers
+  mapName: Заброшенная Верфь
+  mapPath: /Maps/_Forge/Events/Elementary/AbandonedBuildings/shipyardUtilizers.yml
+  minPlayers: 0
+  stations:
+    shipyardUtilizers:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Лаборатория'
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt

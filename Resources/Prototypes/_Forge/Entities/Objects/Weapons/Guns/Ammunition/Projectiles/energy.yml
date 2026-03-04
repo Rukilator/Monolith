@@ -1,0 +1,316 @@
+#region Laser bolts
+# Pistols / SMGs
+- type: entity
+  id: ForgeBulletLaserLow
+  parent: ForgeBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 13.5 # Corvax-Forge: Weaponary update
+    armorPenetration: 0.1 # Forge-Change
+
+- type: entity
+  id: ForgeBulletLaserLowMed # Corvax-Forge: Weaponary update
+  parent: ForgeBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 16.5 # Corvax-Forge: Weaponary update
+    armorPenetration: 0.15 # Forge-Change
+
+# Assault Rifles / Carbines
+- type: entity
+  id: ForgeBulletLaserPractice
+  parent: ForgeBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: green
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 0
+
+- type: entity
+  id: ForgeBulletLaserMedium
+  parent: ForgeBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 18 # Corvax-Forge: Weaponary update
+    armorPenetration: 0.2 # Forge-Change
+
+# Rifles
+- type: entity
+  id: ForgeBulletLaserHeavy
+  parent: ForgeBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 21 # Corvax-Forge: Weaponary update
+    armorPenetration: 0.25 # Forge-Change
+
+#region Disabler bolts
+- type: entity
+  parent: BulletDisabler
+  id: ForgeBulletDisablerStaminaOnly
+  name: disabler bolt
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Heat: 0
+    soundHit:
+      collection: WeakHit
+    forceSound: true
+
+- type: entity
+  id: ForgeBulletDisabler
+  name: disabler bolt
+  parent: BulletDisabler
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Heat: 2
+    soundHit:
+      collection: WeakHit
+    forceSound: true
+  - type: StaminaDamageOnCollide
+    damage: 18
+
+- type: entity
+  id: ForgeBulletDisablerLow
+  name: disabler bolt
+  parent: BulletDisabler
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Heat: 1
+    soundHit:
+      collection: WeakHit
+    forceSound: true
+  - type: StaminaDamageOnCollide
+    damage: 14
+
+#region Kinetic bolts
+- type: entity
+  id: ForgeBulletKineticLowPower
+  name: kinetic bolt
+  parent: BulletKinetic
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectKinetic
+    damage:
+      types:
+        Blunt: 10
+        Structural: 30
+  - type: Ammo
+    muzzleFlash: HitscanEffect
+  - type: TimedDespawn
+    lifetime: 1.5
+  - type: PointLight
+    radius: 2.5
+    color: white
+    energy: 0.5
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+
+- type: entity
+  id: ForgeBulletKineticMediumPower
+  name: kinetic bolt
+  parent: ForgeBulletKineticLowPower
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectKinetic
+    damage:
+      types:
+        Blunt: 13
+        Structural: 30
+
+- type: entity
+  id: ForgeBulletKineticHighPower
+  name: kinetic bolt
+  parent: ForgeBulletKineticLowPower
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: chronobolt
+      shader: unshaded
+      color: "#ffffff"
+      scale: 1.2,1.2
+  - type: Projectile
+    impactEffect: BulletImpactEffectKinetic
+    damage:
+      types:
+        Blunt: 18
+        Structural: 30
+  - type: PointLight
+    color: "#ffffff"
+  - type: MiningGatheringHard
+
+- type: entity
+  name: лазерный снаряд
+  id: ForgeBulletImmolationLaser
+  parent: ForgeBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: heavylaser
+      shader: unshaded
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 40
+    armorPenetration: 0.4
+
+- type: entity
+  name: лазерный снаряд
+  id: ForgeBulletFiredartLaser
+  parent: ForgeBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 20
+    armorPenetration: 0.2
+
+- type: entity
+  name: радиактивный снаряд
+  id: ForgeBulletXrayLaser
+  parent: ForgeBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: green
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 20
+        Radiation: 20
+    armorPenetration: 0.2
+
+- type: entity
+  name: импульсный снаряд
+  id: ForgeBulletPulse
+  parent: ForgeBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: blue
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Heat: 30
+        Structural: 100
+    armorPenetration: 0.4
+
+- type: entity
+  name: тяжёлый импульсный снаряд
+  id: ForgeBulletPulseSniper
+  parent: ForgeBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: blue
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Heat: 100
+        Structural: 1000
+    armorPenetration: 0.5
+
+- type: entity
+  name: тяжёлый импульсный снаряд
+  id: ForgeBulletHeavyPulse
+  parent: ForgeBaseBulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: blue
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Heat: 50
+        Structural: 500
+    armorPenetration: 0.5
+
+- type: entity
+  name: Уничтожить
+  id: ForgeBulletHeavyPulseNarrow
+  categories: [ HideSpawnMenu ]
+  parent: ForgeBulletPulse
+  components:
+  - type: ProjectileSpread
+    proto: ForgeBulletPulse
+    count: 4 #*48* heat damage if you hit all your shots, but narrower spread
+    spread: 10
+
+- type: entity
+  id: ForgeBulletDisablerHeavy
+  name: Обезвредить
+  parent: BulletDisabler
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Heat: 2
+    soundHit:
+      collection: WeakHit
+    forceSound: true
+  - type: StaminaDamageOnCollide
+    damage: 75

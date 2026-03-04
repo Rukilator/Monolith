@@ -1,0 +1,10 @@
+﻿ent-BaseCartridge762x54mmR = патрон (7.62x54ммR FMJ)
+    .desc = Полноразмерный винтовочный патрон, широко используемый в марксманских и гражданских винтовках с продольно-скользящим затвором.
+ent-Cartridge762x54mmRFMJ = патрон (7.62x54mmR FMJ)
+ent-Cartridge762x54mmRPractice = cartridge (7.62x54mmR practice)
+ent-Cartridge762x54mmRIncendiary = cartridge (7.62x54mmR incendiary)
+ent-Cartridge762x54mmRUranium = cartridge (7.62x54mmR uranium)
+ent-Cartridge762x54mmRRubber = cartridge (7.62x54mmR rubber)
+ent-Cartridge762x54mmRHP = cartridge (7.62x54mmR hollow-point)
+ent-Cartridge762x54mmRRIP = патрон (7.62x54mmR RIP)
+ent-Cartridge762x54mmRPlasteelAP = патрон (7.62x54mmR AP)

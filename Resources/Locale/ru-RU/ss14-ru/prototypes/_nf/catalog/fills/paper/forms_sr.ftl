@@ -28,3 +28,13 @@ ent-PaperWrittenFrontierFormContrabandTurnover = Квитанция о пере�
 ent-PaperWrittenFrontierFormContrabandPermit = Разрешение на контрабанду класса 2
     .suffix = Бумажные шаблоны
     .desc = { ent-Paper.desc }
+
+ent-PaperWrittenFrontierContrabandPermit = employment contract
+ent-PaperWrittenFrontierAuthorization = employment contract
+ent-PaperWrittenFrontierFundRequisition = employment contract
+ent-PaperWrittenFrontierShuttleTitleChange = employment contract
+ent-PaperWrittenFrontierContrabandAmnesty = employment contract
+ent-PaperWrittenFrontierShuttleDerelict = employment contract
+ent-PaperWrittenFrontierEmployeePayHistory = PaperWrittenFrontierEmployeePayHistory
+ent-PaperWrittenFrontierEmployment = PaperWrittenFrontierEmployment
+ent-PaperWrittenFrontierContrabandTurnover = employment contract

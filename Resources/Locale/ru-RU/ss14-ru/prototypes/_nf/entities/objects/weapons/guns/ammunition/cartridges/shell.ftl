@@ -1,12 +1,12 @@
-ent-NFShellShotgunBuckshot = ружейный патрон (.50 дробь)
+ent-ForgeShellShotgunBuckshot = ружейный патрон (.50 дробь)
     .desc = { ent-BaseCartridgeRifle.desc }
 ent-NFShellShotgunSlug = патрон (.50 пуля)
     .desc = { ent-BaseCartridgeRifle.desc }
-ent-NFShellShotgunBuckshotOverpressure = патрон (.50 дробь высокоскоростной)
+ent-ForgeShellShotgunBuckshotOverpressure = патрон (.50 дробь высокоскоростной)
     .desc = { ent-BaseCartridgeRifle.desc }
-ent-NFShellShotgunIncendiary = патрон (.50 дробь зажигательный)
+ent-ForgeShellShotgunIncendiary = патрон (.50 дробь зажигательный)
     .desc = { ent-BaseCartridgeRifle.desc }
-ent-NFShellShotgunUranium = патрон (.50 дробь урановый)
+ent-ForgeShellShotgunUranium = патрон (.50 дробь урановый)
     .desc = { ent-BaseCartridgeRifle.desc }
 ent-NFShellShotgunPractice = патрон (.50 тренировочный)
     .desc = { ent-BaseCartridgeRifle.desc }

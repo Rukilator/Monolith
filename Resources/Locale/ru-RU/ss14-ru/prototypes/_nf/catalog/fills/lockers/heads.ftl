@@ -7,3 +7,5 @@ ent-LockerStationRepresentativeFilled = { ent-LockerStationRepresentative }
 ent-GunSafeSr = оружейный сейф ПФ
     .suffix = Заполненный
     .desc = { ent-GunSafe.desc }
+
+ent-LockerNfsdSheriffFilled = LockerNfsdSheriffFilled

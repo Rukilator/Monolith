@@ -1,0 +1,289 @@
+- type: entity
+  id: ForgeBulletRocketEmp
+  name: rocket
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Shock: 0
+  - type: TimedDespawn
+    lifetime: 15
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Projectiles/projectiles2.rsi
+    layers:
+    - state: frag-emp
+  - type: EmpOnTrigger
+    range: 4
+    energyConsumption: 2700000
+    disableDuration: 60
+
+- type: entity
+  id: ForgeBulletCannonBallEmp
+  name: shockshot
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Projectiles/projectiles2.rsi
+    layers:
+    - state: ball-emp
+    - state: ball-emp-unlit
+      shader: unshaded
+  - type: PointLight
+    radius: 1
+    color: cyan
+    energy: 0.5
+  - type: Projectile
+    damage:
+      types:
+        Shock: 0
+  - type: EmpOnTrigger
+    range: 4
+    energyConsumption: 2700000
+    disableDuration: 60
+
+- type: entity
+  id: ForgeBaseBulletLaser
+  name: laser bolt
+  parent: BulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: red
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.2,0.1,0.2"
+        hard: false
+        mask:
+        - Opaque
+
+# region Upstream
+- type: entity
+  parent: MuzzleFlashEffect
+  id: ForgeMuzzleFlashEffect
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: MuzzleFlashEffectOmnilaser
+  id: ForgeMuzzleFlashEffectOmnilaser
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: MuzzleFlashEffectHeavyLaser
+  id: ForgeMuzzleFlashEffectHeavyLaser
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: EmitterBolt
+  id: ForgeEmitterBolt
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: WatcherBolt
+  id: ForgeWatcherBolt
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: WatcherBoltMagmawing
+  id: ForgeWatcherBoltMagmawing
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: BulletKinetic
+  id: ForgeBulletKinetic
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: MiningGatheringSoft # Frontier
+
+- type: entity
+  parent: BulletKineticShuttle
+  id: ForgeBulletKineticShuttle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    color: "#FF8888" # distinguish from regular PKA bolts
+  - type: Projectile
+    damage:
+      types: # it's for mining hard things, not destroying critters
+        Blunt: 0.5
+        Structural: 1
+  - type: TimedDespawn
+    lifetime: 1
+  - type: PointLight
+    color: "#FF8888"
+  - type: MiningGatheringHard # Frontier
+
+- type: entity
+  parent: BulletCharge
+  id: ForgeBulletCharge
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: MiningGatheringSoft # Frontier
+
+- type: entity
+  parent: AnomalousParticleDelta
+  id: ForgeAnomalousParticleDelta
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: AnomalousParticleDeltaStrong
+  id: ForgeAnomalousParticleDeltaStrong
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: AnomalousParticleEpsilon
+  id: ForgeAnomalousParticleEpsilon
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: AnomalousParticleEpsilonStrong
+  id: ForgeAnomalousParticleEpsilonStrong
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: AnomalousParticleZeta
+  id: ForgeAnomalousParticleZeta
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: AnomalousParticleZetaStrong
+  id: ForgeAnomalousParticleZetaStrong
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: AnomalousParticleOmegaStrong
+  id: ForgeAnomalousParticleOmegaStrong
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: AnomalousParticleSigma
+  id: ForgeAnomalousParticleSigma
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: AnomalousParticleSigmaStrong
+  id: ForgeAnomalousParticleSigmaStrong
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: BulletRocket
+  id: ForgeBulletRocket
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: BulletWeakRocket
+  id: ForgeBulletWeakRocket
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: Bullet40mmGrenadeBaton
+  id: ForgeBullet40mmGrenadeBaton
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: Bullet40mmGrenadeThermobaric
+  id: ForgeBullet40mmGrenadeThermobaric
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: Bullet40mmGrenadeFlash
+  id: ForgeBullet40mmGrenadeFlash
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: Bullet40mmGrenadeFragmentation
+  id: ForgeBullet40mmGrenadeFragmentation
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: Bullet40mmGrenadeEMP
+  id: ForgeBullet40mmGrenadeEMP
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: BulletCap
+  id: ForgeBulletCap
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: BulletAcid
+  id: ForgeBulletAcid
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: BulletCannonBall
+  id: ForgeBulletCannonBall
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: GrapplingHook
+  id: ForgeGrapplingHook
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: BulletEnergyTurretLaser
+  id: ForgeBulletEnergyTurretLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Ammo
+    muzzleFlash: ForgeMuzzleFlashEffectHeavyLaser
+
+- type: entity
+  parent: BulletEnergyTurretDisabler
+  id: ForgeBulletEnergyTurretDisabler
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Ammo
+    muzzleFlash: ForgeMuzzleFlashEffectOmnilaser
+
+- type: entity
+  parent: TeslaGunBullet
+  id: ForgeTeslaGunBullet
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: BulletWaterShot
+  id: ForgeBulletWaterShot
+  categories: [ HideSpawnMenu ]
+
+# defined to avoid linter issues
+# these should not be used in non-abstract entities
+
+- type: entity
+  parent: BulletLaserSpread
+  id: Forge1BulletLaserSpread
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: AntiParticlesProjectile
+  id: ForgeAntiParticlesProjectile
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 5
+
+- type: entity
+  parent: BulletDisablerPractice
+  id: ForgeBulletDisablerPractice
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: BulletDisablerSmg
+  id: ForgeBulletDisablerSmg
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: BulletTaser
+  id: ForgeBulletTaser
+  categories: [ HideSpawnMenu ]

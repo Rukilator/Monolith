@@ -31,6 +31,13 @@ public sealed partial class IdCardComponent : Component
     public string? LocalizedJobTitle { set => _jobTitle = value; get => _jobTitle ?? Loc.GetString(JobTitle ?? string.Empty); }
 
     /// <summary>
+    /// Holds the job prototype when the ID card has no associated station record
+    /// </summary>
+    [DataField]
+    [AutoNetworkedField]
+    public ProtoId<JobPrototype>? JobPrototype; // Forge-Change: AccessLevelPrototype<JobPrototype
+
+    /// <summary>
     /// The state of the job icon rsi.
     /// </summary>
     [DataField]

@@ -48,3 +48,10 @@ ent-StorageFillEVASuitNfsd = хранилище скафандра ДСБФ
     .desc = Содержит полный набор для выхода в открытый космос.
 ent-StorageFillEVASuitGoblin = хранилище скафандра гоблинов
     .desc = Содержит традиционный набор гоблинов для выхода в открытый космос.
+
+ent-StorageFillEVASuitLvhi = StorageFillEVASuitLvhi
+    .desc = Содержит стандартный комплект EVA Langstad-Voigt Heavy Industries (LVHI).
+ent-StorageFillEVASuitEmergency = StorageFillEVASuitEmergency
+    .desc = Содержит стандартный аварийный комплект EVA.
+ent-StorageFillEVASuitFsb = StorageFillEVASuitFsb
+    .desc = Содержит стандартный скафандр EVA Far Star Biotech (FSB).

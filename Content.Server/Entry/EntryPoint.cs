@@ -1,3 +1,7 @@
+using Content.Server._Forge.Discord; // Forge-Change
+using Content.Server._Forge.JoinQueue;
+using Content.Server._Forge.Sponsor;
+using Content.Server._Forge.TTS; // Forge-Change
 using Content.Server._NF.Auth;
 using Content.Server.Acz;
 using Content.Server.Administration;
@@ -120,6 +124,9 @@ namespace Content.Server.Entry
                 _watchlistWebhookManager.Initialize();
                 IoCManager.Resolve<JobWhitelistManager>().Initialize();
                 IoCManager.Resolve<PlayerRateLimitManager>().Initialize();
+                IoCManager.Resolve<JoinQueueManager>().Initialize(); // Forge-Change
+                IoCManager.Resolve<DiscordAuthManager>().Initialize(); // Forge-Change
+                IoCManager.Resolve<TTSManager>().Initialize(); // Corvax-TTS
             }
         }
 
@@ -161,6 +168,7 @@ namespace Content.Server.Entry
                 IoCManager.Resolve<IConnectionManager>().PostInit();
                 IoCManager.Resolve<MultiServerKickManager>().Initialize();
                 IoCManager.Resolve<CVarControlManager>().Initialize();
+                IoCManager.Resolve<SponsorManager>().Initialize(); // Forge-Change
             }
         }
 

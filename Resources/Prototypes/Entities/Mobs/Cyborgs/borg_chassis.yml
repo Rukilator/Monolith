@@ -82,6 +82,10 @@
     selectedBorgType: medical
   - type: BorgSwitchableSubtype # Goobstation
     borgSubtype: default_medical
+  #<Forge>
+  - type: TTS # Corvax-TTS
+    voice: TrainingRobot
+  #</Forge>
 
 - type: entity
   id: BorgChassisService

@@ -1,0 +1,15 @@
+ent-ClothingModsuitUSSPVaryag = ядро модкостюма USSP «Варяг»
+    .desc = Силовой и жизнеобеспечивающий блок модкостюма «Варяг».
+ent-ClothingModsuitUSSPVaryagPowerCell = батарея повышенной ёмкости
+ent-ClothingModsuitUSSPZastavnik = ядро модкостюма USSP «Заставник»
+    .desc = Герметичный блок питания системы жизнеобеспечения и замков костюма «Заставник».
+ent-ClothingModsuitUSSPZastavnikPowerCell = батарея повышенной ёмкости
+ent-ClothingModsuitRogue = блок управления скафандра RX-01
+    .desc = Центральный блок управления RX-01. Переживает скачки питания, разгерметизацию и изобретательность чёрного рынка. Как-то. Плюс встроенные экспериментальные вакуумные ботинки.
+ent-ClothingModsuitRoguePowerCell = батарея повышенной ёмкости
+ent-ClothingModsuitVolta = экспериментальный модкостюм TSF «Вольта»
+    .desc = Модифицированная версия сапёрного модкостюма для TSFMC: усиленные баллистические пластины и защита от взрывов.
+ent-ClothingModsuitVoltaPowerCell = батарея повышенной ёмкости
+ent-ClothingModsuitMercenary = блок управления скафандра наёмника «галлоглах»
+    .desc = Модульный блок управления скафандром со встроенным энергощитом для дополнительной защиты.
+ent-ClothingModsuitMercenaryPowerCell = батарея повышенной ёмкости

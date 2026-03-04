@@ -40,3 +40,5 @@ ent-LockerWallEVAColorFsb = настенный шкаф EVA "FSB"
     .desc = { ent-LockerWallColorBase.desc }
 ent-LockerWallEVAColorFsbFilled = { ent-LockerWallEVAColorFsb }
     .desc = { ent-LockerWallColorBase.desc }
+ent-LockerWallEVAColorLvhi = настенный шкаф EVA LVHI
+ent-LockerWallEVAColorEmergency = настенный шкаф EVA экстренный

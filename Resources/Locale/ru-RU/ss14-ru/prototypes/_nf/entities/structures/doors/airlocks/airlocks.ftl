@@ -22,3 +22,4 @@ ent-AirlockExternalGlassNfsd = { ent-AirlockExternalGlass }
 ent-AirlockExternalGlassNfsdLocked = { ent-AirlockExternalGlass }
     .suffix = ДСБФ, Стеклянный, Закрыт
     .desc = { ent-AirlockExternalGlass.desc }
+ent-AirlockMedicalGlassLockedSecurity = AirlockMedicalGlassLockedSecurity

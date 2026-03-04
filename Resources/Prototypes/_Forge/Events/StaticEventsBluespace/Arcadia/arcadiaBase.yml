@@ -1,0 +1,39 @@
+# Author Info
+# GitHub: -
+# Discord: autsaider_m
+# License: CC-BY-NC-ND-4.0
+# CorvaxForge
+
+# Maintainer Info
+# GitHub: https://github.com/Autsaider-IM
+# Discord: autsaider_m
+
+# Notes:
+#
+- type: pointOfInterest
+  id: arcadiaBase
+  name: База Аркадии
+  minimumDistance: 6500
+  maximumDistance: 10000
+  gridPath: /Maps/_Forge/Events/Elementary/Arcadia/arcadiaBase.yml
+  addComponents:
+  - type: IFF
+    color: "#850d09"
+    flags: [HideLabel]
+    readOnly: true
+  - type: Shuttle
+
+- type: gameMap
+  id: arcadiaBase
+  mapName: База Аркадии
+  mapPath: /Maps/_Forge/Events/Elementary/Arcadia/arcadiaBase.yml
+  minPlayers: 0
+  stations:
+    arcadiaBase:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'База Аркадии'
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt

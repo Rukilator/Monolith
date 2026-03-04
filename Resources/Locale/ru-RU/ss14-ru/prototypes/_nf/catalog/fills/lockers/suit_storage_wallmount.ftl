@@ -187,3 +187,5 @@ ent-SuitStorageWallmountEVAPrivateSec = { ent-StorageFillEVASuitPrivateSec }
 ent-SuitStorageWallmountEVANfsd = { ent-StorageFillEVASuitNfsd }
     .desc = { ent-StorageFillEVASuitNfsd.desc }
     .suffix = ЕВА, ДСБФ
+ent-SuitStorageWallmountUssp = SuitStorageWallmountUssp
+ent-SuitStorageWallmountUsspL10 = SuitStorageWallmountUsspL10

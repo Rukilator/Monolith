@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
+using Content.Server._Forge.Discord; // Forge-Change
+using Content.Server._Forge.Sponsor; // Forge-Change
 using Content.Server.Connection.IPIntel;
 using Content.Server.Database;
 using Content.Server.GameTicking;
@@ -31,6 +33,7 @@ namespace Content.Server.Connection
     {
         void Initialize();
         void PostInit();
+        Task<bool> HasPrivilegedJoin(NetUserId userId); // Forge-Change
 
         /// <summary>
         /// Temporarily allow a user to bypass regular connection requirements.
@@ -65,6 +68,8 @@ namespace Content.Server.Connection
         [Dependency] private readonly IHttpClientHolder _http = default!;
         [Dependency] private readonly IAdminManager _adminManager = default!;
         [Dependency] private readonly MiniAuthManager _authManager = default!; //Frontier
+        [Dependency] private readonly SponsorManager _sponsorMan = default!; // Forge-Change
+        [Dependency] private readonly DiscordAuthManager _discordAuth = default!; // Forge-Change
 
         private ISawmill _sawmill = default!;
         private readonly Dictionary<NetUserId, TimeSpan> _temporaryBypasses = [];
@@ -400,6 +405,15 @@ namespace Content.Server.Connection
             var assigned = new NetUserId(Guid.NewGuid());
             await _db.AssignUserIdAsync(name, assigned);
             return assigned;
+        }
+        public async Task<bool> HasPrivilegedJoin(NetUserId userId)
+        {
+            var isAdmin = await _db.GetAdminDataForAsync(userId) != null;
+            var isSponsor = _sponsorMan.Sponsors.ContainsKey(userId); // Forge-Change
+            var wasInGame = EntitySystem.TryGet<GameTicker>(out var ticker) &&
+                            ticker.PlayerGameStatuses.TryGetValue(userId, out var status) &&
+                            status == PlayerGameStatus.JoinedGame;
+            return isAdmin || isSponsor || wasInGame; // Forge-Change
         }
     }
 }

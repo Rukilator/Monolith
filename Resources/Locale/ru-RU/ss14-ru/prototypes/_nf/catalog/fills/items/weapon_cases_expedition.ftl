@@ -286,3 +286,7 @@ ent-WeaponCaseShortPollockExpedition = { ent-WeaponCaseShort }
 
 ent-WeaponCaseLongSVSExpedition = { ent-WeaponCaseLong }
     .desc = { ent-WeaponCaseLong.desc }
+
+ent-WeaponCaseShortAmmoBoxUraniumShotgun = WeaponCaseShortAmmoBoxUraniumShotgun
+ent-WeaponCaseShortAmmoAmmoBox12_gaugeBuckshotgun = WeaponCaseShortAmmoAmmoBox12_gaugeBuckshotgun
+ent-WeaponCaseShortAntiqueLaserExpedition = WeaponCaseShortAntiqueLaserExpedition

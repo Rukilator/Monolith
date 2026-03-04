@@ -12,3 +12,7 @@ ent-BaseStructureLockImmuneToEmag = { "" }
     .desc = { "" }
 ent-BaseStructureAccessReaderImmuneToEmag = { "" }
     .desc = { "" }
+
+ent-BaseStructureDisablePrying = BaseStructureDisablePrying
+ent-BaseStructureDisableScrewing = BaseStructureDisableScrewing
+ent-BaseStructureDisableAnchoring = BaseStructureDisableAnchoring

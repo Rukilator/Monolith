@@ -22,3 +22,4 @@ ent-LockerWallColorGenericBlue = { ent-LockerWallColorBase }
     .desc = { ent-LockerWallColorBase.desc }
 ent-LockerWallColorGenericGreen = { ent-LockerWallColorBase }
     .desc = { ent-LockerWallColorBase.desc }
+ent-LockerWallColorHydroponics = настенный шкаф ботаника

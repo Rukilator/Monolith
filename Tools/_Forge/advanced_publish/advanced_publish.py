@@ -206,12 +206,12 @@ def create_session(publish_token: str, pool_connections: int, pool_maxsize: int,
     session.mount("https://", adapter)
     session.mount("http://", adapter)
     session.headers.update({ "Authorization": f"Bearer {publish_token}" })
-    session.request = lambda method, url, **kwargs: requests.Session.request(
-        session, method, url, timeout=(5,30), **kwargs
-    )
+    #session.request = lambda method, url, **kwargs: requests.Session.request(
+    #    session, method, url, timeout=(5,30), **kwargs
+    #)
     return session
 
-def send_discord_message(message: str, status: str, fork_id: str = None, color: str = "00ff00", publish_webhook: str = None):
+def send_discord_message(message: str, status: str, color: str = "00ff00", fork_id: str = None, publish_webhook: str = None):
     if not publish_webhook:
         return
     if not fork_id:

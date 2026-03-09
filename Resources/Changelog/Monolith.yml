@@ -18136,3 +18136,10 @@ Entries:
   id: 1999
   time: '2026-03-09T17:02:31.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/3416
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Blips are shown from 2048 radius now
+  id: 2000
+  time: '2026-03-09T19:41:19.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/3420

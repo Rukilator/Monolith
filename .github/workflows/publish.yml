@@ -1,34 +1,21 @@
 name: Publish
 concurrency:
   group: publish
-  cancel-in-progress: true
+
 
 on:
   workflow_dispatch:
-  # Frontier: re-enabled autopublish
-  #schedule:
-  #  - cron: '0 10 * * *'
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-
-    - name: Install dependencies
-      run: sudo apt-get install -y python3-paramiko python3-lxml
-
-    - name: Install Python dependencies
-      run: |
-        python3 -m pip install --upgrade pip
-        pip3 install discord-webhook requests
-
-    - uses: actions/checkout@v4.2.2
+    - uses: actions/checkout@v3.6.0
       with:
         submodules: 'recursive'
 
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v4.1.0
+      uses: actions/setup-dotnet@v3.2.0
       with:
         dotnet-version: 9.0.x
 
@@ -50,21 +37,18 @@ jobs:
       run: dotnet run --project Content.Packaging client --no-wipe-release
 
     - name: Publish version
-      run: python3 Tools/_Forge/advanced_publish/advanced_publish.py --fork-id frontier --publish-token PUBLISH_TOKEN --publish-webhook PUBLISH_WEBHOOK
+      run: Tools/publish_multi_request.py
       env:
         PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
-        PUBLISH_WEBHOOK: ${{ secrets.PUBLISH_WEBHOOK }}
         GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }}
 
     # - name: Publish changelog (Discord)
-    #   continue-on-error: true
     #   run: Tools/actions_changelogs_since_last_run.py
     #   env:
     #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     #     DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
 
-    - name: Publish changelog (RSS)
-      continue-on-error: true
-      run: Tools/actions_changelog_rss.py
-      env:
-        CHANGELOG_RSS_KEY: ${{ secrets.CHANGELOG_RSS_KEY }}
+    #- name: Publish changelog (RSS)
+    #  run: Tools/actions_changelog_rss.py
+    #  env:
+    #    CHANGELOG_RSS_KEY: ${{ secrets.CHANGELOG_RSS_KEY }}

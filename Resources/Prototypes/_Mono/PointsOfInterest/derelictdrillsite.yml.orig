@@ -1,0 +1,40 @@
+# Author Info
+# GitHub: Primusirius
+# Discord: Primusirius
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Notes:
+- type: pointOfInterest
+  id: Mining
+  parent: [BasePOI, BaseRepairablePOI]
+<<<<<<< HEAD
+  name: 'Заброшенная буровая'
+  minimumDistance: 3500
+  maximumDistance: 7500
+=======
+  name: 'Derelict Drillsite'
+  minimumDistance: 5500
+  maximumDistance: 9500
+>>>>>>> mono/main
+  spawnGroup: Required
+  gridPath: /Maps/_Mono/POI/derelictdrillsite.yml
+  addComponents:
+  - type: IFF
+    color: "#ccaa55"
+
+- type: gameMap
+  id: Mining
+  mapName: 'Заброшенная буровая'
+  mapPath: /Maps/_Mono/POI/derelictdrillsite.yml
+  minPlayers: 0
+  stations:
+    Mining:
+      stationProto: RecordsFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Заброшенная буровая'
+        - type: StationDeadDrop
+          maxDeadDrops: 6

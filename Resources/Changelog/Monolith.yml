@@ -19346,3 +19346,12 @@ Entries:
   id: 2134
   time: '2026-04-04T21:38:13.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/3592
+- author: Mrrpip
+  changes:
+    - type: Tweak
+      message: >-
+        Tweaks the names and descriptions of missile class weapons, allowing the
+        ammo to be seen in the GCS UI.
+  id: 2135
+  time: '2026-04-04T21:44:56.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/3521

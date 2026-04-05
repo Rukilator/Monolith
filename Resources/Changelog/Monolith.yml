@@ -19483,3 +19483,10 @@ Entries:
   id: 2147
   time: '2026-04-05T21:42:55.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/3334
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: Hristov structural damage 250->500
+  id: 2148
+  time: '2026-04-05T22:13:51.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/3709
